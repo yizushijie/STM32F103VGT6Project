@@ -65,8 +65,8 @@ extern "C" {
 	#define DECA_LED_OUT_0								GPIO_OUT_0(    DECA_LED_PORT,DECA_LED_BIT)
 	#define DECA_LED_OUT_1								GPIO_OUT_1(    DECA_LED_PORT,DECA_LED_BIT)
 	#define DECA_LED_OUT_C								GPIO_OUT_C(    DECA_LED_PORT,DECA_LED_BIT)
-	#define DECA_IS_PASS								DECA_LED_OUT_1
-	#define DECA_IS_FAIL								DECA_LED_OUT_0
+	#define DECA_LED_IS_ON								DECA_LED_OUT_1
+	#define DECA_LED_IS_OFF								DECA_LED_OUT_0
 
 	//===B通道解码实时灯
 	#define DECB_LED_PORT								GPIOB
@@ -77,8 +77,8 @@ extern "C" {
 	#define DECB_LED_OUT_0								GPIO_OUT_0(    DECB_LED_PORT,DECB_LED_BIT)
 	#define DECB_LED_OUT_1								GPIO_OUT_1(    DECB_LED_PORT,DECB_LED_BIT)
 	#define DECB_LED_OUT_C								GPIO_OUT_C(    DECB_LED_PORT,DECB_LED_BIT)
-	#define DECB_IS_PASS								DECB_LED_OUT_1
-	#define DECB_IS_FAIL								DECB_LED_OUT_0
+	#define DECB_LED_IS_ON								DECB_LED_OUT_1
+	#define DECB_LED_IS_OFF								DECB_LED_OUT_0
 
 	//===C通道解码实时灯
 	#define DECC_LED_PORT								GPIOB
@@ -89,8 +89,8 @@ extern "C" {
 	#define DECC_LED_OUT_0								GPIO_OUT_0(    DECC_LED_PORT,DECC_LED_BIT)
 	#define DECC_LED_OUT_1								GPIO_OUT_1(    DECC_LED_PORT,DECC_LED_BIT)
 	#define DECC_LED_OUT_C								GPIO_OUT_C(    DECC_LED_PORT,DECC_LED_BIT)
-	#define DECC_IS_PASS								DECC_LED_OUT_1
-	#define DECC_IS_FAIL								DECC_LED_OUT_0
+	#define DECC_LED_IS_ON								DECC_LED_OUT_1
+	#define DECC_LED_IS_OFF								DECC_LED_OUT_0
 
 	//===D通道解码实时灯
 	#define DECD_LED_PORT								GPIOB
@@ -101,8 +101,8 @@ extern "C" {
 	#define DECD_LED_OUT_0								GPIO_OUT_0(    DECD_LED_PORT,DECD_LED_BIT)
 	#define DECD_LED_OUT_1								GPIO_OUT_1(    DECD_LED_PORT,DECD_LED_BIT)
 	#define DECD_LED_OUT_C								GPIO_OUT_C(    DECD_LED_PORT,DECD_LED_BIT)
-	#define DECD_IS_PASS								DECD_LED_OUT_1
-	#define DECD_IS_FAIL								DECD_LED_OUT_0
+	#define DECD_LED_IS_ON								DECD_LED_OUT_1
+	#define DECD_LED_IS_OFF								DECD_LED_OUT_0
 
 	//===关闭实时解码灯
 	#define DEC_LED_OFF									( DECA_LED_OUT_0,DECB_LED_OUT_0,DECC_LED_OUT_0,DECD_LED_OUT_0 )

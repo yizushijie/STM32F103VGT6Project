@@ -148,10 +148,10 @@ void Key_EOTInit(void)
 void Key_DECInit(void)
 {
 	//---使能GPIO的时钟
-	GPIOTask_Clock(DECA_CTR_PORT, 1);
-	GPIOTask_Clock(DECB_CTR_PORT, 1);
-	GPIOTask_Clock(DECC_CTR_PORT, 1);
-	GPIOTask_Clock(DECD_CTR_PORT, 1);
+	GPIOTask_Clock(DECA_PASS_CTR_PORT, 1);
+	GPIOTask_Clock(DECB_PASS_CTR_PORT, 1);
+	GPIOTask_Clock(DECC_PASS_CTR_PORT, 1);
+	GPIOTask_Clock(DECD_PASS_CTR_PORT, 1);
 
 	//---GPIO的结构体
 	LL_GPIO_InitTypeDef GPIO_InitStruct = { 0 };
@@ -164,24 +164,24 @@ void Key_DECInit(void)
 	#endif
 
 	//---DECA_CH_BIT的初始化
-	GPIO_InitStruct.Pin = DECA_CTR_BIT;
-	LL_GPIO_Init(DECA_CTR_PORT, &GPIO_InitStruct);
-	GPIO_OUT_0(DECA_CTR_PORT, DECA_CTR_BIT);
+	GPIO_InitStruct.Pin = DECA_PASS_CTR_BIT;
+	LL_GPIO_Init(DECA_PASS_CTR_PORT, &GPIO_InitStruct);
+	GPIO_OUT_0(DECA_PASS_CTR_PORT, DECA_PASS_CTR_BIT);
 
 	//---DECB_CH_BIT的初始化
-	GPIO_InitStruct.Pin = DECB_CTR_BIT;
-	LL_GPIO_Init(DECB_CTR_PORT, &GPIO_InitStruct);
-	GPIO_OUT_0(DECB_CTR_PORT, DECB_CTR_BIT);
+	GPIO_InitStruct.Pin = DECB_PASS_CTR_BIT;
+	LL_GPIO_Init(DECB_PASS_CTR_PORT, &GPIO_InitStruct);
+	GPIO_OUT_0(DECB_PASS_CTR_PORT, DECB_PASS_CTR_BIT);
 
 	//---DECC_CH_BIT的初始化
-	GPIO_InitStruct.Pin = DECC_CTR_BIT;
-	LL_GPIO_Init(DECC_CTR_PORT, &GPIO_InitStruct);
-	GPIO_OUT_0(DECC_CTR_PORT, DECC_CTR_BIT);
+	GPIO_InitStruct.Pin = DECC_PASS_CTR_BIT;
+	LL_GPIO_Init(DECC_PASS_CTR_PORT, &GPIO_InitStruct);
+	GPIO_OUT_0(DECC_PASS_CTR_PORT, DECC_PASS_CTR_BIT);
 
 	//---DECD_CH_BIT的初始化
-	GPIO_InitStruct.Pin = DECD_CTR_BIT;
-	LL_GPIO_Init(DECD_CTR_PORT, &GPIO_InitStruct);
-	GPIO_OUT_0(DECD_CTR_PORT, DECD_CTR_BIT);
+	GPIO_InitStruct.Pin = DECD_PASS_CTR_BIT;
+	LL_GPIO_Init(DECD_PASS_CTR_PORT, &GPIO_InitStruct);
+	GPIO_OUT_0(DECD_PASS_CTR_PORT, DECD_PASS_CTR_BIT);
 }
 
 ///////////////////////////////////////////////////////////////////////////////

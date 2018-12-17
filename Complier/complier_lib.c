@@ -63,7 +63,7 @@ UINT8_T ASCIIToHex(UINT8_T hexVal)
 	{
 		hexVal = 0xff;
 	}
-	return hexVal
+	return hexVal;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
