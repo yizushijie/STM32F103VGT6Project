@@ -1,0 +1,220 @@
+#include "systick_cfg.h"
+
+//---变量定义
+SysTick_HandlerType		g_SysTick;
+pSysTick_HandlerType	pSysTick = &g_SysTick;
+
+extern HAL_TickFreqTypeDef uwTickFreq;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//////函		数： 
+//////功		能： 
+//////输入参数: 
+//////输出参数: 
+//////说		明： 
+//////////////////////////////////////////////////////////////////////////////
+UINT8_T SysTick_Suspend(void)
+{
+#ifdef USE_MCU_STM32
+	//---不使能系统滴答定时器的中断
+	SysTick->CTRL &= ~SysTick_CTRL_TICKINT_Msk;
+#endif 
+	return OK_0;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//////函		数： 
+//////功		能： 
+//////输入参数: 
+//////输出参数: 
+//////说		明： 
+//////////////////////////////////////////////////////////////////////////////
+UINT8_T SysTick_Resume(void)
+{
+#ifdef USE_MCU_STM32
+	//---使能系统滴答定时器的中断
+	SysTick->CTRL |= SysTick_CTRL_TICKINT_Msk;
+#endif 
+	return OK_0;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//////函		数： 
+//////功		能： 
+//////输入参数: 
+//////输出参数: 
+//////说		明： 最好1ms的滴答定时器
+//////////////////////////////////////////////////////////////////////////////
+UINT8_T SysTick_Init(UINT32_T tickInc, void(*pHalTickInc)(void))
+{
+#ifdef USE_MCU_STM32
+	//---产生100us的时间滴答器---该初始化函数没有注册中断
+	LL_InitTick(SystemCoreClock, tickInc);
+	//---设置中断抢占分组
+	NVIC_SetPriorityGrouping(NVIC_PRIORITYGROUP_4);
+	//---配置滴答定时器中断---设置为最低优先级
+	NVIC_SetPriority(SysTick_IRQn, NVIC_EncodePriority(NVIC_GetPriorityGrouping(), 0, 0));
+	//---hal定时计数器
+	if ((pHalTickInc!=NULL)&&(pSysTick!=NULL))
+	{
+		uwTickFreq = HAL_TICK_FREQ_DEFAULT;
+		pSysTick->msgHalTickTask = pHalTickInc;
+	}
+	else
+	{
+		return ERROR_1;
+	}
+	//---使能滴答定时的中断---默认是1ms
+	SysTick_Resume();
+#endif
+	return OK_0;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//////函		数： 
+//////功		能： 
+//////输入参数: 
+//////输出参数: 
+//////说		明： 
+//////////////////////////////////////////////////////////////////////////////
+UINT8_T SysTick_DeInit(void)
+{
+#ifdef USE_MCU_STM32
+	SysTick_Suspend();
+#endif
+	return OK_0;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//////函		数： 
+//////功		能： 
+//////输入参数: 
+//////输出参数: 
+//////说		明： 
+//////////////////////////////////////////////////////////////////////////////
+UINT8_T SysTick_TickTask(UINT32_T tickFreq, void(*pLEDTickInc)(void))
+{
+	if ((pLEDTickInc!=NULL)&&(pSysTick!=NULL))
+	{
+		pSysTick->msgFunTickTaskMaxInc = tickFreq;
+		pSysTick->msgFuncTickTask = pLEDTickInc;
+		pSysTick->msgFuncTickTaskInc = 0;
+	}
+	return OK_0;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//////函		数： 
+//////功		能： 
+//////输入参数: 
+//////输出参数: 
+//////说		明： 
+//////////////////////////////////////////////////////////////////////////////
+UINT8_T SysTick_WaitDecTick(UINT32_T waitDecTick)
+{
+	//---计时函数
+	pSysTick->msgTickDec = waitDecTick;
+	//---等待时间到达
+	while (pSysTick->msgTickDec != 0)
+	{
+		WDT_RESET();
+	}
+	return OK_0;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//////函		数： 
+//////功		能： 
+//////输入参数: 
+//////输出参数: 
+//////说		明： 
+//////////////////////////////////////////////////////////////////////////////
+UINT32_T SysTick_GetTick(void)
+{
+	if (pSysTick!=NULL)
+	{
+		return pSysTick->msgTickInc;
+	}
+	else
+	{
+		return ERROR_1;
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//////函		数： 
+//////功		能： 
+//////输入参数: 
+//////输出参数: 
+//////说		明： 
+//////////////////////////////////////////////////////////////////////////////
+UINT8_T SysTick_IRQTick(void)
+{
+	if (pSysTick!=NULL)
+	{
+		//---递加计数
+		pSysTick->msgTickInc++;
+		pSysTick->msgFuncTickTaskInc++;
+		//---判断是否溢出
+		if (pSysTick->msgTickInc==0)
+		{
+			pSysTick->msgTickOverFlow++;
+		}
+		//---注册hal延时函数
+		if (pSysTick->msgHalTickTask!=NULL)
+		{
+			pSysTick->msgHalTickTask();
+		}
+		//---判断任务函数
+		if ((pSysTick->msgFunTickTaskMaxInc!=0)&&(pSysTick->msgFunTickTaskMaxInc==pSysTick->msgFuncTickTaskInc)&&(pSysTick->msgFuncTickTask!=NULL))
+		{
+			pSysTick->msgFuncTickTaskInc = 0;
+			pSysTick->msgFuncTickTask();
+		}
+		//---递减计数
+		if (pSysTick->msgTickDec!=0)
+		{
+			pSysTick->msgTickDec--;
+		}
+		return OK_0;
+	}
+	return ERROR_1;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//////函		数： 
+//////功		能： 
+//////输入参数: 
+//////输出参数: 
+//////说		明： 
+//////////////////////////////////////////////////////////////////////////////
+UINT8_T SysTick_WaitTimer(UINT32_T usTimer)
+{
+#ifdef USE_MCU_STM32
+	UINT32_T load = SysTick->LOAD;	
+	UINT32_T ctrl = SysTick->CTRL;
+	//---关闭定时器，时钟选择为系统时钟，不进行8分频
+	SysTick->CTRL = 0x00000004;
+	//---计算装载值
+	SysTick->LOAD = usTimer;
+	//---清零计数器
+	SysTick->VAL = 0x00;
+	//---使能计数器计数
+	SysTick->CTRL |= 0x01;
+	//---等待计数到0
+	while (!(SysTick->CTRL & 0x00010000))
+	{
+		WDT_RESET();
+	}
+	//---关闭定时器，时钟选择为系统时钟，不进行8分频
+	SysTick->CTRL = 0x00000004;
+	//---恢复装载值
+	SysTick->LOAD = load;
+	//---清零计数器
+	SysTick->VAL = 0x00;
+	//---恢复计数器配置
+	SysTick->CTRL = ctrl;
+#endif
+	return OK_0;
+}

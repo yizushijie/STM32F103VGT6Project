@@ -1,0 +1,34 @@
+#ifndef SYSTICK_CFG_H
+#define SYSTICK_CFG_H
+//////////////////////////////////////////////////////////////////////////////////////
+//---使用包含的头文件
+#include "complier_cfg.h"
+#include "complier_lib.h"
+//---变量定义
+//---结构体声明
+typedef struct _SysTick_HandlerType			SysTick_HandlerType;
+//---结构体指针的声明
+typedef struct _SysTick_HandlerType			*pSysTick_HandlerType;
+//---声明消息处理指针函数
+typedef UINT8_T( *SysTick_Handler_MSG )( SysTick_HandlerType *SysTickHandlerType, UINT8_T msg );
+//---定义滴答的计数计数方式
+typedef enum
+{
+	TICK_1MS_INC		= 1000U,
+	TICK_10MS_INC		= 100U,
+	TICK_100MS_INC		= 10U,
+	TICK_FREQ_INC		= TICK_1MS_INC,
+} SysTickIncType;
+//---滴答定时器的结构体
+struct _SysTick_HandlerType
+{
+	VLTUINT32_T				msgTickInc;							//---定时计数器
+	VLTUINT32_T				msgTickIncOverFlow;					//---定时计数器溢出
+	VLTUINT32_T				msgLedIncTick;						//---LED灯计数器
+	void					(*msgHalTickInc)(void);				//---hal库的计数方式
+	void					(*msgLedTickInc)(void);				//---LED工作指示灯
+	SysTick_Handler_MSG		msgTask;							//---任务处理函数
+};
+	
+//////////////////////////////////////////////////////////////////////////////////////
+#endif /* SYSTICK_CFG_H */
