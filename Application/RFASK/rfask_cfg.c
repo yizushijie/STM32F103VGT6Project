@@ -81,7 +81,7 @@ void RFASK_YSELInit(void)
 	GPIOTask_Clock(YSEL3D_CTR_PORT, 1);
 
 	//---GPIO的结构体
-	LL_GPIO_InitTypeDef GPIO_InitStruct = { 0 };
+	LL_GPIO_InitTypeDef GPIO_InitStruct= { 0 };
 	GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;						//---配置状态为输出模式
 	GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_MEDIUM;				//---GPIO的速度---中速设备
 	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_OPENDRAIN;			//---输出模式---开漏输出
@@ -181,7 +181,7 @@ void RFASK_YSELInit(void)
 void RFASK_StructInit(RFASK_HandlerType *rfask)
 {
 	//---设备类型
-	rfask->msgDeviceType = F11XT;// SYN5XXR;
+	rfask->msgDeviceType =  SYN5XXR;
 
 	//---激活的SITE信息
 	memset(rfask->msgActivateSite, 0, FREQ_CURRENT_MAX_SITE);
@@ -268,8 +268,8 @@ void RFASK_StructInit(RFASK_HandlerType *rfask)
 //////////////////////////////////////////////////////////////////////////////
 void RFASK_Init(RFASK_HandlerType *rfask)
 {
-	RFASK_ClkInit();
 	RFASK_StructInit(rfask);
+	RFASK_ClkInit();
 	RFASK_YSELInit();
 }
 
@@ -311,7 +311,7 @@ UINT32_T RFASK_CalcXTAL(RFASK_HandlerType *rfask, UINT32_T rfX100MHz)
 			_return = 20000;//20KHz
 			break;
 	}
-	return (UINT32_T)_return;
+	return (UINT32_T)(_return);
 }
 
 ///////////////////////////////////////////////////////////////////////////////

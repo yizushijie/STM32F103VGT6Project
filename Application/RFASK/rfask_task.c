@@ -1808,7 +1808,6 @@ UINT8_T  RFASKTask_BINPass(RFASK_HandlerType *rfask)
 				KeyTask_BINDPass(rfask->msgSitePass[i]);
 				break;
 			default:
-
 				//---SITE都不合格
 				KeyTask_BINAPass(1);
 				KeyTask_BINBPass(1);
@@ -1830,7 +1829,6 @@ UINT8_T RFASKTask_KeyTask(USART_HandlerType*USARTx, RFASK_HandlerType *rfask, WM
 {
 	//---获取YSEL的值
 	UINT8_T _return = RFASKTask_ScanYSEL();
-
 	//---判断YSEL是否有效
 	if (_return == 0xFF)
 	{
@@ -1840,70 +1838,58 @@ UINT8_T RFASKTask_KeyTask(USART_HandlerType*USARTx, RFASK_HandlerType *rfask, WM
 	else
 	{
 		RFASKTask_ActivateSites(rfask, activateSites);
-
 		//---初始化EOT
 		RFASKTask_EOTSTART(rfask);
-
 		//---任务序号
 		switch (_return)
 		{
 			case RFASK_TASK_YSEL1:
+				//---设置默认频率1
 				RFASKTask_SetClockFreq(rfask, WM8510x, rfask->msgFreqX100MHzYSel1);
-
 				//---使能频率输出
 				CLK_FREQ_ON;
 				break;
 			case RFASK_TASK_YSEL2:
+				//---设置默认频率2
 				RFASKTask_SetClockFreq(rfask, WM8510x, rfask->msgFreqX100MHzYSel2);
-
 				//---使能频率输出
 				CLK_FREQ_ON;
 				break;
 			case RFASK_TASK_YSEL3:
+				//---设置默认频率3
 				RFASKTask_SetClockFreq(rfask, WM8510x, rfask->msgFreqX100MHzYSel3);
-
 				//---使能频率输出
 				CLK_FREQ_ON;
 				break;
 			case RFASK_TASK_YSEL4:
+				//---设置默认频率4
 				RFASKTask_SetClockFreq(rfask, WM8510x, rfask->msgFreqX100MHzYSel4);
-
 				//---使能频率输出
 				CLK_FREQ_ON;
 				break;
 			case RFASK_TASK_POINT_ONE:
+				//---执行频率电流扫描第一个点
 				RFASKTask_FreqCurrentScan(USARTx, rfask, &rfask->msgFreqCurrentPointOne, WM8510x);
 				break;
 			case RFASK_TASK_POINT_TWO:
+				//---执行频率电流扫描第二个点
 				RFASKTask_FreqCurrentScan(USARTx, rfask, &rfask->msgFreqCurrentPointTwo, WM8510x);
 				break;
 			default:
+				CLK_FREQ_OFF;
 				_return = 0xFF;
 				break;
 		}
-
 		//---执行结果
 		RFASKTask_BINPass(rfask);
-
 		//---完成EOT信号
 		RFASKTask_EOTSTOP();
-
-		//---等待SOT变高，等待结束
-		while (KeyTask_GetSOT() != 0)
-		{
-			//---喂狗
-			WDT_RESET();
-		}
-
 		//---若是频率电流扫描，那么在工作完成之后，需要进时钟设置到不工作的作态
 		if ((_return == RFASK_TASK_POINT_ONE) || (_return == RFASK_TASK_POINT_TWO))
 		{
-			//---设置频率工作在不工作的点
+			//---设置频率工作在不工作的点,默认是20KHz
 			RFASKTask_SetClockFreq(rfask, WM8510x, FREQ_YSEL_X100MHz);
 		}
-
-		//---关闭频率输出
-		CLK_FREQ_OFF;
 	}
 	if (_return != 0xFF)
 	{

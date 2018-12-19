@@ -174,6 +174,54 @@ void Decode_DecodeCHInit(void)
 	GPIO_OUT_0(DECD_CH_PORT, DECD_CH_BIT);
 }
 
+
+///////////////////////////////////////////////////////////////////////////////
+//////函		数：
+//////功		能： 解码成功标志位
+//////输入参数:
+//////输出参数:
+//////说		明：
+//////////////////////////////////////////////////////////////////////////////
+void Decode_DecodePassInit(void)
+{
+	//---使能GPIO的时钟
+	GPIOTask_Clock(DECA_PASS_CTR_PORT, 1);
+	GPIOTask_Clock(DECB_PASS_CTR_PORT, 1);
+	GPIOTask_Clock(DECC_PASS_CTR_PORT, 1);
+	GPIOTask_Clock(DECD_PASS_CTR_PORT, 1);
+
+	//---GPIO的结构体
+	LL_GPIO_InitTypeDef GPIO_InitStruct = { 0 };
+	GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;						//---配置状态为输出模式
+	GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_MEDIUM;				//---GPIO的速度---中速设备
+	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_OPENDRAIN;			//---输出模式---开漏输出
+	GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;							//---上拉
+	#ifndef USE_MCU_STM32F1
+	GPIO_InitStruct.Alternate = LL_GPIO_AF_0;						//---端口复用模式
+	#endif
+
+	//---DECA_CH_BIT的初始化
+	GPIO_InitStruct.Pin = DECA_PASS_CTR_BIT;
+	LL_GPIO_Init(DECA_PASS_CTR_PORT, &GPIO_InitStruct);
+	GPIO_OUT_0(DECA_PASS_CTR_PORT, DECA_PASS_CTR_BIT);
+
+	//---DECB_CH_BIT的初始化
+	GPIO_InitStruct.Pin = DECB_PASS_CTR_BIT;
+	LL_GPIO_Init(DECB_PASS_CTR_PORT, &GPIO_InitStruct);
+	GPIO_OUT_0(DECB_PASS_CTR_PORT, DECB_PASS_CTR_BIT);
+
+	//---DECC_CH_BIT的初始化
+	GPIO_InitStruct.Pin = DECC_PASS_CTR_BIT;
+	LL_GPIO_Init(DECC_PASS_CTR_PORT, &GPIO_InitStruct);
+	GPIO_OUT_0(DECC_PASS_CTR_PORT, DECC_PASS_CTR_BIT);
+
+	//---DECD_CH_BIT的初始化
+	GPIO_InitStruct.Pin = DECD_PASS_CTR_BIT;
+	LL_GPIO_Init(DECD_PASS_CTR_PORT, &GPIO_InitStruct);
+	GPIO_OUT_0(DECD_PASS_CTR_PORT, DECD_PASS_CTR_BIT);
+}
+
+
 ///////////////////////////////////////////////////////////////////////////////
 //////函		数：
 //////功		能：
@@ -285,6 +333,7 @@ void Decode_Init(void)
 	Decode_DecodeLEDInit();
 	Decode_DecodeRSTInit();
 	Decode_DecodeCHInit();
+	Decode_DecodePassInit();
 	Decode_DecodeTimerInit();
 }
 
@@ -323,14 +372,14 @@ void  Decode_ActivateSites(UINT8_T activateSites)
 //////////////////////////////////////////////////////////////////////////////
 void Decode_START(void)
 {
+	//---关闭实时解码灯
 	DEC_LED_OFF;
-
+	//---置位解码失败
+	//DEC_PASS_FAIL;
 	//---清零标志位
 	LL_TIM_ClearFlag(DEC_USE_TIM);
-
 	//---清零计数器
 	LL_TIM_SetCounter(DEC_USE_TIM, 0);
-
 	//---使能定时器
 	LL_TIM_EnableCounter(DEC_USE_TIM);
 }
@@ -344,9 +393,9 @@ void Decode_START(void)
 //////////////////////////////////////////////////////////////////////////////
 void Decode_STOP(void)
 {
-	//---使能定时器
+	//---不使能定时器
 	LL_TIM_DisableCounter(DEC_USE_TIM);
-	DEC_LED_OFF;
+	//DEC_LED_OFF;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -409,6 +458,61 @@ UINT8_T Decode_ScanRST(void)
 //////功		能：
 //////输入参数:
 //////输出参数:
+//////说		明： 解码通过的结果
+//////////////////////////////////////////////////////////////////////////////
+void Decode_DecodePass(UINT8_T channel, UINT8_T isPass)
+{
+	switch (channel)
+	{
+		case 0:
+			if (isPass)
+			{
+				DECA_PASS_OK;
+			}
+			else
+			{
+				DECA_PASS_FAIL;
+			}
+			break;
+		case 1:
+			if (isPass)
+			{
+				DECB_PASS_OK;
+			}
+			else
+			{
+				DECB_PASS_FAIL;
+			}
+			break;
+		case 2:
+			if (isPass)
+			{
+				DECC_PASS_OK;
+			}
+			else
+			{
+				DECC_PASS_FAIL;
+			}
+			break;
+		case 3:
+			if (isPass)
+			{
+				DECD_PASS_OK;
+			}
+			else
+			{
+				DECD_PASS_FAIL;
+			}
+			break;
+		default:
+			break;
+	}
+}
+///////////////////////////////////////////////////////////////////////////////
+//////函		数：
+//////功		能：
+//////输入参数:
+//////输出参数:
 //////说		明： 实时解码灯
 //////////////////////////////////////////////////////////////////////////////
 void Decode_DecodeLED(UINT8_T channel, UINT8_T isPass)
@@ -418,41 +522,41 @@ void Decode_DecodeLED(UINT8_T channel, UINT8_T isPass)
 		case 0:
 			if (isPass)
 			{
-				DECA_LED_OUT_1;
+				DECA_LED_IS_ON;
 			}
 			else
 			{
-				DECA_LED_OUT_0;
+				DECA_LED_IS_OFF;
 			}
 			break;
 		case 1:
 			if (isPass)
 			{
-				DECB_LED_OUT_1;
+				DECB_LED_IS_ON;
 			}
 			else
 			{
-				DECB_LED_OUT_0;
+				DECB_LED_IS_OFF;
 			}
 			break;
 		case 2:
 			if (isPass)
 			{
-				DECC_LED_OUT_1;
+				DECC_LED_IS_ON;
 			}
 			else
 			{
-				DECC_LED_OUT_0;
+				DECC_LED_IS_OFF;
 			}
 			break;
 		case 3:
 			if (isPass)
 			{
-				DECD_LED_OUT_1;
+				DECD_LED_IS_ON;
 			}
 			else
 			{
-				DECD_LED_OUT_0;
+				DECD_LED_IS_OFF;
 			}
 			break;
 		default:
@@ -723,7 +827,7 @@ void Decode_AddBit(UINT16_T channel, UINT16_T value)
 //////输出参数:
 //////说		明：
 //////////////////////////////////////////////////////////////////////////////
-void Decode_Quency(void)
+void Decode_Query(void)
 {
 	UINT32_T pulseWidth = 0;
 	UINT8_T site = 0;
@@ -747,27 +851,23 @@ void Decode_Quency(void)
 			switch (decodeStep[site])
 			{
 				case DECODE_STEP_0:
-
 					//---转到解码步序0
 					decodeStep[site] = DECODE_STEP_1;
-
 					//---初始化捕捉模式
 					decodeIcpMode[site] = 0;
-
 					//---初始化脉冲宽度
 					decodePulseWidth[site] = 0;
-
 					//---设置通道上升沿捕捉模式
 					Decode_SetPolarityRising(site);
 					break;
 				case DECODE_STEP_1:
-
 					//---解码位序清0
 					decodeBitIndex[site] = 0;
 					decodeStep[site] = DECODE_STEP_2;
-
 					//---关闭解码实时灯
 					Decode_DecodeLED(site, 0);
+					//---置位解码指示灯
+					Decode_DecodePass(site, 1);
 					break;
 				case DECODE_STEP_2:
 
@@ -776,10 +876,8 @@ void Decode_Quency(void)
 					{
 						//---计算高电平宽度
 						decodePulseWidth[site] = Decode_CalcHighPulseWidth(site);
-
 						//---复位沿抓取记录值
 						decodeIcpMode[site] = 0;
-
 						//---判断脉冲的宽度
 						if ((decodePulseWidth[site] > DECODE_PULSE_WIDTH_MIN) && (decodePulseWidth[site] < DECODE_PULSE_WIDTH_MAX))
 						{
@@ -809,10 +907,8 @@ void Decode_Quency(void)
 					{
 						//---计算高电平宽度
 						decodePulseWidth[site] = Decode_CalcLowPulseWidth(site);
-
 						//---复位沿抓取记录值
 						decodeIcpMode[site] = 0;
-
 						//---判断脉冲的宽度
 						if ((decodePulseWidth[site] > DECODE_PULSE_WIDTH_MIN) && (decodePulseWidth[site] < DECODE_PULSE_WIDTH_MAX))
 						{
@@ -827,6 +923,8 @@ void Decode_Quency(void)
 							{
 								//---解码成功，打开解码实时灯
 								Decode_DecodeLED(site, 1);
+								//---解码成功，置位解码示灯
+								Decode_DecodePass(site, 1);
 							}
 						}
 						else

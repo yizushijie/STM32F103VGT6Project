@@ -59,7 +59,8 @@ stm32f103vgt6project/rfask_task.o: ../Application/RFASK/rfask_task.c \
   ../Application/Delay\delay_task.h ../Application/Delay/delay_lib.h \
   ../Application/Delay/delay_cfg.h ../Application/SysTick\systick_task.h \
   ../Application/SysTick/systick_lib.h \
-  ../Application/SysTick/systick_cfg.h ../Application/Timer\timer_task.h \
+  ../Application/SysTick/systick_cfg.h \
+  ../Application/RFASKHW\rfaskhw_cfg.h ../Application/Timer\timer_task.h \
   ../Application/Timer/timer_lib.h ../Application/Timer/timer_cfg.h \
   ../Application/WM8510\wm8510_task.h ../Application/WM8510/wm8510_lib.h \
   ../Application/WM8510/wm8510_cfg.h ../Application/I2C\i2c_task.h \

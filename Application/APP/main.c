@@ -140,6 +140,8 @@ void Sys_Init(void)
 
 	//---WM8510的初始化
 	WM8510Task_I2C_Init(pWM8510Device0, DelayTask_us, 0);
+	//---简单的增加WM8510外部时钟的自校准功能
+	//WM8510Task_I2C_CalibrateClock(pWM8510Device0);
 
 	//---ADC初始化
 	ADCTask_ADC_Init();
@@ -160,7 +162,7 @@ void Sys_Init(void)
 	RFASKTask_Init(pRFASK);
 
 	//---备份域初始化
-	BKPTask_Init();
+	//BKPTask_Init();
 
 	//---开启看门狗
 	//IWDGTask_Init(pIWDG);
@@ -188,7 +190,7 @@ int main(void)
 	while (1)
 	{
 		//---获取SOT信号
-		getSOT = KeyTask_ScanSOT();
+		//getSOT = KeyTask_ScanSOT();
 
 		////---判断SOT信号
 		//if (getSOT != 0)
@@ -209,23 +211,20 @@ int main(void)
 		//	//}
 		//
 		//}
+		//---获取SOT信号
+		getSOT = KeyTask_ScanSOT();
 		//---读取解码信号
 		getRST = DecodeTask_ScanRST();
-
 		//---判断解码信号
 		if (getRST != 0)
 		{
-			//---查询解码
-			DecodeTask_Quency(getRST);
+			//---查询解码的初始化
+			DecodeTask_QueryInit(getRST);
 		}
-		else
-		{
-			//---执行频率电流扫描相关的任务---YSEL
-			RFASKTask_KeyTask(pUSART1, pRFASK, pWM8510Device0, getSOT);
-		}
+		//---查询解码
+		DecodeTask_Query();
 		//---执行频率电流扫描相关的任务---YSEL
 		RFASKTask_KeyTask(pUSART1, pRFASK, pWM8510Device0, getSOT);
-
 		//---在线调试命令
 		RFASKTask_Task(pUSART1, pRFASK, pWM8510Device0);
 		WDT_RESET();

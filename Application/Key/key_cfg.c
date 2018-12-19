@@ -140,52 +140,6 @@ void Key_EOTInit(void)
 
 ///////////////////////////////////////////////////////////////////////////////
 //////函		数：
-//////功		能： 解码成功标志位
-//////输入参数:
-//////输出参数:
-//////说		明：
-//////////////////////////////////////////////////////////////////////////////
-void Key_DECInit(void)
-{
-	//---使能GPIO的时钟
-	GPIOTask_Clock(DECA_PASS_CTR_PORT, 1);
-	GPIOTask_Clock(DECB_PASS_CTR_PORT, 1);
-	GPIOTask_Clock(DECC_PASS_CTR_PORT, 1);
-	GPIOTask_Clock(DECD_PASS_CTR_PORT, 1);
-
-	//---GPIO的结构体
-	LL_GPIO_InitTypeDef GPIO_InitStruct = { 0 };
-	GPIO_InitStruct.Mode = LL_GPIO_MODE_OUTPUT;						//---配置状态为输出模式
-	GPIO_InitStruct.Speed = LL_GPIO_SPEED_FREQ_MEDIUM;				//---GPIO的速度---中速设备
-	GPIO_InitStruct.OutputType = LL_GPIO_OUTPUT_OPENDRAIN;			//---输出模式---开漏输出
-	GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;							//---上拉
-	#ifndef USE_MCU_STM32F1
-	GPIO_InitStruct.Alternate = LL_GPIO_AF_0;						//---端口复用模式
-	#endif
-
-	//---DECA_CH_BIT的初始化
-	GPIO_InitStruct.Pin = DECA_PASS_CTR_BIT;
-	LL_GPIO_Init(DECA_PASS_CTR_PORT, &GPIO_InitStruct);
-	GPIO_OUT_0(DECA_PASS_CTR_PORT, DECA_PASS_CTR_BIT);
-
-	//---DECB_CH_BIT的初始化
-	GPIO_InitStruct.Pin = DECB_PASS_CTR_BIT;
-	LL_GPIO_Init(DECB_PASS_CTR_PORT, &GPIO_InitStruct);
-	GPIO_OUT_0(DECB_PASS_CTR_PORT, DECB_PASS_CTR_BIT);
-
-	//---DECC_CH_BIT的初始化
-	GPIO_InitStruct.Pin = DECC_PASS_CTR_BIT;
-	LL_GPIO_Init(DECC_PASS_CTR_PORT, &GPIO_InitStruct);
-	GPIO_OUT_0(DECC_PASS_CTR_PORT, DECC_PASS_CTR_BIT);
-
-	//---DECD_CH_BIT的初始化
-	GPIO_InitStruct.Pin = DECD_PASS_CTR_BIT;
-	LL_GPIO_Init(DECD_PASS_CTR_PORT, &GPIO_InitStruct);
-	GPIO_OUT_0(DECD_PASS_CTR_PORT, DECD_PASS_CTR_BIT);
-}
-
-///////////////////////////////////////////////////////////////////////////////
-//////函		数：
 //////功		能：
 //////输入参数:
 //////输出参数:
@@ -196,7 +150,6 @@ void Key_Init()
 	Key_BINInit();
 	Key_SOTInit();
 	Key_EOTInit();
-	Key_DECInit();
 }
 
 ///////////////////////////////////////////////////////////////////////////////

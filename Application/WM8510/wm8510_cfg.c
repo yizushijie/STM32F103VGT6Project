@@ -285,7 +285,7 @@ void WM8510_Calc_FreqAdd(WM8510_HandlerType *WM8510x, UINT32_T freq)
 {
 	//WM8510x->freqAdd = ( freq / 1000 );
 	//WM8510x->freqAdd *= 2;
-	WM8510x->freqAdd = 0;//( WM8510x->freqAdd + 50 ) / 100;
+	WM8510x->freqAdd =0;//( WM8510x->freqAdd + 50 ) / 100;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -298,7 +298,7 @@ void WM8510_Calc_FreqAdd(WM8510_HandlerType *WM8510x, UINT32_T freq)
 void WM8510_Calc_PllRate(WM8510_HandlerType *WM8510x, UINT32_T freq)
 {
 	//---计算中，这个频率会发生改变，故每次使用的时候需要重新赋值
-	WM8510x->oscFreq = WM8510_MCLK_HZ;
+	//WM8510x->oscFreq = WM8510_MCLK_HZ;
 
 	//---补偿值，每次归零
 	WM8510x->freqAdd = 0;
@@ -674,6 +674,9 @@ void WM8510_I2C_Reset(WM8510_HandlerType *WM8510x)
 	memset(WM8510x->lastR37, 0, 2);
 	memset(WM8510x->lastR38, 0, 2);
 	memset(WM8510x->lastR39, 0, 2);
+
+	//---输出频率归零
+	WM8510x->freqHz = 0;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -806,6 +809,38 @@ UINT8_T WM8510_I2C_SetFreqHzWithAllFreqRegAndCalibrateFreqKHzOutPut(WM8510_Handl
 	if (WM8510_I2C_SetFreqHzWithAllFreqReg(WM8510x, freq) == OK_0)
 	{
 		return WM8510_CalibrateFreqKHzOutPut(WM8510x);
+	}
+	return ERROR_1;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//////函		数：
+//////功		能：
+//////输入参数:
+//////输出参数:
+//////说		明：
+//////////////////////////////////////////////////////////////////////////////
+UINT8_T WM8510_I2C_CalibrateClock(WM8510_HandlerType *WM8510x)
+{
+	//---设置WM8510输出外部参考时钟
+	if (WM8510_I2C_SetFreqHzWithAllFreqReg(WM8510x, WM8510_MCLK_HZ) == OK_0)
+	{
+		//---开启校准程序
+		TimerTask_CalcFreq_Task();
+		//---获取当前输出的频率
+		UINT32_T freq = TimerTask_GetFreqKHz();
+		if (freq > WM8510_MCLK_KHZ)
+		{
+			
+			WM8510x->oscFreq +=200;
+		}
+		else if(freq < WM8510_MCLK_KHZ)
+		{
+			WM8510x->oscFreq -=200;
+		}
+		//---复位设备
+		WM8510_I2C_Reset(WM8510x);
+		return OK_0;
 	}
 	return ERROR_1;
 }

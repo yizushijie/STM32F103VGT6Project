@@ -72,30 +72,33 @@ void DecodeTask_IRQTask(void)
 	DecodeLib_IRQTask();
 }
 
+
 ///////////////////////////////////////////////////////////////////////////////
 //////函		数：
-//////功		能：
+//////功		能：查询解码初始化，产看SITE信息
 //////输入参数:
 //////输出参数:
 //////说		明：
 //////////////////////////////////////////////////////////////////////////////
-void DecodeTask_Quency(UINT8_T activateSites)
+void DecodeTask_QueryInit(UINT8_T activateSites)
 {
 	//---计算激活的SITE数据
 	DecodeTask_ActivateSites(activateSites);
-
 	//---启动解码
 	DecodeTask_START();
+}
 
-	//---等待SOT变高，等待结束
-	while (KeyTask_GetSOT() != 0)
-	{
-		DecodeLib_Quency();
-
-		//---喂狗
-		WDT_RESET();
-	}
-
+///////////////////////////////////////////////////////////////////////////////
+//////函		数：
+//////功		能：查询的方式进行解码
+//////输入参数:
+//////输出参数:
+//////说		明：
+//////////////////////////////////////////////////////////////////////////////
+void DecodeTask_Query(void)
+{
+	//---查询解码
+	DecodeLib_Quency();
 	//---关闭解码
 	DecodeTask_STOP();
 }

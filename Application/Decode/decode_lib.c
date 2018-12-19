@@ -80,5 +80,5 @@ void DecodeLib_IRQTask(void)
 //////////////////////////////////////////////////////////////////////////////
 void DecodeLib_Quency(void)
 {
-	Decode_Quency();
+	Decode_Query();
 }

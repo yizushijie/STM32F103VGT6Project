@@ -13,7 +13,7 @@ extern "C" {
 	//===每100KHz需要补偿15Hz
 	//===每20KHz需要补偿3Hz
 	//=== 12M时钟下最小输出频率是156KHz----单位为HZ
-	#define WM8510_MCLK_HZ				12000000UL
+	#define WM8510_MCLK_HZ				12000300UL//12000000UL
 	#define WM8510_MCLK_KHZ				( WM8510_MCLK_HZ/1000UL )
 	#define WM8510_MCLK_MHZ				( WM8510_MCLK_HZ/1000000UL )
 
@@ -486,6 +486,7 @@ extern "C" {
 	UINT8_T WM8510_I2C_SetFreqHzWithAllFreqReg(WM8510_HandlerType *WM8510x, UINT32_T freq);
 	UINT8_T WM8510_CalibrateFreqKHzOutPut(WM8510_HandlerType *WM8510x);
 	UINT8_T WM8510_I2C_SetFreqHzWithAllFreqRegAndCalibrateFreqKHzOutPut(WM8510_HandlerType *WM8510x, UINT32_T freq);
+	UINT8_T WM8510_I2C_CalibrateClock(WM8510_HandlerType *WM8510x);
 	//////////////////////////////////////////////////////////////////////////////////////
 	#ifdef __cplusplus
 }

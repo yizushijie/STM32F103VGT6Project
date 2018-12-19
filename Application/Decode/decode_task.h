@@ -14,7 +14,8 @@ extern "C" {
 	void DecodeTask_STOP(void);
 	UINT8_T DecodeTask_ScanRST(void);
 	void DecodeTask_IRQTask(void);
-	void DecodeTask_Quency(UINT8_T activateSites);
+	void DecodeTask_QueryInit(UINT8_T activateSites);
+	void DecodeTask_Query(void);
 	//////////////////////////////////////////////////////////////////////////////////////
 	#ifdef __cplusplus
 }

@@ -59,4 +59,5 @@ stm32f103vgt6project/decode_lib.o: ../Application/Decode/decode_lib.c \
   ../Application/Timer/timer_cfg.h ../Application/SysTick\systick_task.h \
   ../Application/SysTick/systick_lib.h \
   ../Application/SysTick/systick_cfg.h ../Application/Delay\delay_task.h \
-  ../Application/Delay/delay_lib.h ../Application/Delay/delay_cfg.h
+  ../Application/Delay/delay_lib.h ../Application/Delay/delay_cfg.h \
+  ../Application/RFASKHW\rfaskhw_cfg.h

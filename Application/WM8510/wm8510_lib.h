@@ -18,6 +18,7 @@ extern "C" {
 	UINT8_T WM8510Lib_I2C_SetFreqHzWithAllFreqReg(WM8510_HandlerType *WM8510x, UINT32_T freq);
 	UINT8_T WM8510Lib_CalibrateFreqKHzOutPut(WM8510_HandlerType *WM8510x);
 	UINT8_T WM8510Lib_I2C_SetFreqHzWithAllFreqRegAndCalibrateFreqKHzOutPut(WM8510_HandlerType *WM8510x, UINT32_T freq);
+	UINT8_T WM8510Lib_I2C_CalibrateClock(WM8510_HandlerType *WM8510x);
 	//////////////////////////////////////////////////////////////////////////////////////
 	#ifdef __cplusplus
 }

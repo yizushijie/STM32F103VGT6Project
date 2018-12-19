@@ -76,10 +76,10 @@ stm32f103vgt6project/main.o: ../Application/APP/main.c \
   ../Application/Decode\decode_task.h ../Application/Decode/decode_lib.h \
   ../Application/Decode/decode_cfg.h ../Application/Timer\timer_task.h \
   ../Application/Timer/timer_lib.h ../Application/Timer/timer_cfg.h \
-  ../Application/Key\key_task.h ../Application/Key/key_lib.h \
-  ../Application/Key/key_cfg.h ../Application/DHT11\dht11_task.h \
-  ../Application/DHT11/dht11_lib.h ../Application/DHT11/dht11_cfg.h \
-  ../Application/DS18B20\ds18b20_task.h \
+  ../Application/RFASKHW\rfaskhw_cfg.h ../Application/Key\key_task.h \
+  ../Application/Key/key_lib.h ../Application/Key/key_cfg.h \
+  ../Application/DHT11\dht11_task.h ../Application/DHT11/dht11_lib.h \
+  ../Application/DHT11/dht11_cfg.h ../Application/DS18B20\ds18b20_task.h \
   ../Application/DS18B20/ds18b20_lib.h \
   ../Application/DS18B20/ds18b20_cfg.h \
   ../Application/OneWire\one_wire_task.h \

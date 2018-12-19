@@ -69,6 +69,7 @@ stm32f103vgt6project/stm32f1xx_it.o: ../STM32F1xx/stm32f1xx_it.c \
   ../Application/Decode\decode_task.h ../Application/Decode/decode_lib.h \
   ../Application/Decode/decode_cfg.h ../Application/Timer\timer_task.h \
   ../Application/Timer/timer_lib.h ../Application/Timer/timer_cfg.h \
-  ../Application/Key\key_task.h ../Application/Key/key_lib.h \
-  ../Application/Key/key_cfg.h ../Application/LED\led_task.h \
-  ../Application/LED/led_lib.h ../Application/LED/led_cfg.h
+  ../Application/RFASKHW\rfaskhw_cfg.h ../Application/Key\key_task.h \
+  ../Application/Key/key_lib.h ../Application/Key/key_cfg.h \
+  ../Application/LED\led_task.h ../Application/LED/led_lib.h \
+  ../Application/LED/led_cfg.h

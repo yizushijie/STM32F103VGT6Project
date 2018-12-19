@@ -107,3 +107,15 @@ UINT8_T WM8510Lib_I2C_SetFreqHzWithAllFreqRegAndCalibrateFreqKHzOutPut(WM8510_Ha
 {
 	return WM8510_I2C_SetFreqHzWithAllFreqRegAndCalibrateFreqKHzOutPut(WM8510x, freq);
 }
+
+///////////////////////////////////////////////////////////////////////////////
+//////函		数：
+//////功		能：
+//////输入参数:
+//////输出参数:
+//////说		明：
+//////////////////////////////////////////////////////////////////////////////
+UINT8_T WM8510Lib_I2C_CalibrateClock(WM8510_HandlerType *WM8510x)
+{
+	return WM8510_I2C_CalibrateClock(WM8510x);
+}
