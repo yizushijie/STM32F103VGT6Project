@@ -120,7 +120,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
-          <Name>皷C!`E緒皷C!`E緒皷C!</Name>
+          <Name>燩$wPX?燩$wPX?</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -152,66 +152,34 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>404</LineNumber>
+          <LineNumber>1842</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134256346</Address>
+          <Address>134250968</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\Application\RFASK\rfask_cfg.c</Filename>
+          <Filename>..\Application\RFASK\rfask_task.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\STM32F103VGT6Project\../Application/RFASK/rfask_cfg.c\404</Expression>
+          <Expression>\\STM32F103VGT6Project\../Application/RFASK/rfask_task.c\1842</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>400</LineNumber>
+          <LineNumber>1843</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134256308</Address>
+          <Address>0</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\Application\RFASK\rfask_cfg.c</Filename>
+          <BreakIfRCount>0</BreakIfRCount>
+          <Filename>..\Application\RFASK\rfask_task.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\STM32F103VGT6Project\../Application/RFASK/rfask_cfg.c\400</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>396</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134256270</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\Application\RFASK\rfask_cfg.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\STM32F103VGT6Project\../Application/RFASK/rfask_cfg.c\396</Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
-          <LineNumber>408</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134256384</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\Application\RFASK\rfask_cfg.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\STM32F103VGT6Project\../Application/RFASK/rfask_cfg.c\408</Expression>
+          <Expression></Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -258,7 +226,7 @@
         <Ww>
           <count>8</count>
           <WinNumber>1</WinNumber>
-          <ItemText>USART1_RX_BUFFER</ItemText>
+          <ItemText>USART1_TX_BUFFER</ItemText>
         </Ww>
         <Ww>
           <count>9</count>
@@ -298,7 +266,12 @@
         <Ww>
           <count>16</count>
           <WinNumber>1</WinNumber>
-          <ItemText>freq,0x0A</ItemText>
+          <ItemText>xtalHz,0x0A</ItemText>
+        </Ww>
+        <Ww>
+          <count>17</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>_return</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>

@@ -9,6 +9,7 @@ extern "C" {
 	#include "gpio_task.h"
 	#include "delay_task.h"
 	#include "rfaskhw_cfg.h"
+	#include "rfask_task.h"
 	//////////////////////////////////////////////////////////////////////////////////////
 
 	//===SOTA的配置
@@ -131,6 +132,15 @@ extern "C" {
 	#define BIND_CTR_OUT_1								GPIO_OUT_1(    BIND_CTR_PORT,BIND_CTR_BIT)
 	#define BIND_CTR_OUT_C								GPIO_OUT_C(    BIND_CTR_PORT,BINC_CTR_BIT)
 
+	#define SOT_CTR_OUT_1								( SOTA_CTR_OUT_1,SOTB_CTR_OUT_1,SOTC_CTR_OUT_1,SOTD_CTR_OUT_1 )
+	#define SOT_CTR_OUT_0								( SOTA_CTR_OUT_0,SOTB_CTR_OUT_0,SOTC_CTR_OUT_0,SOTD_CTR_OUT_0 )
+
+	#define EOT_CTR_OUT_1								( EOTA_CTR_OUT_1,EOTB_CTR_OUT_1,EOTC_CTR_OUT_1,EOTD_CTR_OUT_1 )
+	#define EOT_CTR_OUT_0								( EOTA_CTR_OUT_0,EOTB_CTR_OUT_0,EOTC_CTR_OUT_0,EOTD_CTR_OUT_0)
+	
+	#define BIN_CTR_OUT_1								( BINA_CTR_OUT_1,BINB_CTR_OUT_1,BINC_CTR_OUT_1,BIND_CTR_OUT_1 )
+	#define BIN_CTR_OUT_0								( BINA_CTR_OUT_0,BINB_CTR_OUT_0,BINC_CTR_OUT_0,BIND_CTR_OUT_0 )
+	
 	//===函数调用
 	void Key_Init();
 	UINT8_T Key_GetSOT(void);

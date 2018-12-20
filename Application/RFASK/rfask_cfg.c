@@ -523,66 +523,67 @@ UINT8_T RFASK_ScanYSEL(void)
 
 	//---读取YSELD的值
 	_return |= RFASK_GetYSELD();
+	//---计算YSEL结果
 	_return &= 0x0F;
 
-	//---处理YSEL的值
-	if (_return == 0)
-	{
-		//---没有收到YSEL
-		_return = 0x0F;
-	}
-	else if (_return == 0x0F)
-	{
-		//---YSEL全部触发
-		_return = 0;
-	}
+//	//---处理YSEL的值
+//	if (_return == 0)
+//	{
+//		//---没有收到YSEL
+//		_return = 0x0F;
+//	}
+//	else if (_return == 0x0F)
+//	{
+//		//---YSEL全部触发
+//		_return = 0;
+//	}
 
 	//---索引任务序号
 	switch (_return)
 	{
-		case 0:
+		case 1:
 			_return = RFASK_TASK_YSEL1;
 			break;
-		case 1:
+		case 2:
 			_return = RFASK_TASK_YSEL2;
 			break;
-		case 2:
+		case 3:
 			_return = RFASK_TASK_YSEL3;
 			break;
-		case 3:
+		case 4:
 			_return = RFASK_TASK_YSEL4;
 			break;
-		case 4:
+		case 5:
 			_return = RFASK_TASK_POINT_ONE;
 			break;
-		case 5:
+		case 6:
 			_return = RFASK_TASK_POINT_TWO;
 			break;
-		case 6:
+		case 7:
 			_return = 7;
 			break;
-		case 7:
+		case 8:
 			_return = 8;
 			break;
-		case 8:
+		case 9:
 			_return = 9;
 			break;
-		case 9:
+		case 10:
 			_return = 10;
 			break;
-		case 10:
+		case 11:
 			_return = 11;
 			break;
-		case 11:
+		case 12:
 			_return = 12;
 			break;
-		case 12:
+		case 13:
 			_return = 13;
 			break;
-		case 13:
+		case 14:
 			_return = 14;
 			break;
-		case 14:
+		case 15:
 			_return = 15;
 			break;
 		default:

@@ -196,9 +196,10 @@ UINT8_T Key_ScanSOT(void)
 	UINT8_T _return = Key_GetSOT();
 	if (_return != 0)
 	{
-		//---延时等待，用于软件消抖同时用于等待其他SITE的触发信号的到来
+		#ifndef USE_FT_CP_TEST
+		//---延时等待，调试模式下用于软件消抖同时用于等待其他SITE的触发信号的到来
 		DelayTask_ms(10);
-
+		#endif
 		//---读取SOT的状态
 		_return = Key_GetSOT();
 	}

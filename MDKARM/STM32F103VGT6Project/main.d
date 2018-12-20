@@ -76,10 +76,18 @@ stm32f103vgt6project/main.o: ../Application/APP/main.c \
   ../Application/Decode\decode_task.h ../Application/Decode/decode_lib.h \
   ../Application/Decode/decode_cfg.h ../Application/Timer\timer_task.h \
   ../Application/Timer/timer_lib.h ../Application/Timer/timer_cfg.h \
-  ../Application/RFASKHW\rfaskhw_cfg.h ../Application/Key\key_task.h \
-  ../Application/Key/key_lib.h ../Application/Key/key_cfg.h \
-  ../Application/DHT11\dht11_task.h ../Application/DHT11/dht11_lib.h \
-  ../Application/DHT11/dht11_cfg.h ../Application/DS18B20\ds18b20_task.h \
+  ../Application/RFASKHW\rfaskhw_cfg.h ../Application/RFASK\rfask_task.h \
+  ../Application/RFASK/rfask_lib.h ../Application/RFASK/rfask_cfg.h \
+  ../Application/WM8510\wm8510_task.h ../Application/WM8510/wm8510_lib.h \
+  ../Application/WM8510/wm8510_cfg.h ../Application/USART\usart_task.h \
+  ../Application/USART/usart_lib.h ../Application/USART/usart_cfg.h \
+  ../Application/Power\power_task.h ../Application/Power/power_lib.h \
+  ../Application/Power/power_cfg.h ../Application/LED\led_task.h \
+  ../Application/LED/led_lib.h ../Application/LED/led_cfg.h \
+  ../Application/Key\key_task.h ../Application/Key/key_lib.h \
+  ../Application/Key/key_cfg.h ../Application/DHT11\dht11_task.h \
+  ../Application/DHT11/dht11_lib.h ../Application/DHT11/dht11_cfg.h \
+  ../Application/DS18B20\ds18b20_task.h \
   ../Application/DS18B20/ds18b20_lib.h \
   ../Application/DS18B20/ds18b20_cfg.h \
   ../Application/OneWire\one_wire_task.h \
@@ -96,24 +104,17 @@ stm32f103vgt6project/main.o: ../Application/APP/main.c \
   ../Application/SPI/spi_lib.h ../Application/SPI/spi_cfg.h \
   ../Application/LCD1602\lcd1602_task.h \
   ../Application/LCD1602/lcd1602_lib.h \
-  ../Application/LCD1602/lcd1602_cfg.h ../Application/LED\led_task.h \
-  ../Application/LED/led_lib.h ../Application/LED/led_cfg.h \
+  ../Application/LCD1602/lcd1602_cfg.h \
   ../Application/NRF2401\nrf2401_task.h \
   ../Application/NRF2401/nrf2401_lib.h \
   ../Application/NRF2401/nrf2401_cfg.h ../Application/OLED\oled_task.h \
   ../Application/OLED/oled_lib.h ../Application/OLED/oled_cfg.h \
   ../Application/PCF8563\pcf8563_task.h \
   ../Application/PCF8563/pcf8563_lib.h \
-  ../Application/PCF8563/pcf8563_cfg.h ../Application/Power\power_task.h \
-  ../Application/Power/power_lib.h ../Application/Power/power_cfg.h \
-  ../Application/RFASK\rfask_task.h ../Application/RFASK/rfask_lib.h \
-  ../Application/RFASK/rfask_cfg.h ../Application/WM8510\wm8510_task.h \
-  ../Application/WM8510/wm8510_lib.h ../Application/WM8510/wm8510_cfg.h \
-  ../Application/USART\usart_task.h ../Application/USART/usart_lib.h \
-  ../Application/USART/usart_cfg.h ../Application/Random\random_task.h \
-  ../Application/Random/random_lib.h ../Application/Random/random_cfg.h \
-  ../Application/SHT2x\sht2x_task.h ../Application/SHT2x/sht2x_lib.h \
-  ../Application/SHT2x/sht2x_cfg.h ../Application/W25Qxx\w25qxx_task.h \
-  ../Application/W25Qxx/w25qxx_lib.h ../Application/W25Qxx/w25qxx_cfg.h \
-  ../Application/WWDG\wwdg_task.h ../Application/WWDG/wwdg_lib.h \
-  ../Application/WWDG/wwdg_cfg.h
+  ../Application/PCF8563/pcf8563_cfg.h \
+  ../Application/Random\random_task.h ../Application/Random/random_lib.h \
+  ../Application/Random/random_cfg.h ../Application/SHT2x\sht2x_task.h \
+  ../Application/SHT2x/sht2x_lib.h ../Application/SHT2x/sht2x_cfg.h \
+  ../Application/W25Qxx\w25qxx_task.h ../Application/W25Qxx/w25qxx_lib.h \
+  ../Application/W25Qxx/w25qxx_cfg.h ../Application/WWDG\wwdg_task.h \
+  ../Application/WWDG/wwdg_lib.h ../Application/WWDG/wwdg_cfg.h

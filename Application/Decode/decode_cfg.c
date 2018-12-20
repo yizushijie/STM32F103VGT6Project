@@ -203,22 +203,22 @@ void Decode_DecodePassInit(void)
 	//---DECA_CH_BIT的初始化
 	GPIO_InitStruct.Pin = DECA_PASS_CTR_BIT;
 	LL_GPIO_Init(DECA_PASS_CTR_PORT, &GPIO_InitStruct);
-	GPIO_OUT_0(DECA_PASS_CTR_PORT, DECA_PASS_CTR_BIT);
+	GPIO_OUT_1(DECA_PASS_CTR_PORT, DECA_PASS_CTR_BIT);
 
 	//---DECB_CH_BIT的初始化
 	GPIO_InitStruct.Pin = DECB_PASS_CTR_BIT;
 	LL_GPIO_Init(DECB_PASS_CTR_PORT, &GPIO_InitStruct);
-	GPIO_OUT_0(DECB_PASS_CTR_PORT, DECB_PASS_CTR_BIT);
+	GPIO_OUT_1(DECB_PASS_CTR_PORT, DECB_PASS_CTR_BIT);
 
 	//---DECC_CH_BIT的初始化
 	GPIO_InitStruct.Pin = DECC_PASS_CTR_BIT;
 	LL_GPIO_Init(DECC_PASS_CTR_PORT, &GPIO_InitStruct);
-	GPIO_OUT_0(DECC_PASS_CTR_PORT, DECC_PASS_CTR_BIT);
+	GPIO_OUT_1(DECC_PASS_CTR_PORT, DECC_PASS_CTR_BIT);
 
 	//---DECD_CH_BIT的初始化
 	GPIO_InitStruct.Pin = DECD_PASS_CTR_BIT;
 	LL_GPIO_Init(DECD_PASS_CTR_PORT, &GPIO_InitStruct);
-	GPIO_OUT_0(DECD_PASS_CTR_PORT, DECD_PASS_CTR_BIT);
+	GPIO_OUT_1(DECD_PASS_CTR_PORT, DECD_PASS_CTR_BIT);
 }
 
 
@@ -357,10 +357,26 @@ void  Decode_ActivateSites(UINT8_T activateSites)
 		{
 			decodeActivateSite[i] = 0x00;
 		}
-
 		//---右移一位
 		activateSites >>= 1;
 	}
+}
+///////////////////////////////////////////////////////////////////////////////
+//////函		数： 
+//////功		能： 设置所有的SITE为不激活状态
+//////输入参数: 
+//////输出参数: 
+//////说		明： 
+//////////////////////////////////////////////////////////////////////////////
+void  Decode_ClearActivateSites(void)
+{
+	//---关闭解码指示灯
+	DEC_LED_OFF;
+	//---置位解码失败
+	//DEC_PASS_FAIL;
+	memset(decodeActivateSite, 0, DECODE_SITE_COUNT);
+	//---关闭实时解码
+	Decode_STOP();
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -444,9 +460,10 @@ UINT8_T Decode_ScanRST(void)
 	//---检查是否有解码信号
 	if (_return != 0)
 	{
-		//---延时等待，用于软件消抖同时用于等待其他SITE的触发信号的到来
+		#ifndef USE_FT_CP_TEST
+		//---延时等待，调试模式下用于软件消抖同时用于等待其他SITE的触发信号的到来
 		DelayTask_ms(10);
-
+		#endif
 		//---读取RST的状态
 		_return = Decode_GetRST();
 	}
@@ -867,7 +884,7 @@ void Decode_Query(void)
 					//---关闭解码实时灯
 					Decode_DecodeLED(site, 0);
 					//---置位解码指示灯
-					Decode_DecodePass(site, 1);
+					//Decode_DecodePass(site, 1);
 					break;
 				case DECODE_STEP_2:
 
@@ -924,7 +941,7 @@ void Decode_Query(void)
 								//---解码成功，打开解码实时灯
 								Decode_DecodeLED(site, 1);
 								//---解码成功，置位解码示灯
-								Decode_DecodePass(site, 1);
+								//Decode_DecodePass(site, 1);
 							}
 						}
 						else

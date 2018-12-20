@@ -1239,6 +1239,10 @@ UINT8_T RFASKTask_FreqCurrentScan(USART_HandlerType*USARTx, RFASK_HandlerType *r
 	UINT32_T freqX100MHz = rfaskFreqCurrent->msgStartFreqX100MHz;
 	UINT32_T xtalHz = 0;
 
+	//---停止解码
+	DecodeTask_STOP();
+	//---喂狗
+	WDT_RESET();
 	//---初始化合格/失效判断结果数组---初始化为合格模式
 	memset(rfask->msgSitePass, 0, FREQ_CURRENT_MAX_SITE);
 
@@ -1290,10 +1294,10 @@ UINT8_T RFASKTask_FreqCurrentScan(USART_HandlerType*USARTx, RFASK_HandlerType *r
 		CLK_FREQ_ON;
 
 		//---等待上电稳定
-		DelayTask_ms(4);
+		DelayTask_ms(6);
 
 		//---前10个点，多等几次上电稳定
-		if (freqPointNum < 10)
+		if (freqPointNum <10)
 		{
 			DelayTask_ms(10);
 		}
@@ -1372,6 +1376,8 @@ UINT8_T RFASKTask_FreqCurrentScan(USART_HandlerType*USARTx, RFASK_HandlerType *r
 			USARTTask_RealTime_AddByte(USARTx, (UINT8_T)(rfask->msgSiteCurrent[siteNum] >> 8));
 			USARTTask_RealTime_AddByte(USARTx, (UINT8_T)(rfask->msgSiteCurrent[siteNum]));
 		}
+		//---喂狗，避免长时间的，从而导致看门狗复位
+		WDT_RESET();
 	}
 
 	//---发送测试完成的结果
@@ -1387,7 +1393,10 @@ UINT8_T RFASKTask_FreqCurrentScan(USART_HandlerType*USARTx, RFASK_HandlerType *r
 	//---关闭电源
 	DPS_POWER_OFF;
 
-	//---等待SOT变低
+	//---设置频率工作在不工作的点,默认是20KHz
+	RFASKTask_SetClockFreq(rfask, WM8510x, FREQ_YSEL_X100MHz);
+	//---复位时钟芯片WM8510，需要评估一下那个比较的适合当前模式
+	WM8510Task_I2C_Reset(WM8510x);
 	//---返回值
 	return OK_0;
 }
@@ -1694,11 +1703,13 @@ UINT8_T RFASKTask_HandlerTask(USART_HandlerType*USARTx, RFASK_HandlerType *rfask
 
 			//---第一个电压点的频率电流扫描
 		case CMD_RFASK_CMD1_FREQ_CURRENT_POINT_ONE:
+			//---频率电流扫描
 			_return = RFASKTask_FreqCurrentPointOneTask(USARTx, rfask, WM8510x);
 			break;
 
 			//---第二个电压点的频率电流扫描
 		case CMD_RFASK_CMD1_FREQ_CURRENT_POINT_TWO:
+			//---频率电流扫描
 			_return = RFASKTask_FreqCurrentPointTwoTask(USARTx, rfask, WM8510x);
 			break;
 		default:
@@ -1835,8 +1846,26 @@ UINT8_T RFASKTask_KeyTask(USART_HandlerType*USARTx, RFASK_HandlerType *rfask, WM
 		//---没有解读到YSEL信息，返回2
 		return ERROR_2;
 	}
+	else if (_return==RFASK_TASK_CLEAR)
+	{
+		//===清除所有的状态标志位
+		//---解码状态清零
+		DecodeTask_ClearActivateSites();
+		//---复位时钟芯片WM8510
+		WM8510Task_I2C_Reset(WM8510x);
+		//---设置时钟不输出
+		CLK_FREQ_OFF;
+		//---SOT输出高
+		EOT_CTR_OUT_1;
+		BIN_CTR_OUT_1;
+	}
 	else
 	{
+		if (activateSites==0)
+		{
+			//---没有SITE激活，
+			return ERROR_3;
+		}
 		RFASKTask_ActivateSites(rfask, activateSites);
 		//---初始化EOT
 		RFASKTask_EOTSTART(rfask);
@@ -1870,10 +1899,14 @@ UINT8_T RFASKTask_KeyTask(USART_HandlerType*USARTx, RFASK_HandlerType *rfask, WM
 			case RFASK_TASK_POINT_ONE:
 				//---执行频率电流扫描第一个点
 				RFASKTask_FreqCurrentScan(USARTx, rfask, &rfask->msgFreqCurrentPointOne, WM8510x);
+				//---不使能频率输出
+				CLK_FREQ_OFF;
 				break;
 			case RFASK_TASK_POINT_TWO:
 				//---执行频率电流扫描第二个点
 				RFASKTask_FreqCurrentScan(USARTx, rfask, &rfask->msgFreqCurrentPointTwo, WM8510x);
+				//---不使能频率输出
+				CLK_FREQ_OFF;
 				break;
 			default:
 				CLK_FREQ_OFF;
@@ -1884,12 +1917,6 @@ UINT8_T RFASKTask_KeyTask(USART_HandlerType*USARTx, RFASK_HandlerType *rfask, WM
 		RFASKTask_BINPass(rfask);
 		//---完成EOT信号
 		RFASKTask_EOTSTOP();
-		//---若是频率电流扫描，那么在工作完成之后，需要进时钟设置到不工作的作态
-		if ((_return == RFASK_TASK_POINT_ONE) || (_return == RFASK_TASK_POINT_TWO))
-		{
-			//---设置频率工作在不工作的点,默认是20KHz
-			RFASKTask_SetClockFreq(rfask, WM8510x, FREQ_YSEL_X100MHz);
-		}
 	}
 	if (_return != 0xFF)
 	{

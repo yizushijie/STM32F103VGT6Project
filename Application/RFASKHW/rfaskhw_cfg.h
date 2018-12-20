@@ -190,36 +190,36 @@ extern "C" {
 	#define YSEL3B_BIT					EOTB_BIT_D
 
 	//===YSEL0C
-	#define YSEL0C_PORT					GPIOD
-	#define YSEL0C_BIT					LL_GPIO_PIN_7
+	#define YSEL0C_PORT					YSEL0C_PORT_D//GPIOD
+	#define YSEL0C_BIT					YSEL0C_BIT_D//LL_GPIO_PIN_7
 
 	//===YSEL1C
-	#define YSEL1C_PORT					GPIOD
-	#define YSEL1C_BIT					LL_GPIO_PIN_6
+	#define YSEL1C_PORT					YSEL1C_PORT_D//GPIOD
+	#define YSEL1C_BIT					YSEL1C_BIT_D //LL_GPIO_PIN_6
 
 	//===YSEL2C
-	#define YSEL2C_PORT					GPIOD	
-	#define YSEL2C_BIT					LL_GPIO_PIN_5
+	#define YSEL2C_PORT					YSEL2C_PORT_D//GPIOD	
+	#define YSEL2C_BIT					YSEL2C_BIT_D //LL_GPIO_PIN_5
 
 	//===YSEL3C
-	#define YSEL3C_PORT					GPIOD
-	#define YSEL3C_BIT					LL_GPIO_PIN_4
+	#define YSEL3C_PORT					YSEL3C_PORT_D//GPIOD
+	#define YSEL3C_BIT					YSEL3C_BIT_D //LL_GPIO_PIN_4
 
 	//===YSEL0D
-	#define YSEL0D_PORT					GPIOD
-	#define YSEL0D_BIT					LL_GPIO_PIN_15
+	#define YSEL0D_PORT					YSEL0D_PORT_D//GPIOD
+	#define YSEL0D_BIT					YSEL0D_BIT_D //LL_GPIO_PIN_15
 
 	//===YSEL1D
-	#define YSEL1D_PORT					GPIOD
-	#define YSEL1D_BIT					LL_GPIO_PIN_14
+	#define YSEL1D_PORT					YSEL1D_PORT_D//GPIOD
+	#define YSEL1D_BIT					YSEL1D_BIT_D //LL_GPIO_PIN_14
 
 	//===YSEL2D
-	#define YSEL2D_PORT					GPIOD
-	#define YSEL2D_BIT					LL_GPIO_PIN_13
+	#define YSEL2D_PORT					YSEL2D_PORT_D//GPIOD
+	#define YSEL2D_BIT					YSEL2D_BIT_D //LL_GPIO_PIN_13
 
 	//===YSEL3D	
-	#define YSEL3D_PORT					GPIOD
-	#define YSEL3D_BIT					LL_GPIO_PIN_12
+	#define YSEL3D_PORT					YSEL3D_PORT_D//GPIOD
+	#define YSEL3D_BIT					YSEL3D_BIT_D //LL_GPIO_PIN_12
 
 	//===SITEA的SOT，BIN，EOT,RST,DEC配置
 	//===开始	
@@ -239,8 +239,8 @@ extern "C" {
 	#define	RSTA_BIT					YSEL1A_BIT_D
 	
 	//===解码成功标志，0---解码成功，1---解码失败
-	#define DECA_PASS_PORT				YSEL0A_PORT_D
-	#define	DECA_PASS_BIT				YSEL0A_BIT_D
+	#define DECA_PASS_PORT				BINA_PORT //YSEL0A_PORT_D
+	#define	DECA_PASS_BIT				BINA_BIT  //YSEL0A_BIT_D
 
 	//===SITEB的SOT，BIN，EOT,RST,DEC配置
 	//===开始
@@ -260,50 +260,50 @@ extern "C" {
 	#define	RSTB_BIT					YSEL1B_BIT_D
 	
 	//===解码成功标志，0---解码成功，1--- 解码失败
-	#define DECB_PASS_PORT				YSEL0B_PORT_D
-	#define	DECB_PASS_BIT				YSEL0B_BIT_D
+	#define DECB_PASS_PORT				BINB_PORT//YSEL0B_PORT_D
+	#define	DECB_PASS_BIT				BINB_BIT //YSEL0B_BIT_D
 
 	//===SITEC的SOT，BIN，EOT,RST,DEC配置
 	//===开始
-	#define SOTC_PORT					GPIOD	
-	#define	SOTC_BIT					LL_GPIO_PIN_3
+	#define SOTC_PORT					SOTC_PORT_D //GPIOD	
+	#define	SOTC_BIT					SOTC_BIT_D  //LL_GPIO_PIN_3
 
 	//===结束
-	#define EOTC_PORT					GPIOD	
-	#define	EOTC_BIT					LL_GPIO_PIN_2
+	#define EOTC_PORT					EOTC_PORT_D//GPIOD	
+	#define	EOTC_BIT					EOTC_BIT_D //LL_GPIO_PIN_2
 
 	//===结果标志 0---通过，1---失效
-	#define BINC_PORT					GPIOD	
-	#define	BINC_BIT					LL_GPIO_PIN_1
+	#define BINC_PORT					BINC_PORT_D//GPIOD	
+	#define	BINC_BIT					BINC_BIT_D//LL_GPIO_PIN_1
 
 	//===解码触发，0---触发解码，1---不解码
-	#define RSTC_PORT					GPIOD
-	#define	RSTC_BIT					LL_GPIO_PIN_0
+	#define RSTC_PORT					RSTC_PORT_D//GPIOD
+	#define	RSTC_BIT					RSTC_BIT_D//LL_GPIO_PIN_0
 
 	//===解码成功标志，0---解码成功，1---解码失败
-	#define DECC_PASS_PORT				GPIOC	
-	#define	DECC_PASS_BIT				LL_GPIO_PIN_12
+	#define DECC_PASS_PORT				BINC_PORT//DECC_PASS_PORT_D//GPIOC	
+	#define	DECC_PASS_BIT				BINC_BIT//DECC_PASS_BIT_D//LL_GPIO_PIN_12
 
 	//===SITED的SOT，BIN，EOT,RST,DEC配置
 	//===开始
-	#define SOTD_PORT					GPIOD	
-	#define	SOTD_BIT					LL_GPIO_PIN_11
+	#define SOTD_PORT					SOTD_PORT_D//GPIOD	
+	#define	SOTD_BIT					SOTD_BIT_D //LL_GPIO_PIN_11
 
 	//===结束
-	#define EOTD_PORT					GPIOD	
-	#define	EOTD_BIT					LL_GPIO_PIN_10
+	#define EOTD_PORT					EOTD_PORT_D//GPIOD	
+	#define	EOTD_BIT					EOTD_BIT_D //LL_GPIO_PIN_10
 
 	//===结果标志 0---通过，1---失效
-	#define BIND_PORT					GPIOD	
-	#define	BIND_BIT					LL_GPIO_PIN_9
+	#define BIND_PORT					BIND_PORT_D//GPIOD	
+	#define	BIND_BIT					BIND_BIT_D //LL_GPIO_PIN_9
 
 	//===解码触发，0---触发解码，1---不解码
-	#define RSTD_PORT					GPIOD
-	#define	RSTD_BIT					LL_GPIO_PIN_8
+	#define RSTD_PORT					RSTD_PORT_D//GPIOD
+	#define	RSTD_BIT					RSTD_BIT_D//LL_GPIO_PIN_8
 
 	//===解码成功标志，0---解码成功，1---解码失败
-	#define DECD_PASS_PORT				GPIOB	
-	#define	DECD_PASS_BIT				LL_GPIO_PIN_15
+	#define DECD_PASS_PORT				BIND_PORT//DECD_PASS_PORT_D//GPIOB	
+	#define	DECD_PASS_BIT				BIND_BIT//DECB_PASS_BIT_D//LL_GPIO_PIN_15
 
 
 	//////////////////////////////////////////////////////////////////////////////////////

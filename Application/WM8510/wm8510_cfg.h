@@ -418,7 +418,7 @@ extern "C" {
 	#define WM8510_R56L_DAC2MONO			0x01
 
 	//===定义WM8510的输出频率变化多少次之后执行复位操作
-	#define USE_WM8510_RESET
+	//#define USE_WM8510_RESET
 	#define WM8510_FREQ_CHANGE_MAX			3000
 
 	//===结构体定义
@@ -451,7 +451,8 @@ extern "C" {
 		#endif
 		UINT32_T freqAdd;			//---输出频率的补偿值，每100KHz补偿15Hz
 		UINT32_T pllK;				//---pll的K值
-		UINT32_T oscFreq;			//---外部晶振频率
+		UINT32_T pllFreq;			//---pll频率
+		UINT32_T refOSC;			//---参考时钟
 		UINT32_T freqHz;			//---输出的频率Hz
 		UINT32_T freqKHz;			//---输出的频率KHz
 		float pllRate;				//---pll的比值

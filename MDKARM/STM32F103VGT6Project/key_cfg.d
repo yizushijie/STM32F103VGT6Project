@@ -59,4 +59,20 @@ stm32f103vgt6project/key_cfg.o: ../Application/Key/key_cfg.c \
   ../Application/Delay/delay_cfg.h ../Application/SysTick\systick_task.h \
   ../Application/SysTick/systick_lib.h \
   ../Application/SysTick/systick_cfg.h \
-  ../Application/RFASKHW\rfaskhw_cfg.h
+  ../Application/RFASKHW\rfaskhw_cfg.h ../Application/RFASK\rfask_task.h \
+  ../Application/RFASK/rfask_lib.h ../Application/RFASK/rfask_cfg.h \
+  ../Application/Timer\timer_task.h ../Application/Timer/timer_lib.h \
+  ../Application/Timer/timer_cfg.h ../Application/WM8510\wm8510_task.h \
+  ../Application/WM8510/wm8510_lib.h ../Application/WM8510/wm8510_cfg.h \
+  ../Application/I2C\i2c_task.h ../Application/I2C/i2c_lib.h \
+  ../Application/I2C/i2c_cfg.h ../Application/USART\usart_task.h \
+  ../Application/USART/usart_lib.h ../Application/USART/usart_cfg.h \
+  ../Application/CRC\crc_task.h ../Application/CRC/crc_lib.h \
+  ../Application/CRC/crc_cfg.h ../Application/Power\power_task.h \
+  ../Application/Power/power_lib.h ../Application/Power/power_cfg.h \
+  ../Application/ADC\adc_task.h ../Application/ADC/adc_lib.h \
+  ../Application/ADC/adc_cfg.h ../Application/LED\led_task.h \
+  ../Application/LED/led_lib.h ../Application/LED/led_cfg.h \
+  ../Application/Key\key_task.h ../Application/Key/key_lib.h \
+  ../Application/Decode\decode_task.h ../Application/Decode/decode_lib.h \
+  ../Application/Decode/decode_cfg.h

@@ -223,13 +223,13 @@ extern "C" {
 	#define YSEL3D_CTR_OUT_C							GPIO_OUT_C(    YSEL3D_CTR_PORT,YSEL3D_CTR_BIT)
 
 	//===高电压下的起始频率点电流上限
-	#define FREQ_CURRENT_HIGH_START_IMAX_X100MA			350
+	#define FREQ_CURRENT_HIGH_START_IMAX_X100MA			450
 
 	//===高电压下的起始频率点电流下限
 	#define FREQ_CURRENT_HIGH_START_IMIN_X100MA			250
 
 	//===高电压下的终止频率点电流上限
-	#define FREQ_CURRENT_HIGH_STOP_IMAX_X100MA			650
+	#define FREQ_CURRENT_HIGH_STOP_IMAX_X100MA			800
 
 	//===高电压下的终止频率点电流下限
 	#define FREQ_CURRENT_HIGH_STOP_IMIN_X100MA			500
@@ -256,16 +256,16 @@ extern "C" {
 	#define FREQ_CURRENT_HIGH_ADC_PASS_MIN				0
 
 	//===低电压下的起始频率点电流上限
-	#define FREQ_CURRENT_LOW_START_IMAX_X100MA			550
+	#define FREQ_CURRENT_LOW_START_IMAX_X100MA			800
 
 	//===低电压下的起始频率点电流下限
-	#define FREQ_CURRENT_LOW_START_IMIN_X100MA			450
+	#define FREQ_CURRENT_LOW_START_IMIN_X100MA			600
 
 	//===低电压下的终止频率点电流上限
-	#define FREQ_CURRENT_LOW_STOP_IMAX_X100MA			850
+	#define FREQ_CURRENT_LOW_STOP_IMAX_X100MA			1400
 
 	//===低电压下的终止频率点电流下限
-	#define FREQ_CURRENT_LOW_STOP_IMIN_X100MA			800
+	#define FREQ_CURRENT_LOW_STOP_IMIN_X100MA			1100
 
 	//===低电压下的频率点个数
 	#define FREQ_CURRENT_LOW_FX100MHZ_NUM				100
@@ -335,14 +335,15 @@ extern "C" {
 
 	//===定义ADC采样的参考电压
 	#define FREQ_CURRENT_ADC_VREF_MV					3300
-
+	
 	//====任务步序的定义
-	#define RFASK_TASK_YSEL1							1
-	#define RFASK_TASK_YSEL2							2
-	#define RFASK_TASK_YSEL3							3
-	#define RFASK_TASK_YSEL4							4
-	#define RFASK_TASK_POINT_ONE						5
-	#define RFASK_TASK_POINT_TWO						6
+	#define RFASK_TASK_YSEL1										1
+	#define RFASK_TASK_YSEL2										2
+	#define RFASK_TASK_YSEL3										3
+	#define RFASK_TASK_YSEL4										4
+	#define RFASK_TASK_POINT_ONE									5
+	#define RFASK_TASK_POINT_TWO									6
+	#define RFASK_TASK_CLEAR										15
 
 	//===结构体定义
 	typedef struct _FREQ_CURRENT_HandlerType			FREQ_CURRENT_HandlerType;

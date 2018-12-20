@@ -10,6 +10,7 @@ extern "C" {
 	#include "timer_task.h"
 	#include "delay_task.h"
 	#include "rfaskhw_cfg.h"
+	#include "rfask_task.h"
 	//////////////////////////////////////////////////////////////////////////////////////
 	//===解码使用的定时器
 	#define DEC_USE_TIM									TIM2
@@ -120,7 +121,7 @@ extern "C" {
 
 	//===B通道解码RST复位标志
 	#define DECB_RST_PORT								RSTB_PORT//GPIOE
-	#define DECB_RST_BIT								RSTA_BIT//LL_GPIO_PIN_5
+	#define DECB_RST_BIT								RSTB_BIT//LL_GPIO_PIN_5
 	#define DECB_RST_STATE								GPIO_GET_STATE(DECB_RST_PORT,DECB_RST_BIT)
 	#define DECB_RST_WRITE								GPIO_SET_WRITE(DECB_RST_PORT,DECB_RST_BIT)
 	#define DECB_RST_READ								GPIO_SET_READ( DECB_RST_PORT,DECB_RST_BIT)
@@ -256,6 +257,7 @@ extern "C" {
 	void Decode_START(void);
 	void Decode_STOP(void);
 	void  Decode_ActivateSites(UINT8_T activateSites);
+	void  Decode_ClearActivateSites(void);
 	UINT8_T Decode_ScanRST(void);
 	void Decode_IRQTask(void);
 	void Decode_Query(void);

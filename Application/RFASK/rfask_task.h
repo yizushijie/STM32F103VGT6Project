@@ -13,6 +13,7 @@ extern "C" {
 	#include "adc_task.h"
 	#include "led_task.h"
 	#include "key_task.h"
+	#include "decode_task.h"
 	//////////////////////////////////////////////////////////////////////////////////////
 	//===获取编译时间和版本信息
 	#define CMD_RFASK_CMD1_VERSIOM								0x00
