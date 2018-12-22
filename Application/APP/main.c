@@ -165,9 +165,12 @@ void Sys_Init(void)
 	//BKPTask_Init();
 
 	//---开启看门狗
-	//IWDGTask_Init(pIWDG);
+	IWDGTask_Init();
 
+	//---启动解码逻辑
 	//DecodeTask_START();
+	//---查询解码的初始化
+	DecodeTask_QueryInit(0x0F);
 }
 
 ///////////////////////////////////////////////////////////////////////////////

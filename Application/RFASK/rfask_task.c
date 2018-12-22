@@ -665,12 +665,6 @@ UINT8_T  RFASKTask_SitesCurrent(RFASK_HandlerType *rfask)
 	//---获取ADC的采样结果
 	ADCTask_RFASKTask_GetADC(&rfask->msgSiteADC[0], FREQ_CURRENT_MAX_SITE);
 
-	//---模拟ADC的采集过程
-	//for ( i = 0; i < FREQ_CURRENT_MAX_SITE; i++)
-	//{
-	//	//---采样结果
-	//	rfask->msgActivateSiteADC[i]=4095;
-	//}
 	//---装换结果为电流值
 	for (i = 0; i < FREQ_CURRENT_MAX_SITE; i++)
 	{
@@ -1239,10 +1233,8 @@ UINT8_T RFASKTask_FreqCurrentScan(USART_HandlerType*USARTx, RFASK_HandlerType *r
 	UINT32_T freqX100MHz = rfaskFreqCurrent->msgStartFreqX100MHz;
 	UINT32_T xtalHz = 0;
 
-	//---停止解码
+	//---停止解码，解码使用的中断优先级比较的高，避免因为中断优先级的问题，导致频率电流扫描异常的问题
 	DecodeTask_STOP();
-	//---喂狗
-	WDT_RESET();
 	//---初始化合格/失效判断结果数组---初始化为合格模式
 	memset(rfask->msgSitePass, 0, FREQ_CURRENT_MAX_SITE);
 
@@ -1265,7 +1257,6 @@ UINT8_T RFASKTask_FreqCurrentScan(USART_HandlerType*USARTx, RFASK_HandlerType *r
 	freqPointNum = (freqPointNum << 3) + FREQ_CURRENT_MAX_SITE;
 
 	//---返回SITE数
-	//USARTTask_RealTime_AddByte(USARTx, FREQ_CURRENT_MAX_SITE);
 	USARTTask_RealTime_AddByte(USARTx, (UINT8_T)freqPointNum);
 	freqPointNum = 0;
 
@@ -1296,6 +1287,7 @@ UINT8_T RFASKTask_FreqCurrentScan(USART_HandlerType*USARTx, RFASK_HandlerType *r
 		//---等待上电稳定
 		DelayTask_ms(6);
 
+		
 		//---前10个点，多等几次上电稳定
 		if (freqPointNum <10)
 		{
@@ -1304,6 +1296,15 @@ UINT8_T RFASKTask_FreqCurrentScan(USART_HandlerType*USARTx, RFASK_HandlerType *r
 
 		//---获取每个SITE的电流和ADC的采样结果
 		RFASKTask_SitesCurrent(rfask);
+
+		//---第一次的ADC采集，进行两次，避免数据出错
+		if (freqPointNum==0)
+		{
+			//---等待上电稳定
+			DelayTask_ms(1);
+			//---获取每个SITE的电流和ADC的采样结果
+			RFASKTask_SitesCurrent(rfask);
+		}
 
 		//---轮训判断各个SITE的结果
 		for (siteNum = 0; siteNum < FREQ_CURRENT_MAX_SITE; siteNum++)
@@ -1394,9 +1395,11 @@ UINT8_T RFASKTask_FreqCurrentScan(USART_HandlerType*USARTx, RFASK_HandlerType *r
 	DPS_POWER_OFF;
 
 	//---设置频率工作在不工作的点,默认是20KHz
-	RFASKTask_SetClockFreq(rfask, WM8510x, FREQ_YSEL_X100MHz);
+	//RFASKTask_SetClockFreq(rfask, WM8510x, FREQ_YSEL_X100MHz);
 	//---复位时钟芯片WM8510，需要评估一下那个比较的适合当前模式
 	WM8510Task_I2C_Reset(WM8510x);
+	//---启动解码
+	DecodeTask_START();
 	//---返回值
 	return OK_0;
 }
@@ -1846,11 +1849,9 @@ UINT8_T RFASKTask_KeyTask(USART_HandlerType*USARTx, RFASK_HandlerType *rfask, WM
 		//---没有解读到YSEL信息，返回2
 		return ERROR_2;
 	}
+	//---清除所有的状态标志位
 	else if (_return==RFASK_TASK_CLEAR)
 	{
-		//===清除所有的状态标志位
-		//---解码状态清零
-		DecodeTask_ClearActivateSites();
 		//---复位时钟芯片WM8510
 		WM8510Task_I2C_Reset(WM8510x);
 		//---设置时钟不输出
@@ -1861,11 +1862,13 @@ UINT8_T RFASKTask_KeyTask(USART_HandlerType*USARTx, RFASK_HandlerType *rfask, WM
 	}
 	else
 	{
+		//---判断是否有SITE激活，避免误操作
 		if (activateSites==0)
 		{
 			//---没有SITE激活，
 			return ERROR_3;
 		}
+		//---获取激活的SITE信息
 		RFASKTask_ActivateSites(rfask, activateSites);
 		//---初始化EOT
 		RFASKTask_EOTSTART(rfask);

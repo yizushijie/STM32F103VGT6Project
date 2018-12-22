@@ -258,6 +258,7 @@ extern "C" {
 	void Decode_STOP(void);
 	void  Decode_ActivateSites(UINT8_T activateSites);
 	void  Decode_ClearActivateSites(void);
+	void  Decode_ClearState(void);
 	UINT8_T Decode_ScanRST(void);
 	void Decode_IRQTask(void);
 	void Decode_Query(void);

@@ -156,7 +156,7 @@ UINT8_T W25QXX_SPI_HW_SendCmd(W25QXX_HandlerType *W25QXXx, UINT8_T cmd, UINT8_T 
 UINT8_T W25QXX_SPI_SW_SendCmd(W25QXX_HandlerType *W25QXXx, UINT8_T cmd, UINT8_T *pRVal)
 {
 	//---Êý¾Ý·¢ËÍ
-	return SPITask_MSW_WriteByte(&(W25QXXx->msgSPI), cmd, pRVal);
+	return SPITask_MSW_WriteByteMSB(&(W25QXXx->msgSPI), cmd, pRVal);
 }
 
 ///////////////////////////////////////////////////////////////////////////////

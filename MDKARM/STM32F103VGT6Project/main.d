@@ -93,10 +93,11 @@ stm32f103vgt6project/main.o: ../Application/APP/main.c \
   ../Application/OneWire\one_wire_task.h \
   ../Application/OneWire/one_wire_lib.h \
   ../Application/OneWire/one_wire_cfg.h \
-  ../Application/EEPROM\eeprom_task.h ../Application/EEPROM/eeprom_lib.h \
-  ../Application/EEPROM/eeprom_cfg.h ../Application/FLASH\flash_task.h \
-  ../Application/FLASH/flash_lib.h ../Application/FLASH/flash_cfg.h \
-  ../Application/HMC830\hmc830_task.h \
+  ../Application/DS1302\ds1302_task.h ../Application/DS1302/ds1302_lib.h \
+  ../Application/DS1302/ds1302_cfg.h ../Application/EEPROM\eeprom_task.h \
+  ../Application/EEPROM/eeprom_lib.h ../Application/EEPROM/eeprom_cfg.h \
+  ../Application/FLASH\flash_task.h ../Application/FLASH/flash_lib.h \
+  ../Application/FLASH/flash_cfg.h ../Application/HMC830\hmc830_task.h \
   ../Application/HMC830/hmc830_task.h ../Application/IAP\iap_task.h \
   ../Application/IAP/iap_lib.h ../Application/IAP/iap_cfg.h \
   ../Application/ISP\isp_task.h ../Application/ISP/isp_lib.h \

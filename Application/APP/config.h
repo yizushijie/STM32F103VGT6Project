@@ -18,6 +18,7 @@ extern "C" {
 	#include "delay_task.h"
 	#include "dht11_task.h"
 	#include "ds18b20_task.h"
+	#include "ds1302_task.h"
 	#include "eeprom_task.h"
 	#include "flash_task.h"
 	#include "gpio_task.h"

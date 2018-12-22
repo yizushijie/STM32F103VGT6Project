@@ -121,7 +121,7 @@ UINT8_T OLED_Device0_Init(OLED_IIC_HandlerType *OLEDx)
 	OLEDx->msgI2C.msgFuncDelay = NULL;
 
 	//---通过调整0R电阻,屏可以0x78和0x7A两个地址 -- 默认0x78
-	OLEDx->msgI2C.msgAddr = 0x78;//PCF8563_WRITE_ADDR;
+	OLEDx->msgI2C.msgAddr = 0x78;
 	OLEDx->msgI2C.msgClockSpeed = 0;
 	return OK_0;
 }
@@ -235,7 +235,7 @@ UINT8_T OLED_SWI2C_WriteByte(OLED_IIC_HandlerType *OLEDx, UINT8_T adddr, UINT8_T
 
 	//---读取ACK
 	_return = I2CTask_MSW_ReadACK(&(OLEDx->msgI2C));
-	GoToExit:
+	//GoToExit:
 
 	//---发送停止信号
 	I2CTask_MSW_STOP(&(OLEDx->msgI2C));
@@ -451,48 +451,48 @@ void OLED_I2C_HWInit(OLED_IIC_HandlerType *OLEDx)
 //////输出参数:
 //////说		明：功能描述：显示显示BMP图片128×64起始点坐标(x,y),x的范围0～127，y为页的范围0～7
 //////////////////////////////////////////////////////////////////////////////
-void OLED_I2C_DrawBMP(OLED_IIC_HandlerType *OLEDx, UINT8_T x0, UINT8_T y0, UINT8_T x1, UINT8_T y1, UINT8_T BMP[])
+void OLED_I2C_DrawBMP(OLED_IIC_HandlerType *OLEDx, UINT8_T x0Pos, UINT8_T y0Pos, UINT8_T x1Pos, UINT8_T y1Pos, UINT8_T BMP[])
 {
 	UINT16_T j = 0;
-	UINT8_T x = 0;
-	UINT8_T y = 0;
+	UINT8_T  x = 0;
+	UINT8_T  y = 0;
 
 	//---判断地址是否超界限
-	if (x0 > (OLED_MAX_COL - 1))
+	if (x0Pos > (OLED_MAX_COL - 1))
 	{
-		x0 = (OLED_MAX_COL - 1);
+		x0Pos = (OLED_MAX_COL - 1);
 	}
 
-	if (y0 > (OLED_MAX_ROW - 1))
+	if (y0Pos > (OLED_MAX_ROW - 1))
 	{
-		y0 = (OLED_MAX_ROW - 1);
+		y0Pos = (OLED_MAX_ROW - 1);
 	}
 
-	if (x1 > (OLED_MAX_COL - 1))
+	if (x1Pos > (OLED_MAX_COL - 1))
 	{
-		x1 = (OLED_MAX_COL - 1);
+		x1Pos = (OLED_MAX_COL - 1);
 	}
 
-	if (y1 > (OLED_MAX_ROW - 1))
+	if (y1Pos > (OLED_MAX_ROW - 1))
 	{
-		y1 = (OLED_MAX_ROW - 1);
+		y1Pos = (OLED_MAX_ROW - 1);
 	}
 
 	//---判断数据位置
-	if (y1 % 8 == 0)
+	if (y1Pos % 8 == 0)
 	{
-		y = y1 / 8;
+		y = y1Pos / 8;
 	}
 	else
 	{
-		y = y1 / 8 + 1;
+		y = y1Pos / 8 + 1;
 	}
 
-	for (y = y0; y < y1; y++)
+	for (y = y0Pos; y < y1Pos; y++)
 	{
 		//---设置坐标
-		OLED_I2C_SetPos(OLEDx, x0, y);
-		for (x = x0; x < x1; x++)
+		OLED_I2C_SetPos(OLEDx, x0Pos, y);
+		for (x = x0Pos; x < x1Pos; x++)
 		{
 			//---设置数据
 			OLED_I2C_WriteCmd(OLEDx, BMP[j++]);

@@ -332,7 +332,7 @@ UINT8_T ISP_SW_SendCmd(ISP_HandlerType *ISPx, UINT8_T val1, UINT8_T Val2, UINT8_
 	ISPx->msgWriteData[3] = val4;
 
 	//---Êý¾Ý·¢ËÍ
-	return SPITask_MSW_WriteData(&(ISPx->msgSPI), ISPx->msgWriteData, ISPx->msgReadData, 4);
+	return SPITask_MSW_WriteDataMSB(&(ISPx->msgSPI), ISPx->msgWriteData, ISPx->msgReadData, 4);
 }
 
 ///////////////////////////////////////////////////////////////////////////////

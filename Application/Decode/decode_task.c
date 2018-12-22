@@ -37,6 +37,18 @@ void DecodeTask_ClearActivateSites(void)
 }
 
 ///////////////////////////////////////////////////////////////////////////////
+//////函		数： 
+//////功		能： 
+//////输入参数: 
+//////输出参数: 
+//////说		明： 
+//////////////////////////////////////////////////////////////////////////////
+void  DecodeTask_ClearState(void)
+{
+	DecodeLib_ClearState();
+}
+
+///////////////////////////////////////////////////////////////////////////////
 //////函		数：
 //////功		能：
 //////输入参数:
@@ -95,7 +107,11 @@ void DecodeTask_IRQTask(void)
 void DecodeTask_QueryInit(UINT8_T activateSites)
 {
 	//---计算激活的SITE数据
-	DecodeTask_ActivateSites(activateSites);
+	//DecodeTask_ActivateSites(activateSites);
+	//---激活所有的SITE
+	DecodeTask_ActivateSites(0x0F);
+	//---清除所有的标志
+	DecodeTask_ClearState();
 	//---启动解码
 	DecodeTask_START();
 }

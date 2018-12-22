@@ -49,8 +49,8 @@ extern "C" {
 	//===PCF853的数据结构体
 	struct _PCF8563_HandlerType
 	{
-		RTC_HandlerType	msgRTC;															//---实时时钟
-		I2C_HandlerType msgI2C;															//---使用的I2C
+		RTC_HandlerType	msgRTC;						//---实时时钟
+		I2C_HandlerType msgI2C;						//---使用的I2C
 	};
 
 	//===定义的任务函数

@@ -361,6 +361,7 @@ void  Decode_ActivateSites(UINT8_T activateSites)
 		activateSites >>= 1;
 	}
 }
+
 ///////////////////////////////////////////////////////////////////////////////
 //////函		数： 
 //////功		能： 设置所有的SITE为不激活状态
@@ -373,10 +374,32 @@ void  Decode_ClearActivateSites(void)
 	//---关闭解码指示灯
 	DEC_LED_OFF;
 	//---置位解码失败
-	//DEC_PASS_FAIL;
+	DEC_PASS_FAIL;
 	memset(decodeActivateSite, 0, DECODE_SITE_COUNT);
 	//---关闭实时解码
 	Decode_STOP();
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//////函		数： 
+//////功		能： 清除所有的状态
+//////输入参数: 
+//////输出参数: 
+//////说		明： 
+//////////////////////////////////////////////////////////////////////////////
+void  Decode_ClearState(void)
+{
+	int i=0;
+	//---清除解码步序
+	memset(decodeStep, 0, DECODE_SITE_COUNT);
+	//---清零操作
+	for(i=0;i<DECODE_SITE_COUNT;i++)
+	{
+		decodeOverFlowCount[i]=0;
+		decodeMinPulseCount[i]=0;
+	}
+	//---清除当前计数值
+	memset(decodeNowCount, 0, DECODE_SITE_COUNT);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -391,7 +414,7 @@ void Decode_START(void)
 	//---关闭实时解码灯
 	DEC_LED_OFF;
 	//---置位解码失败
-	//DEC_PASS_FAIL;
+	DEC_PASS_FAIL;
 	//---清零标志位
 	LL_TIM_ClearFlag(DEC_USE_TIM);
 	//---清零计数器
@@ -411,7 +434,7 @@ void Decode_STOP(void)
 {
 	//---不使能定时器
 	LL_TIM_DisableCounter(DEC_USE_TIM);
-	//DEC_LED_OFF;
+	DEC_LED_OFF;
 }
 
 ///////////////////////////////////////////////////////////////////////////////

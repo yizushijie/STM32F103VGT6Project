@@ -51,7 +51,11 @@ UINT8_T HexToASCII(UINT8_T hexVal)
 //////////////////////////////////////////////////////////////////////////////
 UINT8_T ASCIIToHex(UINT8_T hexVal)
 {
-	if ((hexVal >= 0) && (hexVal <= 9))
+	if(hexVal == 0)
+	{
+		hexVal += 0x30;
+	}
+	else if ( hexVal <= 9 )
 	{
 		hexVal += 0x30;
 	}
@@ -61,7 +65,7 @@ UINT8_T ASCIIToHex(UINT8_T hexVal)
 	}
 	else
 	{
-		hexVal = 0xff;
+		hexVal = 0xFF;
 	}
 	return hexVal;
 }

@@ -12,6 +12,7 @@ extern "C" {
 	void DecodeTask_Init(void);
 	void DecodeTask_ActivateSites(UINT8_T activateSites);
 	void DecodeTask_ClearActivateSites(void);
+	void  DecodeTask_ClearState(void);
 	void DecodeTask_START(void);
 	void DecodeTask_STOP(void);
 	UINT8_T DecodeTask_ScanRST(void);

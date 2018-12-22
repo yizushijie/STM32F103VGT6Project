@@ -11,6 +11,7 @@ extern "C" {
 	void DecodeLib_Init(void);
 	void DecodeLib_ActivateSites(UINT8_T activateSites);
 	void DecodeLib_ClearActivateSites(void);
+	void DecodeLib_ClearState(void);
 	void DecodeLib_START(void);
 	void DecodeLib_STOP(void);
 	UINT8_T DecodeLib_ScanRST(void);

@@ -31,27 +31,27 @@ extern "C" {
 	#define OLED_Y_WIDTH					64
 
 	//===结构体定义
-	typedef struct _OLED_IIC_HandlerType				OLED_IIC_HandlerType;
+	typedef struct _OLED_IIC_HandlerType			OLED_IIC_HandlerType;
 
 	//===指针结构体定义
-	typedef struct _OLED_IIC_HandlerType				*pOLED_IIC_HandlerType;
+	typedef struct _OLED_IIC_HandlerType			*pOLED_IIC_HandlerType;
 
 	//===OLED的数据结构体
 	struct _OLED_IIC_HandlerType
 	{
-		UINT32_T			msgRstBit;					//---端口序号
-		GPIO_TypeDef		*msgRstPort;				//---端口号
-		I2C_HandlerType		msgI2C;						//---使用的I2C
+		UINT32_T			msgRstBit;				//---端口序号
+		GPIO_TypeDef		*msgRstPort;			//---端口号
+		I2C_HandlerType		msgI2C;					//---使用的I2C
 	};
 
 	//===定义的任务函数
-	#define OLED_TASK_ONE			pOLEDDevice0
-	#define OLED_TASK_TWO			0
-	#define OLED_TASK_THREE			0
+	#define OLED_TASK_ONE							pOLEDDevice0
+	#define OLED_TASK_TWO							0
+	#define OLED_TASK_THREE							0
 
 	//===外部调用接口
-	extern OLED_IIC_HandlerType			g_OLEDDevice0;
-	extern pOLED_IIC_HandlerType		pOLEDDevice0;
+	extern OLED_IIC_HandlerType						g_OLEDDevice0;
+	extern pOLED_IIC_HandlerType					pOLEDDevice0;
 
 	//===函数定义
 	UINT8_T OLED_I2C_Init(OLED_IIC_HandlerType *OLEDx, void(*msgDelay)(UINT32_T delay), UINT8_T isHWI2C);
@@ -63,7 +63,7 @@ extern "C" {
 	void OLED_I2C_Clear(OLED_IIC_HandlerType *OLEDx);
 	void OLED_I2C_SetPos(OLED_IIC_HandlerType *OLEDx, UINT8_T xPos, UINT8_T yPos);
 	void OLED_I2C_HWInit(OLED_IIC_HandlerType *OLEDx);
-	void OLED_I2C_DrawBMP(OLED_IIC_HandlerType *OLEDx, UINT8_T x0, UINT8_T y0, UINT8_T x1, UINT8_T y1, UINT8_T BMP[]);
+	void OLED_I2C_DrawBMP(OLED_IIC_HandlerType *OLEDx, UINT8_T x0Pos, UINT8_T y0Pos, UINT8_T x1Pos, UINT8_T y1Pos, UINT8_T BMP[]);
 	//////////////////////////////////////////////////////////////////////////////////////
 	#ifdef __cplusplus
 }
