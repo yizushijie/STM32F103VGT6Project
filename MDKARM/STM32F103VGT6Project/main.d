@@ -112,7 +112,8 @@ stm32f103vgt6project/main.o: ../Application/APP/main.c \
   ../Application/OLED/oled_lib.h ../Application/OLED/oled_cfg.h \
   ../Application/PCF8563\pcf8563_task.h \
   ../Application/PCF8563/pcf8563_lib.h \
-  ../Application/PCF8563/pcf8563_cfg.h \
+  ../Application/PCF8563/pcf8563_cfg.h ../Application/PID\pid_task.h \
+  ../Application/PID/pid_lib.h ../Application/PID/pid_cfg.h \
   ../Application/Random\random_task.h ../Application/Random/random_lib.h \
   ../Application/Random/random_cfg.h ../Application/SHT2x\sht2x_task.h \
   ../Application/SHT2x/sht2x_lib.h ../Application/SHT2x/sht2x_cfg.h \

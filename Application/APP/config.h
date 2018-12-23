@@ -34,6 +34,7 @@ extern "C" {
 	#include "oled_task.h"
 	#include "one_wire_task.h"
 	#include "pcf8563_task.h"
+	#include "pid_task.h"
 	#include "power_task.h"
 	#include "rfask_task.h"
 	#include "random_task.h"

@@ -1601,6 +1601,74 @@ Section Cross References
     ds18b20_task.o(.ARM.exidx.text.DS18B20Task_OneWire_ReadTemp) refers to ds18b20_task.o(.text.DS18B20Task_OneWire_ReadTemp) for [Anonymous Symbol]
     ds18b20_task.o(.text.DS18B20Task_OneWire_ReadTempByID) refers to ds18b20_lib.o(.text.DS18B20Lib_OneWire_ReadTempByID) for DS18B20Lib_OneWire_ReadTempByID
     ds18b20_task.o(.ARM.exidx.text.DS18B20Task_OneWire_ReadTempByID) refers to ds18b20_task.o(.text.DS18B20Task_OneWire_ReadTempByID) for [Anonymous Symbol]
+    ds1302_cfg.o(.text.DS1302_Device0_Init) refers to gpio_task.o(.text.GPIOTask_Clock) for GPIOTask_Clock
+    ds1302_cfg.o(.text.DS1302_Device0_Init) refers to stm32f1xx_ll_gpio.o(.text.LL_GPIO_Init) for LL_GPIO_Init
+    ds1302_cfg.o(.text.DS1302_Device0_Init) refers to ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin) for LL_GPIO_ResetOutputPin
+    ds1302_cfg.o(.text.DS1302_Device0_Init) refers to ds1302_cfg.o(.text.LL_GPIO_SetOutputPin) for LL_GPIO_SetOutputPin
+    ds1302_cfg.o(.ARM.exidx.text.DS1302_Device0_Init) refers to ds1302_cfg.o(.text.DS1302_Device0_Init) for [Anonymous Symbol]
+    ds1302_cfg.o(.ARM.exidx.text.LL_GPIO_ResetOutputPin) refers to ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin) for [Anonymous Symbol]
+    ds1302_cfg.o(.ARM.exidx.text.LL_GPIO_SetOutputPin) refers to ds1302_cfg.o(.text.LL_GPIO_SetOutputPin) for [Anonymous Symbol]
+    ds1302_cfg.o(.ARM.exidx.text.DS1302_Device1_Init) refers to ds1302_cfg.o(.text.DS1302_Device1_Init) for [Anonymous Symbol]
+    ds1302_cfg.o(.ARM.exidx.text.DS1302_Device2_Init) refers to ds1302_cfg.o(.text.DS1302_Device2_Init) for [Anonymous Symbol]
+    ds1302_cfg.o(.text.DS1302_Init) refers to ds1302_cfg.o(.data.pDS1302Device0) for pDS1302Device0
+    ds1302_cfg.o(.text.DS1302_Init) refers to ds1302_cfg.o(.text.DS1302_Device0_Init) for DS1302_Device0_Init
+    ds1302_cfg.o(.text.DS1302_Init) refers to ds1302_cfg.o(.text.DS1302_Device1_Init) for DS1302_Device1_Init
+    ds1302_cfg.o(.text.DS1302_Init) refers to ds1302_cfg.o(.text.DS1302_Device2_Init) for DS1302_Device2_Init
+    ds1302_cfg.o(.ARM.exidx.text.DS1302_Init) refers to ds1302_cfg.o(.text.DS1302_Init) for [Anonymous Symbol]
+    ds1302_cfg.o(.text.DS1302_WriteBitLSB) refers to ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin) for LL_GPIO_ResetOutputPin
+    ds1302_cfg.o(.text.DS1302_WriteBitLSB) refers to ds1302_cfg.o(.text.LL_GPIO_SetOutputPin) for LL_GPIO_SetOutputPin
+    ds1302_cfg.o(.text.DS1302_WriteBitLSB) refers to ds1302_cfg.o(.text.LL_GPIO_IsInputPinSet) for LL_GPIO_IsInputPinSet
+    ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteBitLSB) refers to ds1302_cfg.o(.text.DS1302_WriteBitLSB) for [Anonymous Symbol]
+    ds1302_cfg.o(.ARM.exidx.text.LL_GPIO_IsInputPinSet) refers to ds1302_cfg.o(.text.LL_GPIO_IsInputPinSet) for [Anonymous Symbol]
+    ds1302_cfg.o(.text.DS1302_WriteByteLSB) refers to ds1302_cfg.o(.text.DS1302_WriteBitLSB) for DS1302_WriteBitLSB
+    ds1302_cfg.o(.text.DS1302_WriteByteLSB) refers to ds1302_cfg.o(.text.LL_GPIO_SetOutputPin) for LL_GPIO_SetOutputPin
+    ds1302_cfg.o(.text.DS1302_WriteByteLSB) refers to ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin) for LL_GPIO_ResetOutputPin
+    ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteByteLSB) refers to ds1302_cfg.o(.text.DS1302_WriteByteLSB) for [Anonymous Symbol]
+    ds1302_cfg.o(.text.DS1302_WriteReg) refers to ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin) for LL_GPIO_ResetOutputPin
+    ds1302_cfg.o(.text.DS1302_WriteReg) refers to ds1302_cfg.o(.text.LL_GPIO_SetOutputPin) for LL_GPIO_SetOutputPin
+    ds1302_cfg.o(.text.DS1302_WriteReg) refers to ds1302_cfg.o(.text.DS1302_WriteByteLSB) for DS1302_WriteByteLSB
+    ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteReg) refers to ds1302_cfg.o(.text.DS1302_WriteReg) for [Anonymous Symbol]
+    ds1302_cfg.o(.text.DS1302_ReadReg) refers to ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin) for LL_GPIO_ResetOutputPin
+    ds1302_cfg.o(.text.DS1302_ReadReg) refers to ds1302_cfg.o(.text.LL_GPIO_SetOutputPin) for LL_GPIO_SetOutputPin
+    ds1302_cfg.o(.text.DS1302_ReadReg) refers to ds1302_cfg.o(.text.DS1302_WriteByteLSB) for DS1302_WriteByteLSB
+    ds1302_cfg.o(.ARM.exidx.text.DS1302_ReadReg) refers to ds1302_cfg.o(.text.DS1302_ReadReg) for [Anonymous Symbol]
+    ds1302_cfg.o(.text.DS1302_WriteTime) refers to ds1302_cfg.o(.text.DS1302_WriteReg) for DS1302_WriteReg
+    ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteTime) refers to ds1302_cfg.o(.text.DS1302_WriteTime) for [Anonymous Symbol]
+    ds1302_cfg.o(.text.DS1302_ReadTime) refers to ds1302_cfg.o(.text.DS1302_ReadReg) for DS1302_ReadReg
+    ds1302_cfg.o(.ARM.exidx.text.DS1302_ReadTime) refers to ds1302_cfg.o(.text.DS1302_ReadTime) for [Anonymous Symbol]
+    ds1302_cfg.o(.text.DS1302_WriteRTC) refers to ds1302_cfg.o(.text.DS1302_WriteReg) for DS1302_WriteReg
+    ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteRTC) refers to ds1302_cfg.o(.text.DS1302_WriteRTC) for [Anonymous Symbol]
+    ds1302_cfg.o(.text.DS1302_ReadRTC) refers to ds1302_cfg.o(.text.DS1302_ReadReg) for DS1302_ReadReg
+    ds1302_cfg.o(.ARM.exidx.text.DS1302_ReadRTC) refers to ds1302_cfg.o(.text.DS1302_ReadRTC) for [Anonymous Symbol]
+    ds1302_cfg.o(.data.pDS1302Device0) refers to ds1302_cfg.o(.bss.g_DS1302Device0) for g_DS1302Device0
+    ds1302_lib.o(.text.DS1302Lib_Init) refers to ds1302_cfg.o(.text.DS1302_Init) for DS1302_Init
+    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_Init) refers to ds1302_lib.o(.text.DS1302Lib_Init) for [Anonymous Symbol]
+    ds1302_lib.o(.text.DS1302Lib_WriteReg) refers to ds1302_cfg.o(.text.DS1302_WriteReg) for DS1302_WriteReg
+    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_WriteReg) refers to ds1302_lib.o(.text.DS1302Lib_WriteReg) for [Anonymous Symbol]
+    ds1302_lib.o(.text.DS1302Lib_ReadReg) refers to ds1302_cfg.o(.text.DS1302_ReadReg) for DS1302_ReadReg
+    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_ReadReg) refers to ds1302_lib.o(.text.DS1302Lib_ReadReg) for [Anonymous Symbol]
+    ds1302_lib.o(.text.DS1302Lib_WriteTime) refers to ds1302_cfg.o(.text.DS1302_WriteTime) for DS1302_WriteTime
+    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_WriteTime) refers to ds1302_lib.o(.text.DS1302Lib_WriteTime) for [Anonymous Symbol]
+    ds1302_lib.o(.text.DS1302Lib_ReadTime) refers to ds1302_cfg.o(.text.DS1302_ReadTime) for DS1302_ReadTime
+    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_ReadTime) refers to ds1302_lib.o(.text.DS1302Lib_ReadTime) for [Anonymous Symbol]
+    ds1302_lib.o(.text.DS1302Lib_WriteRTC) refers to ds1302_cfg.o(.text.DS1302_WriteRTC) for DS1302_WriteRTC
+    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_WriteRTC) refers to ds1302_lib.o(.text.DS1302Lib_WriteRTC) for [Anonymous Symbol]
+    ds1302_lib.o(.text.DS1302Lib_ReadRTC) refers to ds1302_cfg.o(.text.DS1302_ReadRTC) for DS1302_ReadRTC
+    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_ReadRTC) refers to ds1302_lib.o(.text.DS1302Lib_ReadRTC) for [Anonymous Symbol]
+    ds1302_task.o(.text.DS1302Task_Init) refers to ds1302_lib.o(.text.DS1302Lib_Init) for DS1302Lib_Init
+    ds1302_task.o(.ARM.exidx.text.DS1302Task_Init) refers to ds1302_task.o(.text.DS1302Task_Init) for [Anonymous Symbol]
+    ds1302_task.o(.text.DS1302Task_WriteReg) refers to ds1302_lib.o(.text.DS1302Lib_WriteReg) for DS1302Lib_WriteReg
+    ds1302_task.o(.ARM.exidx.text.DS1302Task_WriteReg) refers to ds1302_task.o(.text.DS1302Task_WriteReg) for [Anonymous Symbol]
+    ds1302_task.o(.text.DS1302Task_ReadReg) refers to ds1302_lib.o(.text.DS1302Lib_ReadReg) for DS1302Lib_ReadReg
+    ds1302_task.o(.ARM.exidx.text.DS1302Task_ReadReg) refers to ds1302_task.o(.text.DS1302Task_ReadReg) for [Anonymous Symbol]
+    ds1302_task.o(.text.DS1302Task_WriteTime) refers to ds1302_lib.o(.text.DS1302Lib_WriteTime) for DS1302Lib_WriteTime
+    ds1302_task.o(.ARM.exidx.text.DS1302Task_WriteTime) refers to ds1302_task.o(.text.DS1302Task_WriteTime) for [Anonymous Symbol]
+    ds1302_task.o(.text.DS1302Task_ReadTime) refers to ds1302_lib.o(.text.DS1302Lib_ReadTime) for DS1302Lib_ReadTime
+    ds1302_task.o(.ARM.exidx.text.DS1302Task_ReadTime) refers to ds1302_task.o(.text.DS1302Task_ReadTime) for [Anonymous Symbol]
+    ds1302_task.o(.text.DS1302Task_WriteRTC) refers to ds1302_lib.o(.text.DS1302Lib_WriteRTC) for DS1302Lib_WriteRTC
+    ds1302_task.o(.ARM.exidx.text.DS1302Task_WriteRTC) refers to ds1302_task.o(.text.DS1302Task_WriteRTC) for [Anonymous Symbol]
+    ds1302_task.o(.text.DS1302Task_ReadRTC) refers to ds1302_lib.o(.text.DS1302Lib_ReadRTC) for DS1302Lib_ReadRTC
+    ds1302_task.o(.ARM.exidx.text.DS1302Task_ReadRTC) refers to ds1302_task.o(.text.DS1302Task_ReadRTC) for [Anonymous Symbol]
     eeprom_cfg.o(.text.EEPROM_Init) refers to eeprom_cfg.o(.bss.g_EepromVal) for g_EepromVal
     eeprom_cfg.o(.text.EEPROM_Init) refers to flash_task.o(.text.FLASHTask_ReadHalfWord) for FLASHTask_ReadHalfWord
     eeprom_cfg.o(.ARM.exidx.text.EEPROM_Init) refers to eeprom_cfg.o(.text.EEPROM_Init) for [Anonymous Symbol]
@@ -3750,74 +3818,42 @@ Section Cross References
     wwdg_task.o(.ARM.exidx.text.WWDGTask_DeInit) refers to wwdg_task.o(.text.WWDGTask_DeInit) for [Anonymous Symbol]
     wwdg_task.o(.text.WWDGTask_Reset) refers to wwdg_lib.o(.text.WWDGLib_Reset) for WWDGLib_Reset
     wwdg_task.o(.ARM.exidx.text.WWDGTask_Reset) refers to wwdg_task.o(.text.WWDGTask_Reset) for [Anonymous Symbol]
-    ds1302_cfg.o(.text.DS1302_Device0_Init) refers to gpio_task.o(.text.GPIOTask_Clock) for GPIOTask_Clock
-    ds1302_cfg.o(.text.DS1302_Device0_Init) refers to stm32f1xx_ll_gpio.o(.text.LL_GPIO_Init) for LL_GPIO_Init
-    ds1302_cfg.o(.text.DS1302_Device0_Init) refers to ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin) for LL_GPIO_ResetOutputPin
-    ds1302_cfg.o(.text.DS1302_Device0_Init) refers to ds1302_cfg.o(.text.LL_GPIO_SetOutputPin) for LL_GPIO_SetOutputPin
-    ds1302_cfg.o(.ARM.exidx.text.DS1302_Device0_Init) refers to ds1302_cfg.o(.text.DS1302_Device0_Init) for [Anonymous Symbol]
-    ds1302_cfg.o(.ARM.exidx.text.LL_GPIO_ResetOutputPin) refers to ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin) for [Anonymous Symbol]
-    ds1302_cfg.o(.ARM.exidx.text.LL_GPIO_SetOutputPin) refers to ds1302_cfg.o(.text.LL_GPIO_SetOutputPin) for [Anonymous Symbol]
-    ds1302_cfg.o(.ARM.exidx.text.DS1302_Device1_Init) refers to ds1302_cfg.o(.text.DS1302_Device1_Init) for [Anonymous Symbol]
-    ds1302_cfg.o(.ARM.exidx.text.DS1302_Device2_Init) refers to ds1302_cfg.o(.text.DS1302_Device2_Init) for [Anonymous Symbol]
-    ds1302_cfg.o(.text.DS1302_Init) refers to ds1302_cfg.o(.data.pDS1302Device0) for pDS1302Device0
-    ds1302_cfg.o(.text.DS1302_Init) refers to ds1302_cfg.o(.text.DS1302_Device0_Init) for DS1302_Device0_Init
-    ds1302_cfg.o(.text.DS1302_Init) refers to ds1302_cfg.o(.text.DS1302_Device1_Init) for DS1302_Device1_Init
-    ds1302_cfg.o(.text.DS1302_Init) refers to ds1302_cfg.o(.text.DS1302_Device2_Init) for DS1302_Device2_Init
-    ds1302_cfg.o(.ARM.exidx.text.DS1302_Init) refers to ds1302_cfg.o(.text.DS1302_Init) for [Anonymous Symbol]
-    ds1302_cfg.o(.text.DS1302_WriteBitLSB) refers to ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin) for LL_GPIO_ResetOutputPin
-    ds1302_cfg.o(.text.DS1302_WriteBitLSB) refers to ds1302_cfg.o(.text.LL_GPIO_SetOutputPin) for LL_GPIO_SetOutputPin
-    ds1302_cfg.o(.text.DS1302_WriteBitLSB) refers to ds1302_cfg.o(.text.LL_GPIO_IsInputPinSet) for LL_GPIO_IsInputPinSet
-    ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteBitLSB) refers to ds1302_cfg.o(.text.DS1302_WriteBitLSB) for [Anonymous Symbol]
-    ds1302_cfg.o(.ARM.exidx.text.LL_GPIO_IsInputPinSet) refers to ds1302_cfg.o(.text.LL_GPIO_IsInputPinSet) for [Anonymous Symbol]
-    ds1302_cfg.o(.text.DS1302_WriteByteLSB) refers to ds1302_cfg.o(.text.DS1302_WriteBitLSB) for DS1302_WriteBitLSB
-    ds1302_cfg.o(.text.DS1302_WriteByteLSB) refers to ds1302_cfg.o(.text.LL_GPIO_SetOutputPin) for LL_GPIO_SetOutputPin
-    ds1302_cfg.o(.text.DS1302_WriteByteLSB) refers to ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin) for LL_GPIO_ResetOutputPin
-    ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteByteLSB) refers to ds1302_cfg.o(.text.DS1302_WriteByteLSB) for [Anonymous Symbol]
-    ds1302_cfg.o(.text.DS1302_WriteReg) refers to ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin) for LL_GPIO_ResetOutputPin
-    ds1302_cfg.o(.text.DS1302_WriteReg) refers to ds1302_cfg.o(.text.LL_GPIO_SetOutputPin) for LL_GPIO_SetOutputPin
-    ds1302_cfg.o(.text.DS1302_WriteReg) refers to ds1302_cfg.o(.text.DS1302_WriteByteLSB) for DS1302_WriteByteLSB
-    ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteReg) refers to ds1302_cfg.o(.text.DS1302_WriteReg) for [Anonymous Symbol]
-    ds1302_cfg.o(.text.DS1302_ReadReg) refers to ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin) for LL_GPIO_ResetOutputPin
-    ds1302_cfg.o(.text.DS1302_ReadReg) refers to ds1302_cfg.o(.text.LL_GPIO_SetOutputPin) for LL_GPIO_SetOutputPin
-    ds1302_cfg.o(.text.DS1302_ReadReg) refers to ds1302_cfg.o(.text.DS1302_WriteByteLSB) for DS1302_WriteByteLSB
-    ds1302_cfg.o(.ARM.exidx.text.DS1302_ReadReg) refers to ds1302_cfg.o(.text.DS1302_ReadReg) for [Anonymous Symbol]
-    ds1302_cfg.o(.text.DS1302_WriteTime) refers to ds1302_cfg.o(.text.DS1302_WriteReg) for DS1302_WriteReg
-    ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteTime) refers to ds1302_cfg.o(.text.DS1302_WriteTime) for [Anonymous Symbol]
-    ds1302_cfg.o(.text.DS1302_ReadTime) refers to ds1302_cfg.o(.text.DS1302_ReadReg) for DS1302_ReadReg
-    ds1302_cfg.o(.ARM.exidx.text.DS1302_ReadTime) refers to ds1302_cfg.o(.text.DS1302_ReadTime) for [Anonymous Symbol]
-    ds1302_cfg.o(.text.DS1302_WriteRTC) refers to ds1302_cfg.o(.text.DS1302_WriteReg) for DS1302_WriteReg
-    ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteRTC) refers to ds1302_cfg.o(.text.DS1302_WriteRTC) for [Anonymous Symbol]
-    ds1302_cfg.o(.text.DS1302_ReadRTC) refers to ds1302_cfg.o(.text.DS1302_ReadReg) for DS1302_ReadReg
-    ds1302_cfg.o(.ARM.exidx.text.DS1302_ReadRTC) refers to ds1302_cfg.o(.text.DS1302_ReadRTC) for [Anonymous Symbol]
-    ds1302_cfg.o(.data.pDS1302Device0) refers to ds1302_cfg.o(.bss.g_DS1302Device0) for g_DS1302Device0
-    ds1302_lib.o(.text.DS1302Lib_Init) refers to ds1302_cfg.o(.text.DS1302_Init) for DS1302_Init
-    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_Init) refers to ds1302_lib.o(.text.DS1302Lib_Init) for [Anonymous Symbol]
-    ds1302_lib.o(.text.DS1302Lib_WriteReg) refers to ds1302_cfg.o(.text.DS1302_WriteReg) for DS1302_WriteReg
-    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_WriteReg) refers to ds1302_lib.o(.text.DS1302Lib_WriteReg) for [Anonymous Symbol]
-    ds1302_lib.o(.text.DS1302Lib_ReadReg) refers to ds1302_cfg.o(.text.DS1302_ReadReg) for DS1302_ReadReg
-    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_ReadReg) refers to ds1302_lib.o(.text.DS1302Lib_ReadReg) for [Anonymous Symbol]
-    ds1302_lib.o(.text.DS1302Lib_WriteTime) refers to ds1302_cfg.o(.text.DS1302_WriteTime) for DS1302_WriteTime
-    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_WriteTime) refers to ds1302_lib.o(.text.DS1302Lib_WriteTime) for [Anonymous Symbol]
-    ds1302_lib.o(.text.DS1302Lib_ReadTime) refers to ds1302_cfg.o(.text.DS1302_ReadTime) for DS1302_ReadTime
-    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_ReadTime) refers to ds1302_lib.o(.text.DS1302Lib_ReadTime) for [Anonymous Symbol]
-    ds1302_lib.o(.text.DS1302Lib_WriteRTC) refers to ds1302_cfg.o(.text.DS1302_WriteRTC) for DS1302_WriteRTC
-    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_WriteRTC) refers to ds1302_lib.o(.text.DS1302Lib_WriteRTC) for [Anonymous Symbol]
-    ds1302_lib.o(.text.DS1302Lib_ReadRTC) refers to ds1302_cfg.o(.text.DS1302_ReadRTC) for DS1302_ReadRTC
-    ds1302_lib.o(.ARM.exidx.text.DS1302Lib_ReadRTC) refers to ds1302_lib.o(.text.DS1302Lib_ReadRTC) for [Anonymous Symbol]
-    ds1302_task.o(.text.DS1302Task_Init) refers to ds1302_lib.o(.text.DS1302Lib_Init) for DS1302Lib_Init
-    ds1302_task.o(.ARM.exidx.text.DS1302Task_Init) refers to ds1302_task.o(.text.DS1302Task_Init) for [Anonymous Symbol]
-    ds1302_task.o(.text.DS1302Task_WriteReg) refers to ds1302_lib.o(.text.DS1302Lib_WriteReg) for DS1302Lib_WriteReg
-    ds1302_task.o(.ARM.exidx.text.DS1302Task_WriteReg) refers to ds1302_task.o(.text.DS1302Task_WriteReg) for [Anonymous Symbol]
-    ds1302_task.o(.text.DS1302Task_ReadReg) refers to ds1302_lib.o(.text.DS1302Lib_ReadReg) for DS1302Lib_ReadReg
-    ds1302_task.o(.ARM.exidx.text.DS1302Task_ReadReg) refers to ds1302_task.o(.text.DS1302Task_ReadReg) for [Anonymous Symbol]
-    ds1302_task.o(.text.DS1302Task_WriteTime) refers to ds1302_lib.o(.text.DS1302Lib_WriteTime) for DS1302Lib_WriteTime
-    ds1302_task.o(.ARM.exidx.text.DS1302Task_WriteTime) refers to ds1302_task.o(.text.DS1302Task_WriteTime) for [Anonymous Symbol]
-    ds1302_task.o(.text.DS1302Task_ReadTime) refers to ds1302_lib.o(.text.DS1302Lib_ReadTime) for DS1302Lib_ReadTime
-    ds1302_task.o(.ARM.exidx.text.DS1302Task_ReadTime) refers to ds1302_task.o(.text.DS1302Task_ReadTime) for [Anonymous Symbol]
-    ds1302_task.o(.text.DS1302Task_WriteRTC) refers to ds1302_lib.o(.text.DS1302Lib_WriteRTC) for DS1302Lib_WriteRTC
-    ds1302_task.o(.ARM.exidx.text.DS1302Task_WriteRTC) refers to ds1302_task.o(.text.DS1302Task_WriteRTC) for [Anonymous Symbol]
-    ds1302_task.o(.text.DS1302Task_ReadRTC) refers to ds1302_lib.o(.text.DS1302Lib_ReadRTC) for DS1302Lib_ReadRTC
-    ds1302_task.o(.ARM.exidx.text.DS1302Task_ReadRTC) refers to ds1302_task.o(.text.DS1302Task_ReadRTC) for [Anonymous Symbol]
+    pid_cfg.o(.text.PID_Task0_Init) refers to pid_cfg.o(.bss.g_PID0) for g_PID0
+    pid_cfg.o(.ARM.exidx.text.PID_Task0_Init) refers to pid_cfg.o(.text.PID_Task0_Init) for [Anonymous Symbol]
+    pid_cfg.o(.ARM.exidx.text.PID_Task1_Init) refers to pid_cfg.o(.text.PID_Task1_Init) for [Anonymous Symbol]
+    pid_cfg.o(.ARM.exidx.text.PID_Task2_Init) refers to pid_cfg.o(.text.PID_Task2_Init) for [Anonymous Symbol]
+    pid_cfg.o(.text.PID_Init) refers to pid_cfg.o(.data.pPID0) for pPID0
+    pid_cfg.o(.text.PID_Init) refers to pid_cfg.o(.text.PID_Task0_Init) for PID_Task0_Init
+    pid_cfg.o(.text.PID_Init) refers to pid_cfg.o(.text.PID_Task1_Init) for PID_Task1_Init
+    pid_cfg.o(.text.PID_Init) refers to pid_cfg.o(.text.PID_Task2_Init) for PID_Task2_Init
+    pid_cfg.o(.ARM.exidx.text.PID_Init) refers to pid_cfg.o(.text.PID_Init) for [Anonymous Symbol]
+    pid_cfg.o(.text.PID_PosCalc) refers to fadd.o(.text) for __aeabi_fsub
+    pid_cfg.o(.text.PID_PosCalc) refers to fcmple.o(.text) for __aeabi_fcmple
+    pid_cfg.o(.text.PID_PosCalc) refers to fcmplt.o(.text) for __aeabi_fcmplt
+    pid_cfg.o(.text.PID_PosCalc) refers to fcmpge.o(.text) for __aeabi_fcmpge
+    pid_cfg.o(.text.PID_PosCalc) refers to fdiv.o(.text) for __aeabi_fdiv
+    pid_cfg.o(.text.PID_PosCalc) refers to ffixi.o(.text) for __aeabi_f2iz
+    pid_cfg.o(.text.PID_PosCalc) refers to fmul.o(.text) for __aeabi_fmul
+    pid_cfg.o(.text.PID_PosCalc) refers to fflti.o(.text) for __aeabi_i2f
+    pid_cfg.o(.ARM.exidx.text.PID_PosCalc) refers to pid_cfg.o(.text.PID_PosCalc) for [Anonymous Symbol]
+    pid_cfg.o(.text.PID_IncCalc) refers to fadd.o(.text) for __aeabi_fsub
+    pid_cfg.o(.text.PID_IncCalc) refers to fmul.o(.text) for __aeabi_fmul
+    pid_cfg.o(.text.PID_IncCalc) refers to fcmple.o(.text) for __aeabi_fcmple
+    pid_cfg.o(.text.PID_IncCalc) refers to fcmpge.o(.text) for __aeabi_fcmpge
+    pid_cfg.o(.ARM.exidx.text.PID_IncCalc) refers to pid_cfg.o(.text.PID_IncCalc) for [Anonymous Symbol]
+    pid_cfg.o(.data.pPID0) refers to pid_cfg.o(.bss.g_PID0) for g_PID0
+    pid_lib.o(.text.PIDLib_Init) refers to pid_cfg.o(.text.PID_Init) for PID_Init
+    pid_lib.o(.ARM.exidx.text.PIDLib_Init) refers to pid_lib.o(.text.PIDLib_Init) for [Anonymous Symbol]
+    pid_lib.o(.text.PIDLib_PosCalc) refers to pid_cfg.o(.text.PID_PosCalc) for PID_PosCalc
+    pid_lib.o(.ARM.exidx.text.PIDLib_PosCalc) refers to pid_lib.o(.text.PIDLib_PosCalc) for [Anonymous Symbol]
+    pid_lib.o(.text.PIDLib_IncCalc) refers to pid_cfg.o(.text.PID_IncCalc) for PID_IncCalc
+    pid_lib.o(.ARM.exidx.text.PIDLib_IncCalc) refers to pid_lib.o(.text.PIDLib_IncCalc) for [Anonymous Symbol]
+    pid_task.o(.text.PIDTask_Init) refers to pid_lib.o(.text.PIDLib_Init) for PIDLib_Init
+    pid_task.o(.ARM.exidx.text.PIDTask_Init) refers to pid_task.o(.text.PIDTask_Init) for [Anonymous Symbol]
+    pid_task.o(.text.PIDTask_PosCalc) refers to pid_lib.o(.text.PIDLib_PosCalc) for PIDLib_PosCalc
+    pid_task.o(.ARM.exidx.text.PIDTask_PosCalc) refers to pid_task.o(.text.PIDTask_PosCalc) for [Anonymous Symbol]
+    pid_task.o(.text.PIDTask_IncCalc) refers to pid_lib.o(.text.PIDLib_IncCalc) for PIDLib_IncCalc
+    pid_task.o(.ARM.exidx.text.PIDTask_IncCalc) refers to pid_task.o(.text.PIDTask_IncCalc) for [Anonymous Symbol]
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
@@ -3882,12 +3918,16 @@ Section Cross References
     dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
     ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    fcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fcmplt.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fcmpge.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     fflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     fflti.o(.text) refers to fepilogue.o(.text) for _float_epilogue
     ffltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     ffltui.o(.text) refers to fepilogue.o(.text) for _float_epilogue
     dflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ffixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     ffixui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     dfixui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
     dfixui.o(.text) refers to llushr.o(.text) for __aeabi_llsr
@@ -5125,6 +5165,69 @@ Removing Unused input sections from the image.
     Removing ds18b20_task.o(.ARM.exidx.text.DS18B20Task_OneWire_ReadTemp), (8 bytes).
     Removing ds18b20_task.o(.text.DS18B20Task_OneWire_ReadTempByID), (28 bytes).
     Removing ds18b20_task.o(.ARM.exidx.text.DS18B20Task_OneWire_ReadTempByID), (8 bytes).
+    Removing ds1302_cfg.o(.text), (0 bytes).
+    Removing ds1302_cfg.o(.text.DS1302_Device0_Init), (232 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_Device0_Init), (8 bytes).
+    Removing ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin), (28 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.LL_GPIO_ResetOutputPin), (8 bytes).
+    Removing ds1302_cfg.o(.text.LL_GPIO_SetOutputPin), (28 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.LL_GPIO_SetOutputPin), (8 bytes).
+    Removing ds1302_cfg.o(.text.DS1302_Device1_Init), (14 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_Device1_Init), (8 bytes).
+    Removing ds1302_cfg.o(.text.DS1302_Device2_Init), (14 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_Device2_Init), (8 bytes).
+    Removing ds1302_cfg.o(.text.DS1302_Init), (138 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_Init), (8 bytes).
+    Removing ds1302_cfg.o(.text.DS1302_WriteBitLSB), (124 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteBitLSB), (8 bytes).
+    Removing ds1302_cfg.o(.text.LL_GPIO_IsInputPinSet), (38 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.LL_GPIO_IsInputPinSet), (8 bytes).
+    Removing ds1302_cfg.o(.text.DS1302_WriteByteLSB), (202 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteByteLSB), (8 bytes).
+    Removing ds1302_cfg.o(.text.DS1302_WriteReg), (146 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteReg), (8 bytes).
+    Removing ds1302_cfg.o(.text.DS1302_ReadReg), (134 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_ReadReg), (8 bytes).
+    Removing ds1302_cfg.o(.text.DS1302_WriteTime), (70 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteTime), (8 bytes).
+    Removing ds1302_cfg.o(.text.DS1302_ReadTime), (44 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_ReadTime), (8 bytes).
+    Removing ds1302_cfg.o(.text.DS1302_WriteRTC), (148 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteRTC), (8 bytes).
+    Removing ds1302_cfg.o(.text.DS1302_ReadRTC), (100 bytes).
+    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_ReadRTC), (8 bytes).
+    Removing ds1302_cfg.o(.bss.g_DS1302Device0), (40 bytes).
+    Removing ds1302_cfg.o(.data.pDS1302Device0), (4 bytes).
+    Removing ds1302_lib.o(.text), (0 bytes).
+    Removing ds1302_lib.o(.text.DS1302Lib_Init), (28 bytes).
+    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_Init), (8 bytes).
+    Removing ds1302_lib.o(.text.DS1302Lib_WriteReg), (48 bytes).
+    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_WriteReg), (8 bytes).
+    Removing ds1302_lib.o(.text.DS1302Lib_ReadReg), (44 bytes).
+    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_ReadReg), (8 bytes).
+    Removing ds1302_lib.o(.text.DS1302Lib_WriteTime), (48 bytes).
+    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_WriteTime), (8 bytes).
+    Removing ds1302_lib.o(.text.DS1302Lib_ReadTime), (44 bytes).
+    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_ReadTime), (8 bytes).
+    Removing ds1302_lib.o(.text.DS1302Lib_WriteRTC), (40 bytes).
+    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_WriteRTC), (8 bytes).
+    Removing ds1302_lib.o(.text.DS1302Lib_ReadRTC), (20 bytes).
+    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_ReadRTC), (8 bytes).
+    Removing ds1302_task.o(.text), (0 bytes).
+    Removing ds1302_task.o(.text.DS1302Task_Init), (28 bytes).
+    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_Init), (8 bytes).
+    Removing ds1302_task.o(.text.DS1302Task_WriteReg), (48 bytes).
+    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_WriteReg), (8 bytes).
+    Removing ds1302_task.o(.text.DS1302Task_ReadReg), (44 bytes).
+    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_ReadReg), (8 bytes).
+    Removing ds1302_task.o(.text.DS1302Task_WriteTime), (48 bytes).
+    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_WriteTime), (8 bytes).
+    Removing ds1302_task.o(.text.DS1302Task_ReadTime), (44 bytes).
+    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_ReadTime), (8 bytes).
+    Removing ds1302_task.o(.text.DS1302Task_WriteRTC), (40 bytes).
+    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_WriteRTC), (8 bytes).
+    Removing ds1302_task.o(.text.DS1302Task_ReadRTC), (20 bytes).
+    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_ReadRTC), (8 bytes).
     Removing eeprom_cfg.o(.text), (0 bytes).
     Removing eeprom_cfg.o(.ARM.exidx.text.EEPROM_Init), (8 bytes).
     Removing eeprom_cfg.o(.text.EEPROM_ReadHalfWord), (40 bytes).
@@ -5155,6 +5258,9 @@ Removing Unused input sections from the image.
     Removing eeprom_task.o(.ARM.exidx.text.EEPROMTask_WriteHalfWord), (8 bytes).
     Removing eeprom_task.o(.text.EEPROMTask_WriteHalfWordData), (48 bytes).
     Removing eeprom_task.o(.ARM.exidx.text.EEPROMTask_WriteHalfWordData), (8 bytes).
+    Removing enc28j60_cfg.o(.text), (0 bytes).
+    Removing enc28j60_lib.o(.text), (0 bytes).
+    Removing enc28j60_task.o(.text), (0 bytes).
     Removing flash_cfg.o(.text), (0 bytes).
     Removing flash_cfg.o(.ARM.exidx.text.FLASH_ReadHalfWord), (8 bytes).
     Removing flash_cfg.o(.text.FLASH_WriteHalfWord), (114 bytes).
@@ -5886,6 +5992,7 @@ Removing Unused input sections from the image.
     Removing rfask_task.o(.ARM.exidx.text.RFASKTask_EOTSTOP), (8 bytes).
     Removing rfask_task.o(.ARM.exidx.text.RFASKTask_BINPass), (8 bytes).
     Removing rfask_task.o(.ARM.exidx.text.RFASKTask_KeyTask), (8 bytes).
+    Removing rfaskhw_cfg.o(.text), (0 bytes).
     Removing sht2x_cfg.o(.text), (0 bytes).
     Removing sht2x_cfg.o(.text.SHT2X_I2C_Init), (210 bytes).
     Removing sht2x_cfg.o(.ARM.exidx.text.SHT2X_I2C_Init), (8 bytes).
@@ -6682,72 +6789,41 @@ Removing Unused input sections from the image.
     Removing wwdg_task.o(.ARM.exidx.text.WWDGTask_DeInit), (8 bytes).
     Removing wwdg_task.o(.text.WWDGTask_Reset), (8 bytes).
     Removing wwdg_task.o(.ARM.exidx.text.WWDGTask_Reset), (8 bytes).
-    Removing rfaskhw_cfg.o(.text), (0 bytes).
-    Removing ds1302_cfg.o(.text), (0 bytes).
-    Removing ds1302_cfg.o(.text.DS1302_Device0_Init), (232 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_Device0_Init), (8 bytes).
-    Removing ds1302_cfg.o(.text.LL_GPIO_ResetOutputPin), (28 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.LL_GPIO_ResetOutputPin), (8 bytes).
-    Removing ds1302_cfg.o(.text.LL_GPIO_SetOutputPin), (28 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.LL_GPIO_SetOutputPin), (8 bytes).
-    Removing ds1302_cfg.o(.text.DS1302_Device1_Init), (14 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_Device1_Init), (8 bytes).
-    Removing ds1302_cfg.o(.text.DS1302_Device2_Init), (14 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_Device2_Init), (8 bytes).
-    Removing ds1302_cfg.o(.text.DS1302_Init), (138 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_Init), (8 bytes).
-    Removing ds1302_cfg.o(.text.DS1302_WriteBitLSB), (124 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteBitLSB), (8 bytes).
-    Removing ds1302_cfg.o(.text.LL_GPIO_IsInputPinSet), (38 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.LL_GPIO_IsInputPinSet), (8 bytes).
-    Removing ds1302_cfg.o(.text.DS1302_WriteByteLSB), (202 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteByteLSB), (8 bytes).
-    Removing ds1302_cfg.o(.text.DS1302_WriteReg), (146 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteReg), (8 bytes).
-    Removing ds1302_cfg.o(.text.DS1302_ReadReg), (134 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_ReadReg), (8 bytes).
-    Removing ds1302_cfg.o(.text.DS1302_WriteTime), (70 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteTime), (8 bytes).
-    Removing ds1302_cfg.o(.text.DS1302_ReadTime), (44 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_ReadTime), (8 bytes).
-    Removing ds1302_cfg.o(.text.DS1302_WriteRTC), (148 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_WriteRTC), (8 bytes).
-    Removing ds1302_cfg.o(.text.DS1302_ReadRTC), (100 bytes).
-    Removing ds1302_cfg.o(.ARM.exidx.text.DS1302_ReadRTC), (8 bytes).
-    Removing ds1302_cfg.o(.bss.g_DS1302Device0), (40 bytes).
-    Removing ds1302_cfg.o(.data.pDS1302Device0), (4 bytes).
-    Removing ds1302_lib.o(.text), (0 bytes).
-    Removing ds1302_lib.o(.text.DS1302Lib_Init), (28 bytes).
-    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_Init), (8 bytes).
-    Removing ds1302_lib.o(.text.DS1302Lib_WriteReg), (48 bytes).
-    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_WriteReg), (8 bytes).
-    Removing ds1302_lib.o(.text.DS1302Lib_ReadReg), (44 bytes).
-    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_ReadReg), (8 bytes).
-    Removing ds1302_lib.o(.text.DS1302Lib_WriteTime), (48 bytes).
-    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_WriteTime), (8 bytes).
-    Removing ds1302_lib.o(.text.DS1302Lib_ReadTime), (44 bytes).
-    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_ReadTime), (8 bytes).
-    Removing ds1302_lib.o(.text.DS1302Lib_WriteRTC), (40 bytes).
-    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_WriteRTC), (8 bytes).
-    Removing ds1302_lib.o(.text.DS1302Lib_ReadRTC), (20 bytes).
-    Removing ds1302_lib.o(.ARM.exidx.text.DS1302Lib_ReadRTC), (8 bytes).
-    Removing ds1302_task.o(.text), (0 bytes).
-    Removing ds1302_task.o(.text.DS1302Task_Init), (28 bytes).
-    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_Init), (8 bytes).
-    Removing ds1302_task.o(.text.DS1302Task_WriteReg), (48 bytes).
-    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_WriteReg), (8 bytes).
-    Removing ds1302_task.o(.text.DS1302Task_ReadReg), (44 bytes).
-    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_ReadReg), (8 bytes).
-    Removing ds1302_task.o(.text.DS1302Task_WriteTime), (48 bytes).
-    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_WriteTime), (8 bytes).
-    Removing ds1302_task.o(.text.DS1302Task_ReadTime), (44 bytes).
-    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_ReadTime), (8 bytes).
-    Removing ds1302_task.o(.text.DS1302Task_WriteRTC), (40 bytes).
-    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_WriteRTC), (8 bytes).
-    Removing ds1302_task.o(.text.DS1302Task_ReadRTC), (20 bytes).
-    Removing ds1302_task.o(.ARM.exidx.text.DS1302Task_ReadRTC), (8 bytes).
+    Removing pid_cfg.o(.text), (0 bytes).
+    Removing pid_cfg.o(.text.PID_Task0_Init), (244 bytes).
+    Removing pid_cfg.o(.ARM.exidx.text.PID_Task0_Init), (8 bytes).
+    Removing pid_cfg.o(.text.PID_Task1_Init), (136 bytes).
+    Removing pid_cfg.o(.ARM.exidx.text.PID_Task1_Init), (8 bytes).
+    Removing pid_cfg.o(.text.PID_Task2_Init), (136 bytes).
+    Removing pid_cfg.o(.ARM.exidx.text.PID_Task2_Init), (8 bytes).
+    Removing pid_cfg.o(.text.PID_Init), (566 bytes).
+    Removing pid_cfg.o(.ARM.exidx.text.PID_Init), (8 bytes).
+    Removing pid_cfg.o(.text.PID_PosCalc), (990 bytes).
+    Removing pid_cfg.o(.ARM.exidx.text.PID_PosCalc), (8 bytes).
+    Removing pid_cfg.o(.text.PID_IncCalc), (370 bytes).
+    Removing pid_cfg.o(.ARM.exidx.text.PID_IncCalc), (8 bytes).
+    Removing pid_cfg.o(.bss.g_PID0), (64 bytes).
+    Removing pid_cfg.o(.data.pPID0), (4 bytes).
+    Removing pid_lib.o(.text), (0 bytes).
+    Removing pid_lib.o(.text.PIDLib_Init), (256 bytes).
+    Removing pid_lib.o(.ARM.exidx.text.PIDLib_Init), (8 bytes).
+    Removing pid_lib.o(.text.PIDLib_PosCalc), (28 bytes).
+    Removing pid_lib.o(.ARM.exidx.text.PIDLib_PosCalc), (8 bytes).
+    Removing pid_lib.o(.text.PIDLib_IncCalc), (28 bytes).
+    Removing pid_lib.o(.ARM.exidx.text.PIDLib_IncCalc), (8 bytes).
+    Removing pid_task.o(.text), (0 bytes).
+    Removing pid_task.o(.text.PIDTask_Init), (256 bytes).
+    Removing pid_task.o(.ARM.exidx.text.PIDTask_Init), (8 bytes).
+    Removing pid_task.o(.text.PIDTask_PosCalc), (28 bytes).
+    Removing pid_task.o(.ARM.exidx.text.PIDTask_PosCalc), (8 bytes).
+    Removing pid_task.o(.text.PIDTask_IncCalc), (28 bytes).
+    Removing pid_task.o(.ARM.exidx.text.PIDTask_IncCalc), (8 bytes).
+    Removing fcmple.o(.text), (28 bytes).
+    Removing fcmplt.o(.text), (28 bytes).
+    Removing fcmpge.o(.text), (28 bytes).
+    Removing ffixi.o(.text), (50 bytes).
 
-2827 unused section(s) (total 91674 bytes) removed from the image.
+2863 unused section(s) (total 95038 bytes) removed from the image.
 
 ==============================================================================
 
@@ -6757,21 +6833,21 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
@@ -6784,20 +6860,24 @@ Image Symbol Table
     ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusesemip.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
-    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
     ../fplib/microlib/fpadd.c                0x00000000   Number         0  fadd.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpcmp.c                0x00000000   Number         0  fcmpge.o ABSOLUTE
+    ../fplib/microlib/fpcmp.c                0x00000000   Number         0  fcmplt.o ABSOLUTE
+    ../fplib/microlib/fpcmp.c                0x00000000   Number         0  fcmple.o ABSOLUTE
     ../fplib/microlib/fpdiv.c                0x00000000   Number         0  fdiv.o ABSOLUTE
     ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  ffixui.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  ffixi.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
-    ../fplib/microlib/fpfix.c                0x00000000   Number         0  ffixui.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dflti.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  ffltui.o ABSOLUTE
     ../fplib/microlib/fpflt.c                0x00000000   Number         0  fflti.o ABSOLUTE
-    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dflti.o ABSOLUTE
-    ../fplib/microlib/fpmul.c                0x00000000   Number         0  fmul.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  fmul.o ABSOLUTE
     ..\STARTUP\MDKARM\startup_stm32f103xg.s  0x00000000   Number         0  startup_stm32f103xg.o ABSOLUTE
     ad5593_cfg.c                             0x00000000   Number         0  ad5593_cfg.o ABSOLUTE
     ad5593_lib.c                             0x00000000   Number         0  ad5593_lib.o ABSOLUTE
@@ -6842,6 +6922,9 @@ Image Symbol Table
     eeprom_cfg.c                             0x00000000   Number         0  eeprom_cfg.o ABSOLUTE
     eeprom_lib.c                             0x00000000   Number         0  eeprom_lib.o ABSOLUTE
     eeprom_task.c                            0x00000000   Number         0  eeprom_task.o ABSOLUTE
+    enc28j60_cfg.c                           0x00000000   Number         0  enc28j60_cfg.o ABSOLUTE
+    enc28j60_lib.c                           0x00000000   Number         0  enc28j60_lib.o ABSOLUTE
+    enc28j60_task.c                          0x00000000   Number         0  enc28j60_task.o ABSOLUTE
     flash_cfg.c                              0x00000000   Number         0  flash_cfg.o ABSOLUTE
     flash_lib.c                              0x00000000   Number         0  flash_lib.o ABSOLUTE
     flash_task.c                             0x00000000   Number         0  flash_task.o ABSOLUTE
@@ -6887,6 +6970,9 @@ Image Symbol Table
     pcf8563_cfg.c                            0x00000000   Number         0  pcf8563_cfg.o ABSOLUTE
     pcf8563_lib.c                            0x00000000   Number         0  pcf8563_lib.o ABSOLUTE
     pcf8563_task.c                           0x00000000   Number         0  pcf8563_task.o ABSOLUTE
+    pid_cfg.c                                0x00000000   Number         0  pid_cfg.o ABSOLUTE
+    pid_lib.c                                0x00000000   Number         0  pid_lib.o ABSOLUTE
+    pid_task.c                               0x00000000   Number         0  pid_task.o ABSOLUTE
     power_cfg.c                              0x00000000   Number         0  power_cfg.o ABSOLUTE
     power_lib.c                              0x00000000   Number         0  power_lib.o ABSOLUTE
     power_task.c                             0x00000000   Number         0  power_task.o ABSOLUTE
@@ -8397,39 +8483,39 @@ Memory Map of the image
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000130   Data   RO         1010    RESET               startup_stm32f103xg.o
-    0x08000130   0x08000130   0x00000000   Code   RO         4597  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000130   0x08000130   0x00000004   Code   RO         4655    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x08000134   0x08000134   0x00000004   Code   RO         4658    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000138   0x08000138   0x00000000   Code   RO         4660    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000138   0x08000138   0x00000000   Code   RO         4662    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000138   0x08000138   0x00000008   Code   RO         4663    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO         4665    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO         4667    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000140   0x08000140   0x00000004   Code   RO         4656    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000130   0x08000130   0x00000000   Code   RO         4656  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000130   0x08000130   0x00000004   Code   RO         4722    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000134   0x08000134   0x00000004   Code   RO         4725    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000138   0x08000138   0x00000000   Code   RO         4727    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000138   0x08000138   0x00000000   Code   RO         4729    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000138   0x08000138   0x00000008   Code   RO         4730    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO         4732    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000140   0x08000140   0x00000000   Code   RO         4734    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000140   0x08000140   0x00000004   Code   RO         4723    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x08000144   0x08000144   0x00000024   Code   RO         1011    .text               startup_stm32f103xg.o
-    0x08000168   0x08000168   0x00000062   Code   RO         4600    .text               mc_w.l(uldiv.o)
-    0x080001ca   0x080001ca   0x00000024   Code   RO         4605    .text               mc_w.l(memseta.o)
-    0x080001ee   0x080001ee   0x000000b0   Code   RO         4635    .text               mf_w.l(fadd.o)
-    0x0800029e   0x0800029e   0x00000064   Code   RO         4637    .text               mf_w.l(fmul.o)
-    0x08000302   0x08000302   0x0000007c   Code   RO         4639    .text               mf_w.l(fdiv.o)
-    0x0800037e   0x0800037e   0x0000014e   Code   RO         4641    .text               mf_w.l(dadd.o)
-    0x080004cc   0x080004cc   0x000000de   Code   RO         4643    .text               mf_w.l(ddiv.o)
-    0x080005aa   0x080005aa   0x00000012   Code   RO         4645    .text               mf_w.l(fflti.o)
-    0x080005bc   0x080005bc   0x0000000a   Code   RO         4647    .text               mf_w.l(ffltui.o)
-    0x080005c6   0x080005c6   0x00000022   Code   RO         4649    .text               mf_w.l(dflti.o)
-    0x080005e8   0x080005e8   0x00000028   Code   RO         4651    .text               mf_w.l(ffixui.o)
-    0x08000610   0x08000610   0x00000032   Code   RO         4653    .text               mf_w.l(dfixui.o)
-    0x08000642   0x08000642   0x0000002c   Code   RO         4674    .text               mc_w.l(uidiv.o)
-    0x0800066e   0x0800066e   0x0000001e   Code   RO         4676    .text               mc_w.l(llshl.o)
-    0x0800068c   0x0800068c   0x00000020   Code   RO         4678    .text               mc_w.l(llushr.o)
-    0x080006ac   0x080006ac   0x00000024   Code   RO         4680    .text               mc_w.l(llsshr.o)
-    0x080006d0   0x080006d0   0x00000000   Code   RO         4682    .text               mc_w.l(iusefp.o)
-    0x080006d0   0x080006d0   0x0000006e   Code   RO         4683    .text               mf_w.l(fepilogue.o)
-    0x0800073e   0x0800073e   0x000000ba   Code   RO         4685    .text               mf_w.l(depilogue.o)
-    0x080007f8   0x080007f8   0x000000e4   Code   RO         4687    .text               mf_w.l(dmul.o)
-    0x080008dc   0x080008dc   0x00000030   Code   RO         4689    .text               mf_w.l(dfixul.o)
-    0x0800090c   0x0800090c   0x00000030   Code   RO         4691    .text               mf_w.l(cdrcmple.o)
-    0x0800093c   0x0800093c   0x00000024   Code   RO         4693    .text               mc_w.l(init.o)
+    0x08000168   0x08000168   0x00000062   Code   RO         4659    .text               mc_w.l(uldiv.o)
+    0x080001ca   0x080001ca   0x00000024   Code   RO         4664    .text               mc_w.l(memseta.o)
+    0x080001ee   0x080001ee   0x000000b0   Code   RO         4694    .text               mf_w.l(fadd.o)
+    0x0800029e   0x0800029e   0x00000064   Code   RO         4696    .text               mf_w.l(fmul.o)
+    0x08000302   0x08000302   0x0000007c   Code   RO         4698    .text               mf_w.l(fdiv.o)
+    0x0800037e   0x0800037e   0x0000014e   Code   RO         4700    .text               mf_w.l(dadd.o)
+    0x080004cc   0x080004cc   0x000000de   Code   RO         4702    .text               mf_w.l(ddiv.o)
+    0x080005aa   0x080005aa   0x00000012   Code   RO         4710    .text               mf_w.l(fflti.o)
+    0x080005bc   0x080005bc   0x0000000a   Code   RO         4712    .text               mf_w.l(ffltui.o)
+    0x080005c6   0x080005c6   0x00000022   Code   RO         4714    .text               mf_w.l(dflti.o)
+    0x080005e8   0x080005e8   0x00000028   Code   RO         4718    .text               mf_w.l(ffixui.o)
+    0x08000610   0x08000610   0x00000032   Code   RO         4720    .text               mf_w.l(dfixui.o)
+    0x08000642   0x08000642   0x0000002c   Code   RO         4741    .text               mc_w.l(uidiv.o)
+    0x0800066e   0x0800066e   0x0000001e   Code   RO         4743    .text               mc_w.l(llshl.o)
+    0x0800068c   0x0800068c   0x00000020   Code   RO         4745    .text               mc_w.l(llushr.o)
+    0x080006ac   0x080006ac   0x00000024   Code   RO         4747    .text               mc_w.l(llsshr.o)
+    0x080006d0   0x080006d0   0x00000000   Code   RO         4749    .text               mc_w.l(iusefp.o)
+    0x080006d0   0x080006d0   0x0000006e   Code   RO         4750    .text               mf_w.l(fepilogue.o)
+    0x0800073e   0x0800073e   0x000000ba   Code   RO         4752    .text               mf_w.l(depilogue.o)
+    0x080007f8   0x080007f8   0x000000e4   Code   RO         4754    .text               mf_w.l(dmul.o)
+    0x080008dc   0x080008dc   0x00000030   Code   RO         4756    .text               mf_w.l(dfixul.o)
+    0x0800090c   0x0800090c   0x00000030   Code   RO         4758    .text               mf_w.l(cdrcmple.o)
+    0x0800093c   0x0800093c   0x00000024   Code   RO         4760    .text               mc_w.l(init.o)
     0x08000960   0x08000960   0x00000014   Code   RO         1126    .text.ADCLib_ADCTask_START  adc_lib.o
     0x08000974   0x08000974   0x00000014   Code   RO         1128    .text.ADCLib_ADCTask_STOP  adc_lib.o
     0x08000988   0x08000988   0x00000008   Code   RO         1124    .text.ADCLib_ADC_Init  adc_lib.o
@@ -8565,97 +8651,97 @@ Memory Map of the image
     0x08002924   0x08002924   0x00000014   Code   RO         1819    .text.DelayTask_us  delay_task.o
     0x08002938   0x08002938   0x00000034   Code   RO         1767    .text.Delay_ms      delay_cfg.o
     0x0800296c   0x0800296c   0x000000bc   Code   RO           31    .text.DescSortFun2  complier_lib.o
-    0x08002a28   0x08002a28   0x00000008   Code   RO         2010    .text.EEPROMLib_Init  eeprom_lib.o
-    0x08002a30   0x08002a30   0x00000008   Code   RO         2030    .text.EEPROMTask_Init  eeprom_task.o
-    0x08002a38   0x08002a38   0x0000001c   Code   RO         1989    .text.EEPROM_Init   eeprom_cfg.o
-    0x08002a54   0x08002a54   0x0000002c   Code   RO         2077    .text.FLASHLib_ReadHalfWord  flash_lib.o
-    0x08002a80   0x08002a80   0x0000002c   Code   RO         2093    .text.FLASHTask_ReadHalfWord  flash_task.o
-    0x08002aac   0x08002aac   0x0000005c   Code   RO         2050    .text.FLASH_ReadHalfWord  flash_cfg.o
-    0x08002b08   0x08002b08   0x00000020   Code   RO         2135    .text.GPIOLib_Clock  gpio_lib.o
-    0x08002b28   0x08002b28   0x00000008   Code   RO         2137    .text.GPIOLib_Init  gpio_lib.o
-    0x08002b30   0x08002b30   0x00000020   Code   RO         2149    .text.GPIOTask_Clock  gpio_task.o
-    0x08002b50   0x08002b50   0x00000008   Code   RO         2151    .text.GPIOTask_Init  gpio_task.o
-    0x08002b58   0x08002b58   0x0000014e   Code   RO         2113    .text.GPIO_Clock    gpio_cfg.o
+    0x08002a28   0x08002a28   0x00000008   Code   RO         2100    .text.EEPROMLib_Init  eeprom_lib.o
+    0x08002a30   0x08002a30   0x00000008   Code   RO         2120    .text.EEPROMTask_Init  eeprom_task.o
+    0x08002a38   0x08002a38   0x0000001c   Code   RO         2079    .text.EEPROM_Init   eeprom_cfg.o
+    0x08002a54   0x08002a54   0x0000002c   Code   RO         2170    .text.FLASHLib_ReadHalfWord  flash_lib.o
+    0x08002a80   0x08002a80   0x0000002c   Code   RO         2186    .text.FLASHTask_ReadHalfWord  flash_task.o
+    0x08002aac   0x08002aac   0x0000005c   Code   RO         2143    .text.FLASH_ReadHalfWord  flash_cfg.o
+    0x08002b08   0x08002b08   0x00000020   Code   RO         2228    .text.GPIOLib_Clock  gpio_lib.o
+    0x08002b28   0x08002b28   0x00000008   Code   RO         2230    .text.GPIOLib_Init  gpio_lib.o
+    0x08002b30   0x08002b30   0x00000020   Code   RO         2242    .text.GPIOTask_Clock  gpio_task.o
+    0x08002b50   0x08002b50   0x00000008   Code   RO         2244    .text.GPIOTask_Init  gpio_task.o
+    0x08002b58   0x08002b58   0x0000014e   Code   RO         2206    .text.GPIO_Clock    gpio_cfg.o
     0x08002ca6   0x08002ca6   0x00000002   PAD
-    0x08002ca8   0x08002ca8   0x0000007a   Code   RO         2119    .text.GPIO_Init     gpio_cfg.o
+    0x08002ca8   0x08002ca8   0x0000007a   Code   RO         2212    .text.GPIO_Init     gpio_cfg.o
     0x08002d22   0x08002d22   0x00000002   PAD
     0x08002d24   0x08002d24   0x0000001a   Code   RO          305    .text.HAL_IncTick   stm32f1xx_hal.o
     0x08002d3e   0x08002d3e   0x00000002   PAD
     0x08002d40   0x08002d40   0x00000004   Code   RO           63    .text.HardFault_Handler  stm32f1xx_it.o
-    0x08002d44   0x08002d44   0x0000001c   Code   RO         2216    .text.I2CLib_MSW_Init  i2c_lib.o
-    0x08002d60   0x08002d60   0x00000014   Code   RO         2228    .text.I2CLib_MSW_ReadACK  i2c_lib.o
-    0x08002d74   0x08002d74   0x00000052   Code   RO         2220    .text.I2CLib_MSW_START  i2c_lib.o
+    0x08002d44   0x08002d44   0x0000001c   Code   RO         2309    .text.I2CLib_MSW_Init  i2c_lib.o
+    0x08002d60   0x08002d60   0x00000014   Code   RO         2321    .text.I2CLib_MSW_ReadACK  i2c_lib.o
+    0x08002d74   0x08002d74   0x00000052   Code   RO         2313    .text.I2CLib_MSW_START  i2c_lib.o
     0x08002dc6   0x08002dc6   0x00000002   PAD
-    0x08002dc8   0x08002dc8   0x00000014   Code   RO         2222    .text.I2CLib_MSW_STOP  i2c_lib.o
-    0x08002ddc   0x08002ddc   0x00000020   Code   RO         2234    .text.I2CLib_MSW_SendByte  i2c_lib.o
-    0x08002dfc   0x08002dfc   0x0000001c   Code   RO         2262    .text.I2CTask_MSW_Init  i2c_task.o
-    0x08002e18   0x08002e18   0x00000014   Code   RO         2270    .text.I2CTask_MSW_ReadACK  i2c_task.o
-    0x08002e2c   0x08002e2c   0x00000020   Code   RO         2266    .text.I2CTask_MSW_START  i2c_task.o
-    0x08002e4c   0x08002e4c   0x00000014   Code   RO         2268    .text.I2CTask_MSW_STOP  i2c_task.o
-    0x08002e60   0x08002e60   0x00000020   Code   RO         2274    .text.I2CTask_MSW_SendByte  i2c_task.o
-    0x08002e80   0x08002e80   0x000000ac   Code   RO         2166    .text.I2C_MSW_Init  i2c_cfg.o
-    0x08002f2c   0x08002f2c   0x0000007c   Code   RO         2184    .text.I2C_MSW_ReadACK  i2c_cfg.o
-    0x08002fa8   0x08002fa8   0x000000a2   Code   RO         2172    .text.I2C_MSW_START  i2c_cfg.o
+    0x08002dc8   0x08002dc8   0x00000014   Code   RO         2315    .text.I2CLib_MSW_STOP  i2c_lib.o
+    0x08002ddc   0x08002ddc   0x00000020   Code   RO         2327    .text.I2CLib_MSW_SendByte  i2c_lib.o
+    0x08002dfc   0x08002dfc   0x0000001c   Code   RO         2355    .text.I2CTask_MSW_Init  i2c_task.o
+    0x08002e18   0x08002e18   0x00000014   Code   RO         2363    .text.I2CTask_MSW_ReadACK  i2c_task.o
+    0x08002e2c   0x08002e2c   0x00000020   Code   RO         2359    .text.I2CTask_MSW_START  i2c_task.o
+    0x08002e4c   0x08002e4c   0x00000014   Code   RO         2361    .text.I2CTask_MSW_STOP  i2c_task.o
+    0x08002e60   0x08002e60   0x00000020   Code   RO         2367    .text.I2CTask_MSW_SendByte  i2c_task.o
+    0x08002e80   0x08002e80   0x000000ac   Code   RO         2259    .text.I2C_MSW_Init  i2c_cfg.o
+    0x08002f2c   0x08002f2c   0x0000007c   Code   RO         2277    .text.I2C_MSW_ReadACK  i2c_cfg.o
+    0x08002fa8   0x08002fa8   0x000000a2   Code   RO         2265    .text.I2C_MSW_START  i2c_cfg.o
     0x0800304a   0x0800304a   0x00000002   PAD
-    0x0800304c   0x0800304c   0x00000092   Code   RO         2178    .text.I2C_MSW_STOP  i2c_cfg.o
+    0x0800304c   0x0800304c   0x00000092   Code   RO         2271    .text.I2C_MSW_STOP  i2c_cfg.o
     0x080030de   0x080030de   0x00000002   PAD
-    0x080030e0   0x080030e0   0x00000090   Code   RO         2190    .text.I2C_MSW_SendBit  i2c_cfg.o
-    0x08003170   0x08003170   0x00000064   Code   RO         2192    .text.I2C_MSW_SendByte  i2c_cfg.o
+    0x080030e0   0x080030e0   0x00000090   Code   RO         2283    .text.I2C_MSW_SendBit  i2c_cfg.o
+    0x08003170   0x08003170   0x00000064   Code   RO         2285    .text.I2C_MSW_SendByte  i2c_cfg.o
     0x080031d4   0x080031d4   0x0000005a   Code   RO          769    .text.IC1Config     stm32f1xx_ll_tim.o
     0x0800322e   0x0800322e   0x00000002   PAD
     0x08003230   0x08003230   0x0000005c   Code   RO          771    .text.IC2Config     stm32f1xx_ll_tim.o
     0x0800328c   0x0800328c   0x0000005c   Code   RO          773    .text.IC3Config     stm32f1xx_ll_tim.o
     0x080032e8   0x080032e8   0x0000005c   Code   RO          775    .text.IC4Config     stm32f1xx_ll_tim.o
-    0x08003344   0x08003344   0x00000008   Code   RO         2581    .text.IWDGLib_Init  iwdg_lib.o
-    0x0800334c   0x0800334c   0x00000008   Code   RO         2585    .text.IWDGLib_Reset  iwdg_lib.o
-    0x08003354   0x08003354   0x00000008   Code   RO         2597    .text.IWDGTask_Init  iwdg_task.o
-    0x0800335c   0x0800335c   0x00000008   Code   RO         2601    .text.IWDGTask_Reset  iwdg_task.o
-    0x08003364   0x08003364   0x0000005e   Code   RO         2553    .text.IWDG_Init     iwdg_cfg.o
+    0x08003344   0x08003344   0x00000008   Code   RO         2674    .text.IWDGLib_Init  iwdg_lib.o
+    0x0800334c   0x0800334c   0x00000008   Code   RO         2678    .text.IWDGLib_Reset  iwdg_lib.o
+    0x08003354   0x08003354   0x00000008   Code   RO         2690    .text.IWDGTask_Init  iwdg_task.o
+    0x0800335c   0x0800335c   0x00000008   Code   RO         2694    .text.IWDGTask_Reset  iwdg_task.o
+    0x08003364   0x08003364   0x0000005e   Code   RO         2646    .text.IWDG_Init     iwdg_cfg.o
     0x080033c2   0x080033c2   0x00000002   PAD
-    0x080033c4   0x080033c4   0x00000012   Code   RO         2569    .text.IWDG_Reset    iwdg_cfg.o
+    0x080033c4   0x080033c4   0x00000012   Code   RO         2662    .text.IWDG_Reset    iwdg_cfg.o
     0x080033d6   0x080033d6   0x00000002   PAD
-    0x080033d8   0x080033d8   0x00000018   Code   RO         2663    .text.KeyLib_BINAPass  key_lib.o
-    0x080033f0   0x080033f0   0x00000018   Code   RO         2665    .text.KeyLib_BINBPass  key_lib.o
-    0x08003408   0x08003408   0x00000018   Code   RO         2667    .text.KeyLib_BINCPass  key_lib.o
-    0x08003420   0x08003420   0x00000018   Code   RO         2669    .text.KeyLib_BINDPass  key_lib.o
-    0x08003438   0x08003438   0x00000008   Code   RO         2659    .text.KeyLib_EOTSTART  key_lib.o
-    0x08003440   0x08003440   0x00000008   Code   RO         2661    .text.KeyLib_EOTSTOP  key_lib.o
-    0x08003448   0x08003448   0x00000008   Code   RO         2653    .text.KeyLib_Init   key_lib.o
-    0x08003450   0x08003450   0x00000008   Code   RO         2657    .text.KeyLib_ScanSOT  key_lib.o
-    0x08003458   0x08003458   0x00000018   Code   RO         2691    .text.KeyTask_BINAPass  key_task.o
-    0x08003470   0x08003470   0x00000018   Code   RO         2693    .text.KeyTask_BINBPass  key_task.o
-    0x08003488   0x08003488   0x00000018   Code   RO         2695    .text.KeyTask_BINCPass  key_task.o
-    0x080034a0   0x080034a0   0x00000018   Code   RO         2697    .text.KeyTask_BINDPass  key_task.o
-    0x080034b8   0x080034b8   0x00000008   Code   RO         2687    .text.KeyTask_EOTSTART  key_task.o
-    0x080034c0   0x080034c0   0x00000008   Code   RO         2689    .text.KeyTask_EOTSTOP  key_task.o
-    0x080034c8   0x080034c8   0x00000008   Code   RO         2681    .text.KeyTask_Init  key_task.o
-    0x080034d0   0x080034d0   0x00000008   Code   RO         2685    .text.KeyTask_ScanSOT  key_task.o
-    0x080034d8   0x080034d8   0x00000042   Code   RO         2635    .text.Key_BINAPass  key_cfg.o
+    0x080033d8   0x080033d8   0x00000018   Code   RO         2756    .text.KeyLib_BINAPass  key_lib.o
+    0x080033f0   0x080033f0   0x00000018   Code   RO         2758    .text.KeyLib_BINBPass  key_lib.o
+    0x08003408   0x08003408   0x00000018   Code   RO         2760    .text.KeyLib_BINCPass  key_lib.o
+    0x08003420   0x08003420   0x00000018   Code   RO         2762    .text.KeyLib_BINDPass  key_lib.o
+    0x08003438   0x08003438   0x00000008   Code   RO         2752    .text.KeyLib_EOTSTART  key_lib.o
+    0x08003440   0x08003440   0x00000008   Code   RO         2754    .text.KeyLib_EOTSTOP  key_lib.o
+    0x08003448   0x08003448   0x00000008   Code   RO         2746    .text.KeyLib_Init   key_lib.o
+    0x08003450   0x08003450   0x00000008   Code   RO         2750    .text.KeyLib_ScanSOT  key_lib.o
+    0x08003458   0x08003458   0x00000018   Code   RO         2784    .text.KeyTask_BINAPass  key_task.o
+    0x08003470   0x08003470   0x00000018   Code   RO         2786    .text.KeyTask_BINBPass  key_task.o
+    0x08003488   0x08003488   0x00000018   Code   RO         2788    .text.KeyTask_BINCPass  key_task.o
+    0x080034a0   0x080034a0   0x00000018   Code   RO         2790    .text.KeyTask_BINDPass  key_task.o
+    0x080034b8   0x080034b8   0x00000008   Code   RO         2780    .text.KeyTask_EOTSTART  key_task.o
+    0x080034c0   0x080034c0   0x00000008   Code   RO         2782    .text.KeyTask_EOTSTOP  key_task.o
+    0x080034c8   0x080034c8   0x00000008   Code   RO         2774    .text.KeyTask_Init  key_task.o
+    0x080034d0   0x080034d0   0x00000008   Code   RO         2778    .text.KeyTask_ScanSOT  key_task.o
+    0x080034d8   0x080034d8   0x00000042   Code   RO         2728    .text.Key_BINAPass  key_cfg.o
     0x0800351a   0x0800351a   0x00000002   PAD
-    0x0800351c   0x0800351c   0x0000003e   Code   RO         2637    .text.Key_BINBPass  key_cfg.o
+    0x0800351c   0x0800351c   0x0000003e   Code   RO         2730    .text.Key_BINBPass  key_cfg.o
     0x0800355a   0x0800355a   0x00000002   PAD
-    0x0800355c   0x0800355c   0x0000003e   Code   RO         2639    .text.Key_BINCPass  key_cfg.o
+    0x0800355c   0x0800355c   0x0000003e   Code   RO         2732    .text.Key_BINCPass  key_cfg.o
     0x0800359a   0x0800359a   0x00000002   PAD
-    0x0800359c   0x0800359c   0x00000042   Code   RO         2641    .text.Key_BINDPass  key_cfg.o
+    0x0800359c   0x0800359c   0x00000042   Code   RO         2734    .text.Key_BINDPass  key_cfg.o
     0x080035de   0x080035de   0x00000002   PAD
-    0x080035e0   0x080035e0   0x000000cc   Code   RO         2613    .text.Key_BINInit   key_cfg.o
-    0x080036ac   0x080036ac   0x000000cc   Code   RO         2619    .text.Key_EOTInit   key_cfg.o
-    0x08003778   0x08003778   0x00000074   Code   RO         2629    .text.Key_EOTSTART  key_cfg.o
-    0x080037ec   0x080037ec   0x00000042   Code   RO         2631    .text.Key_EOTSTOP   key_cfg.o
+    0x080035e0   0x080035e0   0x000000cc   Code   RO         2706    .text.Key_BINInit   key_cfg.o
+    0x080036ac   0x080036ac   0x000000cc   Code   RO         2712    .text.Key_EOTInit   key_cfg.o
+    0x08003778   0x08003778   0x00000074   Code   RO         2722    .text.Key_EOTSTART  key_cfg.o
+    0x080037ec   0x080037ec   0x00000042   Code   RO         2724    .text.Key_EOTSTOP   key_cfg.o
     0x0800382e   0x0800382e   0x00000002   PAD
-    0x08003830   0x08003830   0x000000a6   Code   RO         2623    .text.Key_GetSOT    key_cfg.o
+    0x08003830   0x08003830   0x000000a6   Code   RO         2716    .text.Key_GetSOT    key_cfg.o
     0x080038d6   0x080038d6   0x00000002   PAD
-    0x080038d8   0x080038d8   0x00000010   Code   RO         2621    .text.Key_Init      key_cfg.o
-    0x080038e8   0x080038e8   0x000000cc   Code   RO         2617    .text.Key_SOTInit   key_cfg.o
-    0x080039b4   0x080039b4   0x0000002e   Code   RO         2627    .text.Key_ScanSOT   key_cfg.o
+    0x080038d8   0x080038d8   0x00000010   Code   RO         2714    .text.Key_Init      key_cfg.o
+    0x080038e8   0x080038e8   0x000000cc   Code   RO         2710    .text.Key_SOTInit   key_cfg.o
+    0x080039b4   0x080039b4   0x0000002e   Code   RO         2720    .text.Key_ScanSOT   key_cfg.o
     0x080039e2   0x080039e2   0x00000002   PAD
-    0x080039e4   0x080039e4   0x0000005c   Code   RO         2795    .text.LEDDebug_Init  led_cfg.o
-    0x08003a40   0x08003a40   0x00000008   Code   RO         2810    .text.LEDLib_Init   led_lib.o
-    0x08003a48   0x08003a48   0x00000008   Code   RO         2822    .text.LEDTask_Init  led_task.o
-    0x08003a50   0x08003a50   0x0000006a   Code   RO         2787    .text.LEDWork_Init  led_cfg.o
+    0x080039e4   0x080039e4   0x0000005c   Code   RO         2888    .text.LEDDebug_Init  led_cfg.o
+    0x08003a40   0x08003a40   0x00000008   Code   RO         2903    .text.LEDLib_Init   led_lib.o
+    0x08003a48   0x08003a48   0x00000008   Code   RO         2915    .text.LEDTask_Init  led_task.o
+    0x08003a50   0x08003a50   0x0000006a   Code   RO         2880    .text.LEDWork_Init  led_cfg.o
     0x08003aba   0x08003aba   0x00000002   PAD
-    0x08003abc   0x08003abc   0x0000003c   Code   RO         2791    .text.LEDWork_Task  led_cfg.o
-    0x08003af8   0x08003af8   0x0000000c   Code   RO         2797    .text.LED_Init      led_cfg.o
+    0x08003abc   0x08003abc   0x0000003c   Code   RO         2884    .text.LEDWork_Task  led_cfg.o
+    0x08003af8   0x08003af8   0x0000000c   Code   RO         2890    .text.LED_Init      led_cfg.o
     0x08003b04   0x08003b04   0x0000009e   Code   RO          675    .text.LL_ADC_CommonInit  stm32f1xx_ll_adc.o
     0x08003ba2   0x08003ba2   0x00000002   PAD
     0x08003ba4   0x08003ba4   0x000000e0   Code   RO          681    .text.LL_ADC_DeInit  stm32f1xx_ll_adc.o
@@ -8686,13 +8772,13 @@ Memory Map of the image
     0x08003f72   0x08003f72   0x00000002   PAD
     0x08003f74   0x08003f74   0x00000028   Code   RO         1047    .text.LL_AHB1_GRP1_EnableClock  adc_cfg.o
     0x08003f9c   0x08003f9c   0x00000028   Code   RO         1398    .text.LL_AHB1_GRP1_EnableClock  crc_cfg.o
-    0x08003fc4   0x08003fc4   0x0000001e   Code   RO         3741    .text.LL_APB1_GRP1_DisableClock  timer_cfg.o
+    0x08003fc4   0x08003fc4   0x0000001e   Code   RO         3835    .text.LL_APB1_GRP1_DisableClock  timer_cfg.o
     0x08003fe2   0x08003fe2   0x00000002   PAD
-    0x08003fe4   0x08003fe4   0x0000001e   Code   RO         3926    .text.LL_APB1_GRP1_DisableClock  usart_cfg.o
+    0x08003fe4   0x08003fe4   0x0000001e   Code   RO         4020    .text.LL_APB1_GRP1_DisableClock  usart_cfg.o
     0x08004002   0x08004002   0x00000002   PAD
     0x08004004   0x08004004   0x00000028   Code   RO         1201    .text.LL_APB1_GRP1_EnableClock  main.o
-    0x0800402c   0x0800402c   0x00000028   Code   RO         3739    .text.LL_APB1_GRP1_EnableClock  timer_cfg.o
-    0x08004054   0x08004054   0x00000028   Code   RO         3924    .text.LL_APB1_GRP1_EnableClock  usart_cfg.o
+    0x0800402c   0x0800402c   0x00000028   Code   RO         3833    .text.LL_APB1_GRP1_EnableClock  timer_cfg.o
+    0x08004054   0x08004054   0x00000028   Code   RO         4018    .text.LL_APB1_GRP1_EnableClock  usart_cfg.o
     0x0800407c   0x0800407c   0x0000001c   Code   RO          418    .text.LL_APB1_GRP1_ForceReset  stm32f1xx_ll_usart.o
     0x08004098   0x08004098   0x0000001c   Code   RO          733    .text.LL_APB1_GRP1_ForceReset  stm32f1xx_ll_tim.o
     0x080040b4   0x080040b4   0x0000001e   Code   RO          420    .text.LL_APB1_GRP1_ReleaseReset  stm32f1xx_ll_usart.o
@@ -8701,16 +8787,16 @@ Memory Map of the image
     0x080040f2   0x080040f2   0x00000002   PAD
     0x080040f4   0x080040f4   0x0000001e   Code   RO         1027    .text.LL_APB2_GRP1_DisableClock  adc_cfg.o
     0x08004112   0x08004112   0x00000002   PAD
-    0x08004114   0x08004114   0x0000001e   Code   RO         2117    .text.LL_APB2_GRP1_DisableClock  gpio_cfg.o
+    0x08004114   0x08004114   0x0000001e   Code   RO         2210    .text.LL_APB2_GRP1_DisableClock  gpio_cfg.o
     0x08004132   0x08004132   0x00000002   PAD
-    0x08004134   0x08004134   0x0000001e   Code   RO         3745    .text.LL_APB2_GRP1_DisableClock  timer_cfg.o
+    0x08004134   0x08004134   0x0000001e   Code   RO         3839    .text.LL_APB2_GRP1_DisableClock  timer_cfg.o
     0x08004152   0x08004152   0x00000002   PAD
-    0x08004154   0x08004154   0x0000001e   Code   RO         3922    .text.LL_APB2_GRP1_DisableClock  usart_cfg.o
+    0x08004154   0x08004154   0x0000001e   Code   RO         4016    .text.LL_APB2_GRP1_DisableClock  usart_cfg.o
     0x08004172   0x08004172   0x00000002   PAD
     0x08004174   0x08004174   0x00000028   Code   RO         1025    .text.LL_APB2_GRP1_EnableClock  adc_cfg.o
-    0x0800419c   0x0800419c   0x00000028   Code   RO         2115    .text.LL_APB2_GRP1_EnableClock  gpio_cfg.o
-    0x080041c4   0x080041c4   0x00000028   Code   RO         3743    .text.LL_APB2_GRP1_EnableClock  timer_cfg.o
-    0x080041ec   0x080041ec   0x00000028   Code   RO         3920    .text.LL_APB2_GRP1_EnableClock  usart_cfg.o
+    0x0800419c   0x0800419c   0x00000028   Code   RO         2208    .text.LL_APB2_GRP1_EnableClock  gpio_cfg.o
+    0x080041c4   0x080041c4   0x00000028   Code   RO         3837    .text.LL_APB2_GRP1_EnableClock  timer_cfg.o
+    0x080041ec   0x080041ec   0x00000028   Code   RO         4014    .text.LL_APB2_GRP1_EnableClock  usart_cfg.o
     0x08004214   0x08004214   0x0000001c   Code   RO          414    .text.LL_APB2_GRP1_ForceReset  stm32f1xx_ll_usart.o
     0x08004230   0x08004230   0x0000001c   Code   RO          737    .text.LL_APB2_GRP1_ForceReset  stm32f1xx_ll_tim.o
     0x0800424c   0x0800424c   0x0000001e   Code   RO          416    .text.LL_APB2_GRP1_ReleaseReset  stm32f1xx_ll_usart.o
@@ -8770,53 +8856,53 @@ Memory Map of the image
     0x08004994   0x08004994   0x00000010   Code   RO         1169    .text.LL_FLASH_GetLatency  main.o
     0x080049a4   0x080049a4   0x00000010   Code   RO          180    .text.LL_FLASH_ReadHalfWord  stm32_cfg.o
     0x080049b4   0x080049b4   0x00000020   Code   RO         1167    .text.LL_FLASH_SetLatency  main.o
-    0x080049d4   0x080049d4   0x00000018   Code   RO         3695    .text.LL_GPIO_AF_RemapPartial_TIM3  timer_cfg.o
-    0x080049ec   0x080049ec   0x00000018   Code   RO         2121    .text.LL_GPIO_AF_Remap_SWJ_NOJTAG  gpio_cfg.o
-    0x08004a04   0x08004a04   0x00000018   Code   RO         2123    .text.LL_GPIO_AF_Remap_SWJ_NONJTRST  gpio_cfg.o
+    0x080049d4   0x080049d4   0x00000018   Code   RO         3789    .text.LL_GPIO_AF_RemapPartial_TIM3  timer_cfg.o
+    0x080049ec   0x080049ec   0x00000018   Code   RO         2214    .text.LL_GPIO_AF_Remap_SWJ_NOJTAG  gpio_cfg.o
+    0x08004a04   0x08004a04   0x00000018   Code   RO         2216    .text.LL_GPIO_AF_Remap_SWJ_NONJTRST  gpio_cfg.o
     0x08004a1c   0x08004a1c   0x000000cc   Code   RO          456    .text.LL_GPIO_Init  stm32f1xx_ll_gpio.o
     0x08004ae8   0x08004ae8   0x00000026   Code   RO         1624    .text.LL_GPIO_IsInputPinSet  decode_cfg.o
     0x08004b0e   0x08004b0e   0x00000002   PAD
-    0x08004b10   0x08004b10   0x00000026   Code   RO         2176    .text.LL_GPIO_IsInputPinSet  i2c_cfg.o
+    0x08004b10   0x08004b10   0x00000026   Code   RO         2269    .text.LL_GPIO_IsInputPinSet  i2c_cfg.o
     0x08004b36   0x08004b36   0x00000002   PAD
-    0x08004b38   0x08004b38   0x00000026   Code   RO         2625    .text.LL_GPIO_IsInputPinSet  key_cfg.o
+    0x08004b38   0x08004b38   0x00000026   Code   RO         2718    .text.LL_GPIO_IsInputPinSet  key_cfg.o
     0x08004b5e   0x08004b5e   0x00000002   PAD
-    0x08004b60   0x08004b60   0x00000026   Code   RO         3212    .text.LL_GPIO_IsInputPinSet  rfask_cfg.o
+    0x08004b60   0x08004b60   0x00000026   Code   RO         3305    .text.LL_GPIO_IsInputPinSet  rfask_cfg.o
     0x08004b86   0x08004b86   0x00000002   PAD
     0x08004b88   0x08004b88   0x0000001c   Code   RO         1566    .text.LL_GPIO_ResetOutputPin  decode_cfg.o
-    0x08004ba4   0x08004ba4   0x0000001c   Code   RO         2174    .text.LL_GPIO_ResetOutputPin  i2c_cfg.o
-    0x08004bc0   0x08004bc0   0x0000001c   Code   RO         2633    .text.LL_GPIO_ResetOutputPin  key_cfg.o
-    0x08004bdc   0x08004bdc   0x0000001c   Code   RO         2789    .text.LL_GPIO_ResetOutputPin  led_cfg.o
-    0x08004bf8   0x08004bf8   0x0000001c   Code   RO         3094    .text.LL_GPIO_ResetOutputPin  power_cfg.o
-    0x08004c14   0x08004c14   0x0000001c   Code   RO         3270    .text.LL_GPIO_ResetOutputPin  rfask_task.o
-    0x08004c30   0x08004c30   0x0000001c   Code   RO         3818    .text.LL_GPIO_ResetOutputPin  usart_cfg.o
+    0x08004ba4   0x08004ba4   0x0000001c   Code   RO         2267    .text.LL_GPIO_ResetOutputPin  i2c_cfg.o
+    0x08004bc0   0x08004bc0   0x0000001c   Code   RO         2726    .text.LL_GPIO_ResetOutputPin  key_cfg.o
+    0x08004bdc   0x08004bdc   0x0000001c   Code   RO         2882    .text.LL_GPIO_ResetOutputPin  led_cfg.o
+    0x08004bf8   0x08004bf8   0x0000001c   Code   RO         3187    .text.LL_GPIO_ResetOutputPin  power_cfg.o
+    0x08004c14   0x08004c14   0x0000001c   Code   RO         3363    .text.LL_GPIO_ResetOutputPin  rfask_task.o
+    0x08004c30   0x08004c30   0x0000001c   Code   RO         3912    .text.LL_GPIO_ResetOutputPin  usart_cfg.o
     0x08004c4c   0x08004c4c   0x0000001c   Code   RO         1570    .text.LL_GPIO_SetOutputPin  decode_cfg.o
-    0x08004c68   0x08004c68   0x0000001c   Code   RO         2168    .text.LL_GPIO_SetOutputPin  i2c_cfg.o
-    0x08004c84   0x08004c84   0x0000001c   Code   RO         2615    .text.LL_GPIO_SetOutputPin  key_cfg.o
-    0x08004ca0   0x08004ca0   0x0000001c   Code   RO         3192    .text.LL_GPIO_SetOutputPin  rfask_cfg.o
-    0x08004cbc   0x08004cbc   0x0000001c   Code   RO         3272    .text.LL_GPIO_SetOutputPin  rfask_task.o
-    0x08004cd8   0x08004cd8   0x0000001c   Code   RO         3820    .text.LL_GPIO_SetOutputPin  usart_cfg.o
+    0x08004c68   0x08004c68   0x0000001c   Code   RO         2261    .text.LL_GPIO_SetOutputPin  i2c_cfg.o
+    0x08004c84   0x08004c84   0x0000001c   Code   RO         2708    .text.LL_GPIO_SetOutputPin  key_cfg.o
+    0x08004ca0   0x08004ca0   0x0000001c   Code   RO         3285    .text.LL_GPIO_SetOutputPin  rfask_cfg.o
+    0x08004cbc   0x08004cbc   0x0000001c   Code   RO         3365    .text.LL_GPIO_SetOutputPin  rfask_task.o
+    0x08004cd8   0x08004cd8   0x0000001c   Code   RO         3914    .text.LL_GPIO_SetOutputPin  usart_cfg.o
     0x08004cf4   0x08004cf4   0x00000066   Code   RO          458    .text.LL_GPIO_SetPinMode  stm32f1xx_ll_gpio.o
     0x08004d5a   0x08004d5a   0x00000002   PAD
-    0x08004d5c   0x08004d5c   0x00000066   Code   RO         3814    .text.LL_GPIO_SetPinMode  usart_cfg.o
+    0x08004d5c   0x08004d5c   0x00000066   Code   RO         3908    .text.LL_GPIO_SetPinMode  usart_cfg.o
     0x08004dc2   0x08004dc2   0x00000002   PAD
     0x08004dc4   0x08004dc4   0x00000066   Code   RO          464    .text.LL_GPIO_SetPinOutputType  stm32f1xx_ll_gpio.o
     0x08004e2a   0x08004e2a   0x00000002   PAD
     0x08004e2c   0x08004e2c   0x00000044   Code   RO          460    .text.LL_GPIO_SetPinPull  stm32f1xx_ll_gpio.o
     0x08004e70   0x08004e70   0x00000066   Code   RO          462    .text.LL_GPIO_SetPinSpeed  stm32f1xx_ll_gpio.o
     0x08004ed6   0x08004ed6   0x00000002   PAD
-    0x08004ed8   0x08004ed8   0x00000022   Code   RO         2793    .text.LL_GPIO_TogglePin  led_cfg.o
+    0x08004ed8   0x08004ed8   0x00000022   Code   RO         2886    .text.LL_GPIO_TogglePin  led_cfg.o
     0x08004efa   0x08004efa   0x00000002   PAD
-    0x08004efc   0x08004efc   0x0000001a   Code   RO         2555    .text.LL_IWDG_Enable  iwdg_cfg.o
+    0x08004efc   0x08004efc   0x0000001a   Code   RO         2648    .text.LL_IWDG_Enable  iwdg_cfg.o
     0x08004f16   0x08004f16   0x00000002   PAD
-    0x08004f18   0x08004f18   0x0000001a   Code   RO         2557    .text.LL_IWDG_EnableWriteAccess  iwdg_cfg.o
+    0x08004f18   0x08004f18   0x0000001a   Code   RO         2650    .text.LL_IWDG_EnableWriteAccess  iwdg_cfg.o
     0x08004f32   0x08004f32   0x00000002   PAD
-    0x08004f34   0x08004f34   0x0000001a   Code   RO         2563    .text.LL_IWDG_IsReady  iwdg_cfg.o
+    0x08004f34   0x08004f34   0x0000001a   Code   RO         2656    .text.LL_IWDG_IsReady  iwdg_cfg.o
     0x08004f4e   0x08004f4e   0x00000002   PAD
-    0x08004f50   0x08004f50   0x0000001a   Code   RO         2565    .text.LL_IWDG_ReloadCounter  iwdg_cfg.o
+    0x08004f50   0x08004f50   0x0000001a   Code   RO         2658    .text.LL_IWDG_ReloadCounter  iwdg_cfg.o
     0x08004f6a   0x08004f6a   0x00000002   PAD
-    0x08004f6c   0x08004f6c   0x0000001c   Code   RO         2559    .text.LL_IWDG_SetPrescaler  iwdg_cfg.o
-    0x08004f88   0x08004f88   0x0000001c   Code   RO         2561    .text.LL_IWDG_SetReloadCounter  iwdg_cfg.o
-    0x08004fa4   0x08004fa4   0x0000003e   Code   RO         3597    .text.LL_InitTick   systick_cfg.o
+    0x08004f6c   0x08004f6c   0x0000001c   Code   RO         2652    .text.LL_IWDG_SetPrescaler  iwdg_cfg.o
+    0x08004f88   0x08004f88   0x0000001c   Code   RO         2654    .text.LL_IWDG_SetReloadCounter  iwdg_cfg.o
+    0x08004fa4   0x08004fa4   0x0000003e   Code   RO         3691    .text.LL_InitTick   systick_cfg.o
     0x08004fe2   0x08004fe2   0x00000002   PAD
     0x08004fe4   0x08004fe4   0x00000012   Code   RO         1506    .text.LL_RCC_ClearFlag_HSECSS  css_cfg.o
     0x08004ff6   0x08004ff6   0x00000002   PAD
@@ -8857,7 +8943,7 @@ Memory Map of the image
     0x08005248   0x08005248   0x00000020   Code   RO         1191    .text.LL_RCC_SetSysClkSource  main.o
     0x08005268   0x08005268   0x00000038   Code   RO         1195    .text.LL_SYSTICK_SetClkSource  main.o
     0x080052a0   0x080052a0   0x00000018   Code   RO          237    .text.LL_SetSystemCoreClock  stm32f1xx_ll_utils.o
-    0x080052b8   0x080052b8   0x00000020   Code   RO         3705    .text.LL_TIM_CC_DisableChannel  timer_cfg.o
+    0x080052b8   0x080052b8   0x00000020   Code   RO         3799    .text.LL_TIM_CC_DisableChannel  timer_cfg.o
     0x080052d8   0x080052d8   0x00000014   Code   RO          196    .text.LL_TIM_ClearFlag  stm32_cfg.o
     0x080052ec   0x080052ec   0x00000014   Code   RO         1652    .text.LL_TIM_ClearFlag_CC1  decode_cfg.o
     0x08005300   0x08005300   0x00000014   Code   RO         1658    .text.LL_TIM_ClearFlag_CC2  decode_cfg.o
@@ -8870,21 +8956,21 @@ Memory Map of the image
     0x08005562   0x08005562   0x00000002   PAD
     0x08005564   0x08005564   0x00000016   Code   RO         1620    .text.LL_TIM_DisableCounter  decode_cfg.o
     0x0800557a   0x0800557a   0x00000002   PAD
-    0x0800557c   0x0800557c   0x00000016   Code   RO         3727    .text.LL_TIM_DisableCounter  timer_cfg.o
+    0x0800557c   0x0800557c   0x00000016   Code   RO         3821    .text.LL_TIM_DisableCounter  timer_cfg.o
     0x08005592   0x08005592   0x00000002   PAD
-    0x08005594   0x08005594   0x00000016   Code   RO         3713    .text.LL_TIM_DisableDMAReq_TRIG  timer_cfg.o
+    0x08005594   0x08005594   0x00000016   Code   RO         3807    .text.LL_TIM_DisableDMAReq_TRIG  timer_cfg.o
     0x080055aa   0x080055aa   0x00000002   PAD
-    0x080055ac   0x080055ac   0x00000016   Code   RO         3711    .text.LL_TIM_DisableIT_TRIG  timer_cfg.o
+    0x080055ac   0x080055ac   0x00000016   Code   RO         3805    .text.LL_TIM_DisableIT_TRIG  timer_cfg.o
     0x080055c2   0x080055c2   0x00000002   PAD
     0x080055c4   0x080055c4   0x00000016   Code   RO         1584    .text.LL_TIM_DisableMasterSlaveMode  decode_cfg.o
     0x080055da   0x080055da   0x00000002   PAD
-    0x080055dc   0x080055dc   0x00000016   Code   RO         3717    .text.LL_TIM_DisableMasterSlaveMode  timer_cfg.o
+    0x080055dc   0x080055dc   0x00000016   Code   RO         3811    .text.LL_TIM_DisableMasterSlaveMode  timer_cfg.o
     0x080055f2   0x080055f2   0x00000002   PAD
-    0x080055f4   0x080055f4   0x00000016   Code   RO         3697    .text.LL_TIM_EnableARRPreload  timer_cfg.o
+    0x080055f4   0x080055f4   0x00000016   Code   RO         3791    .text.LL_TIM_EnableARRPreload  timer_cfg.o
     0x0800560a   0x0800560a   0x00000002   PAD
     0x0800560c   0x0800560c   0x00000016   Code   RO         1604    .text.LL_TIM_EnableCounter  decode_cfg.o
     0x08005622   0x08005622   0x00000002   PAD
-    0x08005624   0x08005624   0x00000016   Code   RO         3723    .text.LL_TIM_EnableCounter  timer_cfg.o
+    0x08005624   0x08005624   0x00000016   Code   RO         3817    .text.LL_TIM_EnableCounter  timer_cfg.o
     0x0800563a   0x0800563a   0x00000002   PAD
     0x0800563c   0x0800563c   0x00000016   Code   RO         1594    .text.LL_TIM_EnableIT_CC1  decode_cfg.o
     0x08005652   0x08005652   0x00000002   PAD
@@ -8899,7 +8985,7 @@ Memory Map of the image
     0x080056b4   0x080056b4   0x00000016   Code   RO          751    .text.LL_TIM_GenerateEvent_UPDATE  stm32f1xx_ll_tim.o
     0x080056ca   0x080056ca   0x00000002   PAD
     0x080056cc   0x080056cc   0x00000010   Code   RO         1680    .text.LL_TIM_GetCounter  decode_cfg.o
-    0x080056dc   0x080056dc   0x00000010   Code   RO         3729    .text.LL_TIM_GetCounter  timer_cfg.o
+    0x080056dc   0x080056dc   0x00000010   Code   RO         3823    .text.LL_TIM_GetCounter  timer_cfg.o
     0x080056ec   0x080056ec   0x00000010   Code   RO         1650    .text.LL_TIM_IC_GetCaptureCH1  decode_cfg.o
     0x080056fc   0x080056fc   0x00000010   Code   RO         1656    .text.LL_TIM_IC_GetCaptureCH2  decode_cfg.o
     0x0800570c   0x0800570c   0x00000010   Code   RO         1662    .text.LL_TIM_IC_GetCaptureCH3  decode_cfg.o
@@ -8907,12 +8993,12 @@ Memory Map of the image
     0x0800572c   0x0800572c   0x000000a2   Code   RO         1638    .text.LL_TIM_IC_GetPolarity  decode_cfg.o
     0x080057ce   0x080057ce   0x00000002   PAD
     0x080057d0   0x080057d0   0x0000007c   Code   RO          767    .text.LL_TIM_IC_Init  stm32f1xx_ll_tim.o
-    0x0800584c   0x0800584c   0x000000ce   Code   RO         3701    .text.LL_TIM_IC_SetActiveInput  timer_cfg.o
+    0x0800584c   0x0800584c   0x000000ce   Code   RO         3795    .text.LL_TIM_IC_SetActiveInput  timer_cfg.o
     0x0800591a   0x0800591a   0x00000002   PAD
-    0x0800591c   0x0800591c   0x000000ce   Code   RO         3707    .text.LL_TIM_IC_SetFilter  timer_cfg.o
+    0x0800591c   0x0800591c   0x000000ce   Code   RO         3801    .text.LL_TIM_IC_SetFilter  timer_cfg.o
     0x080059ea   0x080059ea   0x00000002   PAD
     0x080059ec   0x080059ec   0x000000b8   Code   RO         1640    .text.LL_TIM_IC_SetPolarity  decode_cfg.o
-    0x08005aa4   0x08005aa4   0x000000b8   Code   RO         3709    .text.LL_TIM_IC_SetPolarity  timer_cfg.o
+    0x08005aa4   0x08005aa4   0x000000b8   Code   RO         3803    .text.LL_TIM_IC_SetPolarity  timer_cfg.o
     0x08005b5c   0x08005b5c   0x000001a0   Code   RO          743    .text.LL_TIM_Init   stm32f1xx_ll_tim.o
     0x08005cfc   0x08005cfc   0x00000014   Code   RO         1648    .text.LL_TIM_IsActiveFlag_CC1  decode_cfg.o
     0x08005d10   0x08005d10   0x00000014   Code   RO         1654    .text.LL_TIM_IsActiveFlag_CC2  decode_cfg.o
@@ -8921,46 +9007,46 @@ Memory Map of the image
     0x08005d4c   0x08005d4c   0x00000014   Code   RO         1644    .text.LL_TIM_IsActiveFlag_UPDATE  decode_cfg.o
     0x08005d60   0x08005d60   0x00000018   Code   RO          745    .text.LL_TIM_SetAutoReload  stm32f1xx_ll_tim.o
     0x08005d78   0x08005d78   0x00000024   Code   RO         1580    .text.LL_TIM_SetClockSource  decode_cfg.o
-    0x08005d9c   0x08005d9c   0x00000024   Code   RO         3703    .text.LL_TIM_SetClockSource  timer_cfg.o
+    0x08005d9c   0x08005d9c   0x00000024   Code   RO         3797    .text.LL_TIM_SetClockSource  timer_cfg.o
     0x08005dc0   0x08005dc0   0x00000018   Code   RO         1618    .text.LL_TIM_SetCounter  decode_cfg.o
-    0x08005dd8   0x08005dd8   0x00000018   Code   RO         3725    .text.LL_TIM_SetCounter  timer_cfg.o
+    0x08005dd8   0x08005dd8   0x00000018   Code   RO         3819    .text.LL_TIM_SetCounter  timer_cfg.o
     0x08005df0   0x08005df0   0x00000018   Code   RO          747    .text.LL_TIM_SetPrescaler  stm32f1xx_ll_tim.o
     0x08005e08   0x08005e08   0x00000018   Code   RO          749    .text.LL_TIM_SetRepetitionCounter  stm32f1xx_ll_tim.o
-    0x08005e20   0x08005e20   0x00000022   Code   RO         3699    .text.LL_TIM_SetTriggerInput  timer_cfg.o
+    0x08005e20   0x08005e20   0x00000022   Code   RO         3793    .text.LL_TIM_SetTriggerInput  timer_cfg.o
     0x08005e42   0x08005e42   0x00000002   PAD
     0x08005e44   0x08005e44   0x00000022   Code   RO         1582    .text.LL_TIM_SetTriggerOutput  decode_cfg.o
     0x08005e66   0x08005e66   0x00000002   PAD
-    0x08005e68   0x08005e68   0x00000022   Code   RO         3715    .text.LL_TIM_SetTriggerOutput  timer_cfg.o
+    0x08005e68   0x08005e68   0x00000022   Code   RO         3809    .text.LL_TIM_SetTriggerOutput  timer_cfg.o
     0x08005e8a   0x08005e8a   0x00000002   PAD
     0x08005e8c   0x08005e8c   0x00000014   Code   RO           91    .text.LL_USART_ClearFlag_RXNE  stm32f1xx_it.o
     0x08005ea0   0x08005ea0   0x00000014   Code   RO          101    .text.LL_USART_ClearFlag_TC  stm32f1xx_it.o
-    0x08005eb4   0x08005eb4   0x00000014   Code   RO         3858    .text.LL_USART_ClearFlag_TC  usart_cfg.o
-    0x08005ec8   0x08005ec8   0x00000020   Code   RO         3932    .text.LL_USART_ConfigAsyncMode  usart_cfg.o
+    0x08005eb4   0x08005eb4   0x00000014   Code   RO         3952    .text.LL_USART_ClearFlag_TC  usart_cfg.o
+    0x08005ec8   0x08005ec8   0x00000020   Code   RO         4026    .text.LL_USART_ConfigAsyncMode  usart_cfg.o
     0x08005ee8   0x08005ee8   0x000000cc   Code   RO          412    .text.LL_USART_DeInit  stm32f1xx_ll_usart.o
-    0x08005fb4   0x08005fb4   0x00000016   Code   RO         3878    .text.LL_USART_DisableIT_TC  usart_cfg.o
+    0x08005fb4   0x08005fb4   0x00000016   Code   RO         3972    .text.LL_USART_DisableIT_TC  usart_cfg.o
     0x08005fca   0x08005fca   0x00000002   PAD
-    0x08005fcc   0x08005fcc   0x00000016   Code   RO         3872    .text.LL_USART_DisableIT_TXE  usart_cfg.o
+    0x08005fcc   0x08005fcc   0x00000016   Code   RO         3966    .text.LL_USART_DisableIT_TXE  usart_cfg.o
     0x08005fe2   0x08005fe2   0x00000002   PAD
-    0x08005fe4   0x08005fe4   0x00000016   Code   RO         3944    .text.LL_USART_Enable  usart_cfg.o
+    0x08005fe4   0x08005fe4   0x00000016   Code   RO         4038    .text.LL_USART_Enable  usart_cfg.o
     0x08005ffa   0x08005ffa   0x00000002   PAD
-    0x08005ffc   0x08005ffc   0x00000016   Code   RO         3942    .text.LL_USART_EnableIT_RXNE  usart_cfg.o
+    0x08005ffc   0x08005ffc   0x00000016   Code   RO         4036    .text.LL_USART_EnableIT_RXNE  usart_cfg.o
     0x08006012   0x08006012   0x00000002   PAD
-    0x08006014   0x08006014   0x00000016   Code   RO         3874    .text.LL_USART_EnableIT_TC  usart_cfg.o
+    0x08006014   0x08006014   0x00000016   Code   RO         3968    .text.LL_USART_EnableIT_TC  usart_cfg.o
     0x0800602a   0x0800602a   0x00000002   PAD
-    0x0800602c   0x0800602c   0x00000016   Code   RO         3884    .text.LL_USART_EnableIT_TXE  usart_cfg.o
+    0x0800602c   0x0800602c   0x00000016   Code   RO         3978    .text.LL_USART_EnableIT_TXE  usart_cfg.o
     0x08006042   0x08006042   0x00000002   PAD
     0x08006044   0x08006044   0x000000fc   Code   RO          422    .text.LL_USART_Init  stm32f1xx_ll_usart.o
     0x08006140   0x08006140   0x00000014   Code   RO           85    .text.LL_USART_IsActiveFlag_RXNE  stm32f1xx_it.o
     0x08006154   0x08006154   0x00000014   Code   RO           97    .text.LL_USART_IsActiveFlag_TC  stm32f1xx_it.o
-    0x08006168   0x08006168   0x00000014   Code   RO         3856    .text.LL_USART_IsActiveFlag_TC  usart_cfg.o
+    0x08006168   0x08006168   0x00000014   Code   RO         3950    .text.LL_USART_IsActiveFlag_TC  usart_cfg.o
     0x0800617c   0x0800617c   0x00000014   Code   RO           93    .text.LL_USART_IsActiveFlag_TXE  stm32f1xx_it.o
-    0x08006190   0x08006190   0x00000014   Code   RO         3912    .text.LL_USART_IsActiveFlag_TXE  usart_cfg.o
+    0x08006190   0x08006190   0x00000014   Code   RO         4006    .text.LL_USART_IsActiveFlag_TXE  usart_cfg.o
     0x080061a4   0x080061a4   0x00000014   Code   RO          424    .text.LL_USART_IsEnabled  stm32f1xx_ll_usart.o
     0x080061b8   0x080061b8   0x00000014   Code   RO           87    .text.LL_USART_IsEnabledIT_RXNE  stm32f1xx_it.o
     0x080061cc   0x080061cc   0x00000014   Code   RO           99    .text.LL_USART_IsEnabledIT_TC  stm32f1xx_it.o
-    0x080061e0   0x080061e0   0x00000014   Code   RO         3914    .text.LL_USART_IsEnabledIT_TC  usart_cfg.o
+    0x080061e0   0x080061e0   0x00000014   Code   RO         4008    .text.LL_USART_IsEnabledIT_TC  usart_cfg.o
     0x080061f4   0x080061f4   0x00000014   Code   RO           95    .text.LL_USART_IsEnabledIT_TXE  stm32f1xx_it.o
-    0x08006208   0x08006208   0x00000014   Code   RO         3882    .text.LL_USART_IsEnabledIT_TXE  usart_cfg.o
+    0x08006208   0x08006208   0x00000014   Code   RO         3976    .text.LL_USART_IsEnabledIT_TXE  usart_cfg.o
     0x0800621c   0x0800621c   0x00000012   Code   RO           89    .text.LL_USART_ReceiveData8  stm32f1xx_it.o
     0x0800622e   0x0800622e   0x00000002   PAD
     0x08006230   0x08006230   0x00000064   Code   RO          430    .text.LL_USART_SetBaudRate  stm32f1xx_ll_usart.o
@@ -8968,7 +9054,7 @@ Memory Map of the image
     0x080062b6   0x080062b6   0x00000002   PAD
     0x080062b8   0x080062b8   0x00000022   Code   RO          426    .text.LL_USART_SetStopBitsLength  stm32f1xx_ll_usart.o
     0x080062da   0x080062da   0x00000002   PAD
-    0x080062dc   0x080062dc   0x0000001c   Code   RO         3854    .text.LL_USART_TransmitData8  usart_cfg.o
+    0x080062dc   0x080062dc   0x0000001c   Code   RO         3948    .text.LL_USART_TransmitData8  usart_cfg.o
     0x080062f8   0x080062f8   0x00000014   Code   RO           81    .text.LL_WWDG_ClearFlag_EWKUP  stm32f1xx_it.o
     0x0800630c   0x0800630c   0x00000004   Code   RO           65    .text.MemManage_Handler  stm32f1xx_it.o
     0x08006310   0x08006310   0x00000008   Code   RO           59    .text.NMI_Handler   stm32f1xx_it.o
@@ -8976,33 +9062,33 @@ Memory Map of the image
     0x0800633e   0x0800633e   0x00000002   PAD
     0x08006340   0x08006340   0x00000026   Code   RO         1592    .text.NVIC_EnableIRQ  decode_cfg.o
     0x08006366   0x08006366   0x00000002   PAD
-    0x08006368   0x08006368   0x00000026   Code   RO         3940    .text.NVIC_EnableIRQ  usart_cfg.o
+    0x08006368   0x08006368   0x00000026   Code   RO         4034    .text.NVIC_EnableIRQ  usart_cfg.o
     0x0800638e   0x0800638e   0x00000002   PAD
     0x08006390   0x08006390   0x00000080   Code   RO         1053    .text.NVIC_EncodePriority  adc_cfg.o
     0x08006410   0x08006410   0x00000080   Code   RO         1207    .text.NVIC_EncodePriority  main.o
     0x08006490   0x08006490   0x00000080   Code   RO         1588    .text.NVIC_EncodePriority  decode_cfg.o
-    0x08006510   0x08006510   0x00000080   Code   RO         3603    .text.NVIC_EncodePriority  systick_cfg.o
-    0x08006590   0x08006590   0x00000080   Code   RO         3936    .text.NVIC_EncodePriority  usart_cfg.o
+    0x08006510   0x08006510   0x00000080   Code   RO         3697    .text.NVIC_EncodePriority  systick_cfg.o
+    0x08006590   0x08006590   0x00000080   Code   RO         4030    .text.NVIC_EncodePriority  usart_cfg.o
     0x08006610   0x08006610   0x00000010   Code   RO         1055    .text.NVIC_GetPriorityGrouping  adc_cfg.o
     0x08006620   0x08006620   0x00000010   Code   RO         1209    .text.NVIC_GetPriorityGrouping  main.o
     0x08006630   0x08006630   0x00000010   Code   RO         1590    .text.NVIC_GetPriorityGrouping  decode_cfg.o
-    0x08006640   0x08006640   0x00000010   Code   RO         3605    .text.NVIC_GetPriorityGrouping  systick_cfg.o
-    0x08006650   0x08006650   0x00000010   Code   RO         3938    .text.NVIC_GetPriorityGrouping  usart_cfg.o
+    0x08006640   0x08006640   0x00000010   Code   RO         3699    .text.NVIC_GetPriorityGrouping  systick_cfg.o
+    0x08006650   0x08006650   0x00000010   Code   RO         4032    .text.NVIC_GetPriorityGrouping  usart_cfg.o
     0x08006660   0x08006660   0x000000d4   Code   RO         1199    .text.NVIC_Init     main.o
     0x08006734   0x08006734   0x00000044   Code   RO         1051    .text.NVIC_SetPriority  adc_cfg.o
     0x08006778   0x08006778   0x00000044   Code   RO         1205    .text.NVIC_SetPriority  main.o
     0x080067bc   0x080067bc   0x00000044   Code   RO         1586    .text.NVIC_SetPriority  decode_cfg.o
-    0x08006800   0x08006800   0x00000044   Code   RO         3601    .text.NVIC_SetPriority  systick_cfg.o
-    0x08006844   0x08006844   0x00000044   Code   RO         3934    .text.NVIC_SetPriority  usart_cfg.o
+    0x08006800   0x08006800   0x00000044   Code   RO         3695    .text.NVIC_SetPriority  systick_cfg.o
+    0x08006844   0x08006844   0x00000044   Code   RO         4028    .text.NVIC_SetPriority  usart_cfg.o
     0x08006888   0x08006888   0x00000040   Code   RO         1203    .text.NVIC_SetPriorityGrouping  main.o
-    0x080068c8   0x080068c8   0x00000040   Code   RO         3599    .text.NVIC_SetPriorityGrouping  systick_cfg.o
+    0x080068c8   0x080068c8   0x00000040   Code   RO         3693    .text.NVIC_SetPriorityGrouping  systick_cfg.o
     0x08006908   0x08006908   0x00000026   Code   RO         1516    .text.NVIC_SystemReset  css_cfg.o
     0x0800692e   0x0800692e   0x00000002   PAD
     0x08006930   0x08006930   0x00000002   Code   RO           75    .text.PendSV_Handler  stm32f1xx_it.o
     0x08006932   0x08006932   0x00000002   PAD
-    0x08006934   0x08006934   0x00000008   Code   RO         3108    .text.PowerLib_Init  power_lib.o
-    0x0800693c   0x0800693c   0x00000008   Code   RO         3122    .text.PowerTask_Init  power_task.o
-    0x08006944   0x08006944   0x00000172   Code   RO         3092    .text.Power_Init    power_cfg.o
+    0x08006934   0x08006934   0x00000008   Code   RO         3201    .text.PowerLib_Init  power_lib.o
+    0x0800693c   0x0800693c   0x00000008   Code   RO         3215    .text.PowerTask_Init  power_task.o
+    0x08006944   0x08006944   0x00000172   Code   RO         3185    .text.Power_Init    power_cfg.o
     0x08006ab6   0x08006ab6   0x00000002   PAD
     0x08006ab8   0x08006ab8   0x0000002a   Code   RO          374    .text.RCC_GetHCLKClockFreq  stm32f1xx_ll_rcc.o
     0x08006ae2   0x08006ae2   0x00000002   PAD
@@ -9013,94 +9099,94 @@ Memory Map of the image
     0x08006b90   0x08006b90   0x00000008   Code   RO           61    .text.RCC_IRQHandler  stm32f1xx_it.o
     0x08006b98   0x08006b98   0x0000006e   Code   RO          384    .text.RCC_PLL_GetFreqDomain_SYS  stm32f1xx_ll_rcc.o
     0x08006c06   0x08006c06   0x00000002   PAD
-    0x08006c08   0x08006c08   0x00000020   Code   RO         3242    .text.RFASKLib_ActivateSites  rfask_lib.o
-    0x08006c28   0x08006c28   0x0000001c   Code   RO         3236    .text.RFASKLib_CalcXTAL  rfask_lib.o
-    0x08006c44   0x08006c44   0x00000014   Code   RO         3234    .text.RFASKLib_Init  rfask_lib.o
-    0x08006c58   0x08006c58   0x00000008   Code   RO         3246    .text.RFASKLib_ScanYSEL  rfask_lib.o
-    0x08006c60   0x08006c60   0x00000020   Code   RO         3244    .text.RFASKLib_SetFreqCurrentPointCmd  rfask_lib.o
-    0x08006c80   0x08006c80   0x00000020   Code   RO         3276    .text.RFASKTask_ActivateSites  rfask_task.o
-    0x08006ca0   0x08006ca0   0x000000b2   Code   RO         3304    .text.RFASKTask_BINPass  rfask_task.o
+    0x08006c08   0x08006c08   0x00000020   Code   RO         3335    .text.RFASKLib_ActivateSites  rfask_lib.o
+    0x08006c28   0x08006c28   0x0000001c   Code   RO         3329    .text.RFASKLib_CalcXTAL  rfask_lib.o
+    0x08006c44   0x08006c44   0x00000014   Code   RO         3327    .text.RFASKLib_Init  rfask_lib.o
+    0x08006c58   0x08006c58   0x00000008   Code   RO         3339    .text.RFASKLib_ScanYSEL  rfask_lib.o
+    0x08006c60   0x08006c60   0x00000020   Code   RO         3337    .text.RFASKLib_SetFreqCurrentPointCmd  rfask_lib.o
+    0x08006c80   0x08006c80   0x00000020   Code   RO         3369    .text.RFASKTask_ActivateSites  rfask_task.o
+    0x08006ca0   0x08006ca0   0x000000b2   Code   RO         3397    .text.RFASKTask_BINPass  rfask_task.o
     0x08006d52   0x08006d52   0x00000002   PAD
-    0x08006d54   0x08006d54   0x0000001c   Code   RO         3260    .text.RFASKTask_CalcXTAL  rfask_task.o
-    0x08006d70   0x08006d70   0x0000001c   Code   RO         3300    .text.RFASKTask_EOTSTART  rfask_task.o
-    0x08006d8c   0x08006d8c   0x0000000a   Code   RO         3302    .text.RFASKTask_EOTSTOP  rfask_task.o
+    0x08006d54   0x08006d54   0x0000001c   Code   RO         3353    .text.RFASKTask_CalcXTAL  rfask_task.o
+    0x08006d70   0x08006d70   0x0000001c   Code   RO         3393    .text.RFASKTask_EOTSTART  rfask_task.o
+    0x08006d8c   0x08006d8c   0x0000000a   Code   RO         3395    .text.RFASKTask_EOTSTOP  rfask_task.o
     0x08006d96   0x08006d96   0x00000002   PAD
-    0x08006d98   0x08006d98   0x00000446   Code   RO         3290    .text.RFASKTask_FreqCurrentHandlerTask  rfask_task.o
+    0x08006d98   0x08006d98   0x00000446   Code   RO         3383    .text.RFASKTask_FreqCurrentHandlerTask  rfask_task.o
     0x080071de   0x080071de   0x00000002   PAD
-    0x080071e0   0x080071e0   0x00000552   Code   RO         3284    .text.RFASKTask_FreqCurrentPointOneTask  rfask_task.o
+    0x080071e0   0x080071e0   0x00000552   Code   RO         3377    .text.RFASKTask_FreqCurrentPointOneTask  rfask_task.o
     0x08007732   0x08007732   0x00000002   PAD
-    0x08007734   0x08007734   0x00000552   Code   RO         3288    .text.RFASKTask_FreqCurrentPointTwoTask  rfask_task.o
+    0x08007734   0x08007734   0x00000552   Code   RO         3381    .text.RFASKTask_FreqCurrentPointTwoTask  rfask_task.o
     0x08007c86   0x08007c86   0x00000002   PAD
-    0x08007c88   0x08007c88   0x000005ec   Code   RO         3286    .text.RFASKTask_FreqCurrentScan  rfask_task.o
-    0x08008274   0x08008274   0x00000098   Code   RO         3294    .text.RFASKTask_HandlerTask  rfask_task.o
-    0x0800830c   0x0800830c   0x00000032   Code   RO         3258    .text.RFASKTask_Init  rfask_task.o
+    0x08007c88   0x08007c88   0x000005ec   Code   RO         3379    .text.RFASKTask_FreqCurrentScan  rfask_task.o
+    0x08008274   0x08008274   0x00000098   Code   RO         3387    .text.RFASKTask_HandlerTask  rfask_task.o
+    0x0800830c   0x0800830c   0x00000032   Code   RO         3351    .text.RFASKTask_Init  rfask_task.o
     0x0800833e   0x0800833e   0x00000002   PAD
-    0x08008340   0x08008340   0x0000033a   Code   RO         3306    .text.RFASKTask_KeyTask  rfask_task.o
+    0x08008340   0x08008340   0x0000033a   Code   RO         3399    .text.RFASKTask_KeyTask  rfask_task.o
     0x0800867a   0x0800867a   0x00000002   PAD
-    0x0800867c   0x0800867c   0x00000008   Code   RO         3298    .text.RFASKTask_ScanYSEL  rfask_task.o
-    0x08008684   0x08008684   0x00000030   Code   RO         3266    .text.RFASKTask_SetClockFreq  rfask_task.o
-    0x080086b4   0x080086b4   0x000000c6   Code   RO         3278    .text.RFASKTask_SitesCurrent  rfask_task.o
+    0x0800867c   0x0800867c   0x00000008   Code   RO         3391    .text.RFASKTask_ScanYSEL  rfask_task.o
+    0x08008684   0x08008684   0x00000030   Code   RO         3359    .text.RFASKTask_SetClockFreq  rfask_task.o
+    0x080086b4   0x080086b4   0x000000c6   Code   RO         3371    .text.RFASKTask_SitesCurrent  rfask_task.o
     0x0800877a   0x0800877a   0x00000002   PAD
-    0x0800877c   0x0800877c   0x0000008e   Code   RO         3296    .text.RFASKTask_Task  rfask_task.o
+    0x0800877c   0x0800877c   0x0000008e   Code   RO         3389    .text.RFASKTask_Task  rfask_task.o
     0x0800880a   0x0800880a   0x00000002   PAD
-    0x0800880c   0x0800880c   0x0000048c   Code   RO         3268    .text.RFASKTask_WM8510Task  rfask_task.o
-    0x08008c98   0x08008c98   0x0000095e   Code   RO         3274    .text.RFASKTask_YSELTask  rfask_task.o
+    0x0800880c   0x0800880c   0x0000048c   Code   RO         3361    .text.RFASKTask_WM8510Task  rfask_task.o
+    0x08008c98   0x08008c98   0x0000095e   Code   RO         3367    .text.RFASKTask_YSELTask  rfask_task.o
     0x080095f6   0x080095f6   0x00000002   PAD
-    0x080095f8   0x080095f8   0x00000068   Code   RO         3206    .text.RFASK_ActivateSites  rfask_cfg.o
-    0x08009660   0x08009660   0x00000134   Code   RO         3200    .text.RFASK_CalcXTAL  rfask_cfg.o
-    0x08009794   0x08009794   0x000000c8   Code   RO         3190    .text.RFASK_ClkInit  rfask_cfg.o
-    0x0800985c   0x0800985c   0x000000aa   Code   RO         3210    .text.RFASK_GetYSELA  rfask_cfg.o
+    0x080095f8   0x080095f8   0x00000068   Code   RO         3299    .text.RFASK_ActivateSites  rfask_cfg.o
+    0x08009660   0x08009660   0x00000134   Code   RO         3293    .text.RFASK_CalcXTAL  rfask_cfg.o
+    0x08009794   0x08009794   0x000000c8   Code   RO         3283    .text.RFASK_ClkInit  rfask_cfg.o
+    0x0800985c   0x0800985c   0x000000aa   Code   RO         3303    .text.RFASK_GetYSELA  rfask_cfg.o
     0x08009906   0x08009906   0x00000002   PAD
-    0x08009908   0x08009908   0x0000007e   Code   RO         3214    .text.RFASK_GetYSELB  rfask_cfg.o
+    0x08009908   0x08009908   0x0000007e   Code   RO         3307    .text.RFASK_GetYSELB  rfask_cfg.o
     0x08009986   0x08009986   0x00000002   PAD
-    0x08009988   0x08009988   0x0000007e   Code   RO         3216    .text.RFASK_GetYSELC  rfask_cfg.o
+    0x08009988   0x08009988   0x0000007e   Code   RO         3309    .text.RFASK_GetYSELC  rfask_cfg.o
     0x08009a06   0x08009a06   0x00000002   PAD
-    0x08009a08   0x08009a08   0x00000084   Code   RO         3218    .text.RFASK_GetYSELD  rfask_cfg.o
-    0x08009a8c   0x08009a8c   0x0000001c   Code   RO         3198    .text.RFASK_Init    rfask_cfg.o
-    0x08009aa8   0x08009aa8   0x000000f6   Code   RO         3220    .text.RFASK_ScanYSEL  rfask_cfg.o
+    0x08009a08   0x08009a08   0x00000084   Code   RO         3311    .text.RFASK_GetYSELD  rfask_cfg.o
+    0x08009a8c   0x08009a8c   0x0000001c   Code   RO         3291    .text.RFASK_Init    rfask_cfg.o
+    0x08009aa8   0x08009aa8   0x000000f6   Code   RO         3313    .text.RFASK_ScanYSEL  rfask_cfg.o
     0x08009b9e   0x08009b9e   0x00000002   PAD
-    0x08009ba0   0x08009ba0   0x0000001e   Code   RO         3208    .text.RFASK_SetFreqCurrentPointCmd  rfask_cfg.o
+    0x08009ba0   0x08009ba0   0x0000001e   Code   RO         3301    .text.RFASK_SetFreqCurrentPointCmd  rfask_cfg.o
     0x08009bbe   0x08009bbe   0x00000002   PAD
-    0x08009bc0   0x08009bc0   0x0000019e   Code   RO         3196    .text.RFASK_StructInit  rfask_cfg.o
+    0x08009bc0   0x08009bc0   0x0000019e   Code   RO         3289    .text.RFASK_StructInit  rfask_cfg.o
     0x08009d5e   0x08009d5e   0x00000002   PAD
-    0x08009d60   0x08009d60   0x00000276   Code   RO         3194    .text.RFASK_YSELInit  rfask_cfg.o
+    0x08009d60   0x08009d60   0x00000276   Code   RO         3287    .text.RFASK_YSELInit  rfask_cfg.o
     0x08009fd6   0x08009fd6   0x00000002   PAD
-    0x08009fd8   0x08009fd8   0x00000008   Code   RO         3154    .text.RandomLib_Init  random_lib.o
-    0x08009fe0   0x08009fe0   0x00000008   Code   RO         3172    .text.RandomTask_Init  random_task.o
-    0x08009fe8   0x08009fe8   0x00000002   Code   RO         3136    .text.Random_Init   random_cfg.o
+    0x08009fd8   0x08009fd8   0x00000008   Code   RO         3247    .text.RandomLib_Init  random_lib.o
+    0x08009fe0   0x08009fe0   0x00000008   Code   RO         3265    .text.RandomTask_Init  random_task.o
+    0x08009fe8   0x08009fe8   0x00000002   Code   RO         3229    .text.Random_Init   random_cfg.o
     0x08009fea   0x08009fea   0x00000002   PAD
     0x08009fec   0x08009fec   0x00000002   Code   RO           71    .text.SVC_Handler   stm32f1xx_it.o
     0x08009fee   0x08009fee   0x00000002   PAD
-    0x08009ff0   0x08009ff0   0x00000008   Code   RO         3649    .text.SysTickLib_1msIncTick  systick_lib.o
-    0x08009ff8   0x08009ff8   0x00000014   Code   RO         3639    .text.SysTickLib_FuncTick  systick_lib.o
-    0x0800a00c   0x0800a00c   0x00000008   Code   RO         3643    .text.SysTickLib_GetTick  systick_lib.o
-    0x0800a014   0x0800a014   0x00000014   Code   RO         3641    .text.SysTickLib_IRQDecTick  systick_lib.o
-    0x0800a028   0x0800a028   0x00000008   Code   RO         3645    .text.SysTickLib_IRQTick  systick_lib.o
-    0x0800a030   0x0800a030   0x00000008   Code   RO         3635    .text.SysTickLib_Init  systick_lib.o
-    0x0800a038   0x0800a038   0x00000014   Code   RO         3647    .text.SysTickLib_WaitTick  systick_lib.o
-    0x0800a04c   0x0800a04c   0x00000008   Code   RO         3677    .text.SysTickTask_1msIncTick  systick_task.o
-    0x0800a054   0x0800a054   0x00000014   Code   RO         3667    .text.SysTickTask_FuncTick  systick_task.o
-    0x0800a068   0x0800a068   0x00000008   Code   RO         3671    .text.SysTickTask_GetTick  systick_task.o
-    0x0800a070   0x0800a070   0x00000014   Code   RO         3669    .text.SysTickTask_IRQDecTick  systick_task.o
-    0x0800a084   0x0800a084   0x00000008   Code   RO         3673    .text.SysTickTask_IRQTick  systick_task.o
-    0x0800a08c   0x0800a08c   0x00000008   Code   RO         3663    .text.SysTickTask_Init  systick_task.o
-    0x0800a094   0x0800a094   0x00000014   Code   RO         3675    .text.SysTickTask_WaitTick  systick_task.o
-    0x0800a0a8   0x0800a0a8   0x00000098   Code   RO         3619    .text.SysTick_1msIncTick  systick_cfg.o
-    0x0800a140   0x0800a140   0x00000026   Code   RO         3609    .text.SysTick_FuncTick  systick_cfg.o
+    0x08009ff0   0x08009ff0   0x00000008   Code   RO         3743    .text.SysTickLib_1msIncTick  systick_lib.o
+    0x08009ff8   0x08009ff8   0x00000014   Code   RO         3733    .text.SysTickLib_FuncTick  systick_lib.o
+    0x0800a00c   0x0800a00c   0x00000008   Code   RO         3737    .text.SysTickLib_GetTick  systick_lib.o
+    0x0800a014   0x0800a014   0x00000014   Code   RO         3735    .text.SysTickLib_IRQDecTick  systick_lib.o
+    0x0800a028   0x0800a028   0x00000008   Code   RO         3739    .text.SysTickLib_IRQTick  systick_lib.o
+    0x0800a030   0x0800a030   0x00000008   Code   RO         3729    .text.SysTickLib_Init  systick_lib.o
+    0x0800a038   0x0800a038   0x00000014   Code   RO         3741    .text.SysTickLib_WaitTick  systick_lib.o
+    0x0800a04c   0x0800a04c   0x00000008   Code   RO         3771    .text.SysTickTask_1msIncTick  systick_task.o
+    0x0800a054   0x0800a054   0x00000014   Code   RO         3761    .text.SysTickTask_FuncTick  systick_task.o
+    0x0800a068   0x0800a068   0x00000008   Code   RO         3765    .text.SysTickTask_GetTick  systick_task.o
+    0x0800a070   0x0800a070   0x00000014   Code   RO         3763    .text.SysTickTask_IRQDecTick  systick_task.o
+    0x0800a084   0x0800a084   0x00000008   Code   RO         3767    .text.SysTickTask_IRQTick  systick_task.o
+    0x0800a08c   0x0800a08c   0x00000008   Code   RO         3757    .text.SysTickTask_Init  systick_task.o
+    0x0800a094   0x0800a094   0x00000014   Code   RO         3769    .text.SysTickTask_WaitTick  systick_task.o
+    0x0800a0a8   0x0800a0a8   0x00000098   Code   RO         3713    .text.SysTick_1msIncTick  systick_cfg.o
+    0x0800a140   0x0800a140   0x00000026   Code   RO         3703    .text.SysTick_FuncTick  systick_cfg.o
     0x0800a166   0x0800a166   0x00000002   PAD
-    0x0800a168   0x0800a168   0x0000000e   Code   RO         3613    .text.SysTick_GetTick  systick_cfg.o
+    0x0800a168   0x0800a168   0x0000000e   Code   RO         3707    .text.SysTick_GetTick  systick_cfg.o
     0x0800a176   0x0800a176   0x00000002   PAD
     0x0800a178   0x0800a178   0x0000000e   Code   RO           77    .text.SysTick_Handler  stm32f1xx_it.o
     0x0800a186   0x0800a186   0x00000002   PAD
-    0x0800a188   0x0800a188   0x0000006c   Code   RO         3611    .text.SysTick_IRQDecTick  systick_cfg.o
-    0x0800a1f4   0x0800a1f4   0x0000009a   Code   RO         3615    .text.SysTick_IRQTick  systick_cfg.o
+    0x0800a188   0x0800a188   0x0000006c   Code   RO         3705    .text.SysTick_IRQDecTick  systick_cfg.o
+    0x0800a1f4   0x0800a1f4   0x0000009a   Code   RO         3709    .text.SysTick_IRQTick  systick_cfg.o
     0x0800a28e   0x0800a28e   0x00000002   PAD
-    0x0800a290   0x0800a290   0x00000086   Code   RO         3595    .text.SysTick_Init  systick_cfg.o
+    0x0800a290   0x0800a290   0x00000086   Code   RO         3689    .text.SysTick_Init  systick_cfg.o
     0x0800a316   0x0800a316   0x00000002   PAD
-    0x0800a318   0x0800a318   0x00000014   Code   RO         3591    .text.SysTick_Resume  systick_cfg.o
-    0x0800a32c   0x0800a32c   0x00000024   Code   RO         3593    .text.SysTick_StructInit  systick_cfg.o
-    0x0800a350   0x0800a350   0x00000014   Code   RO         3589    .text.SysTick_Suspend  systick_cfg.o
-    0x0800a364   0x0800a364   0x000000c6   Code   RO         3617    .text.SysTick_WaitTick  systick_cfg.o
+    0x0800a318   0x0800a318   0x00000014   Code   RO         3685    .text.SysTick_Resume  systick_cfg.o
+    0x0800a32c   0x0800a32c   0x00000024   Code   RO         3687    .text.SysTick_StructInit  systick_cfg.o
+    0x0800a350   0x0800a350   0x00000014   Code   RO         3683    .text.SysTick_Suspend  systick_cfg.o
+    0x0800a364   0x0800a364   0x000000c6   Code   RO         3711    .text.SysTick_WaitTick  systick_cfg.o
     0x0800a42a   0x0800a42a   0x00000002   PAD
     0x0800a42c   0x0800a42c   0x000000be   Code   RO         1211    .text.Sys_Init      main.o
     0x0800a4ea   0x0800a4ea   0x00000002   PAD
@@ -9108,120 +9194,120 @@ Memory Map of the image
     0x0800a59e   0x0800a59e   0x00000002   PAD
     0x0800a5a0   0x0800a5a0   0x00000060   Code   RO          214    .text.SystemInit    system_stm32f1xx.o
     0x0800a600   0x0800a600   0x00000008   Code   RO          113    .text.TIM2_IRQHandler  stm32f1xx_it.o
-    0x0800a608   0x0800a608   0x00000008   Code   RO         3764    .text.TimerLib_CalcFreq_Task  timer_lib.o
-    0x0800a610   0x0800a610   0x00000020   Code   RO         3770    .text.TimerLib_Clock  timer_lib.o
-    0x0800a630   0x0800a630   0x00000008   Code   RO         3766    .text.TimerLib_GetFreqKHz  timer_lib.o
-    0x0800a638   0x0800a638   0x00000008   Code   RO         3762    .text.TimerLib_Init  timer_lib.o
-    0x0800a640   0x0800a640   0x00000008   Code   RO         3784    .text.TimerTask_CalcFreq_Task  timer_task.o
-    0x0800a648   0x0800a648   0x00000020   Code   RO         3790    .text.TimerTask_Clock  timer_task.o
-    0x0800a668   0x0800a668   0x00000008   Code   RO         3786    .text.TimerTask_GetFreqKHz  timer_task.o
-    0x0800a670   0x0800a670   0x00000008   Code   RO         3782    .text.TimerTask_Init  timer_task.o
-    0x0800a678   0x0800a678   0x000000da   Code   RO         3691    .text.Timer_CalcFreqMode_Init  timer_cfg.o
+    0x0800a608   0x0800a608   0x00000008   Code   RO         3858    .text.TimerLib_CalcFreq_Task  timer_lib.o
+    0x0800a610   0x0800a610   0x00000020   Code   RO         3864    .text.TimerLib_Clock  timer_lib.o
+    0x0800a630   0x0800a630   0x00000008   Code   RO         3860    .text.TimerLib_GetFreqKHz  timer_lib.o
+    0x0800a638   0x0800a638   0x00000008   Code   RO         3856    .text.TimerLib_Init  timer_lib.o
+    0x0800a640   0x0800a640   0x00000008   Code   RO         3878    .text.TimerTask_CalcFreq_Task  timer_task.o
+    0x0800a648   0x0800a648   0x00000020   Code   RO         3884    .text.TimerTask_Clock  timer_task.o
+    0x0800a668   0x0800a668   0x00000008   Code   RO         3880    .text.TimerTask_GetFreqKHz  timer_task.o
+    0x0800a670   0x0800a670   0x00000008   Code   RO         3876    .text.TimerTask_Init  timer_task.o
+    0x0800a678   0x0800a678   0x000000da   Code   RO         3785    .text.Timer_CalcFreqMode_Init  timer_cfg.o
     0x0800a752   0x0800a752   0x00000002   PAD
-    0x0800a754   0x0800a754   0x000000b4   Code   RO         3721    .text.Timer_CalcFreq_Init  timer_cfg.o
-    0x0800a808   0x0800a808   0x0000008a   Code   RO         3731    .text.Timer_CalcFreq_Task  timer_cfg.o
+    0x0800a754   0x0800a754   0x000000b4   Code   RO         3815    .text.Timer_CalcFreq_Init  timer_cfg.o
+    0x0800a808   0x0800a808   0x0000008a   Code   RO         3825    .text.Timer_CalcFreq_Task  timer_cfg.o
     0x0800a892   0x0800a892   0x00000002   PAD
-    0x0800a894   0x0800a894   0x0000028c   Code   RO         3693    .text.Timer_Clock   timer_cfg.o
-    0x0800ab20   0x0800ab20   0x0000000e   Code   RO         3733    .text.Timer_GetFreqKHz  timer_cfg.o
+    0x0800a894   0x0800a894   0x0000028c   Code   RO         3787    .text.Timer_Clock   timer_cfg.o
+    0x0800ab20   0x0800ab20   0x0000000e   Code   RO         3827    .text.Timer_GetFreqKHz  timer_cfg.o
     0x0800ab2e   0x0800ab2e   0x00000002   PAD
-    0x0800ab30   0x0800ab30   0x00000008   Code   RO         3737    .text.Timer_Init    timer_cfg.o
+    0x0800ab30   0x0800ab30   0x00000008   Code   RO         3831    .text.Timer_Init    timer_cfg.o
     0x0800ab38   0x0800ab38   0x000000f2   Code   RO           83    .text.USART1_IRQHandler  stm32f1xx_it.o
     0x0800ac2a   0x0800ac2a   0x00000002   PAD
-    0x0800ac2c   0x0800ac2c   0x00000170   Code   RO         3806    .text.USART1_Init   usart_cfg.o
-    0x0800ad9c   0x0800ad9c   0x0000000e   Code   RO         3808    .text.USART2_Init   usart_cfg.o
+    0x0800ac2c   0x0800ac2c   0x00000170   Code   RO         3900    .text.USART1_Init   usart_cfg.o
+    0x0800ad9c   0x0800ad9c   0x0000000e   Code   RO         3902    .text.USART2_Init   usart_cfg.o
     0x0800adaa   0x0800adaa   0x00000002   PAD
-    0x0800adac   0x0800adac   0x0000000e   Code   RO         3810    .text.USART3_Init   usart_cfg.o
+    0x0800adac   0x0800adac   0x0000000e   Code   RO         3904    .text.USART3_Init   usart_cfg.o
     0x0800adba   0x0800adba   0x00000002   PAD
-    0x0800adbc   0x0800adbc   0x00000014   Code   RO         4012    .text.USARTLib_CRCTask_Read  usart_lib.o
-    0x0800add0   0x0800add0   0x00000014   Code   RO         3996    .text.USARTLib_DeviceID  usart_lib.o
-    0x0800ade4   0x0800ade4   0x0000005e   Code   RO         3966    .text.USARTLib_DeviceInit  usart_lib.o
+    0x0800adbc   0x0800adbc   0x00000014   Code   RO         4106    .text.USARTLib_CRCTask_Read  usart_lib.o
+    0x0800add0   0x0800add0   0x00000014   Code   RO         4090    .text.USARTLib_DeviceID  usart_lib.o
+    0x0800ade4   0x0800ade4   0x0000005e   Code   RO         4060    .text.USARTLib_DeviceInit  usart_lib.o
     0x0800ae42   0x0800ae42   0x00000002   PAD
-    0x0800ae44   0x0800ae44   0x00000014   Code   RO         3970    .text.USARTLib_GetReadState  usart_lib.o
-    0x0800ae58   0x0800ae58   0x00000020   Code   RO         3992    .text.USARTLib_ITRead_Task  usart_lib.o
-    0x0800ae78   0x0800ae78   0x00000014   Code   RO         4000    .text.USARTLib_ITWrite_TCTask  usart_lib.o
-    0x0800ae8c   0x0800ae8c   0x00000014   Code   RO         3998    .text.USARTLib_ITWrite_TXETask  usart_lib.o
-    0x0800aea0   0x0800aea0   0x000000aa   Code   RO         3962    .text.USARTLib_Init  usart_lib.o
+    0x0800ae44   0x0800ae44   0x00000014   Code   RO         4064    .text.USARTLib_GetReadState  usart_lib.o
+    0x0800ae58   0x0800ae58   0x00000020   Code   RO         4086    .text.USARTLib_ITRead_Task  usart_lib.o
+    0x0800ae78   0x0800ae78   0x00000014   Code   RO         4094    .text.USARTLib_ITWrite_TCTask  usart_lib.o
+    0x0800ae8c   0x0800ae8c   0x00000014   Code   RO         4092    .text.USARTLib_ITWrite_TXETask  usart_lib.o
+    0x0800aea0   0x0800aea0   0x000000aa   Code   RO         4056    .text.USARTLib_Init  usart_lib.o
     0x0800af4a   0x0800af4a   0x00000002   PAD
-    0x0800af4c   0x0800af4c   0x00000014   Code   RO         3968    .text.USARTLib_ReadInit  usart_lib.o
-    0x0800af60   0x0800af60   0x00000020   Code   RO         4002    .text.USARTLib_RealTime_AddByte  usart_lib.o
-    0x0800af80   0x0800af80   0x00000014   Code   RO         4006    .text.USARTLib_RealTime_AddByteCRC  usart_lib.o
-    0x0800af94   0x0800af94   0x00000020   Code   RO         4004    .text.USARTLib_RealTime_AddByteSize  usart_lib.o
-    0x0800afb4   0x0800afb4   0x00000020   Code   RO         3986    .text.USARTLib_TimeOVFTask  usart_lib.o
-    0x0800afd4   0x0800afd4   0x00000014   Code   RO         4074    .text.USARTTask_CRCTask_Read  usart_task.o
-    0x0800afe8   0x0800afe8   0x00000014   Code   RO         4086    .text.USARTTask_DeviceID  usart_task.o
-    0x0800affc   0x0800affc   0x00000014   Code   RO         4042    .text.USARTTask_GetReadState  usart_task.o
-    0x0800b010   0x0800b010   0x00000020   Code   RO         4056    .text.USARTTask_ITRead_Task  usart_task.o
-    0x0800b030   0x0800b030   0x00000014   Code   RO         4062    .text.USARTTask_ITWrite_TCTask  usart_task.o
-    0x0800b044   0x0800b044   0x00000014   Code   RO         4060    .text.USARTTask_ITWrite_TXETask  usart_task.o
-    0x0800b058   0x0800b058   0x000000b0   Code   RO         4034    .text.USARTTask_Init  usart_task.o
-    0x0800b108   0x0800b108   0x00000014   Code   RO         4040    .text.USARTTask_ReadInit  usart_task.o
-    0x0800b11c   0x0800b11c   0x00000020   Code   RO         4064    .text.USARTTask_RealTime_AddByte  usart_task.o
-    0x0800b13c   0x0800b13c   0x00000014   Code   RO         4068    .text.USARTTask_RealTime_AddByteCRC  usart_task.o
-    0x0800b150   0x0800b150   0x00000020   Code   RO         4066    .text.USARTTask_RealTime_AddByteSize  usart_task.o
-    0x0800b170   0x0800b170   0x00000018   Code   RO         4050    .text.USARTTask_TimeOVFTask  usart_task.o
-    0x0800b188   0x0800b188   0x00000046   Code   RO         3816    .text.USART_485GPIOInit  usart_cfg.o
+    0x0800af4c   0x0800af4c   0x00000014   Code   RO         4062    .text.USARTLib_ReadInit  usart_lib.o
+    0x0800af60   0x0800af60   0x00000020   Code   RO         4096    .text.USARTLib_RealTime_AddByte  usart_lib.o
+    0x0800af80   0x0800af80   0x00000014   Code   RO         4100    .text.USARTLib_RealTime_AddByteCRC  usart_lib.o
+    0x0800af94   0x0800af94   0x00000020   Code   RO         4098    .text.USARTLib_RealTime_AddByteSize  usart_lib.o
+    0x0800afb4   0x0800afb4   0x00000020   Code   RO         4080    .text.USARTLib_TimeOVFTask  usart_lib.o
+    0x0800afd4   0x0800afd4   0x00000014   Code   RO         4168    .text.USARTTask_CRCTask_Read  usart_task.o
+    0x0800afe8   0x0800afe8   0x00000014   Code   RO         4180    .text.USARTTask_DeviceID  usart_task.o
+    0x0800affc   0x0800affc   0x00000014   Code   RO         4136    .text.USARTTask_GetReadState  usart_task.o
+    0x0800b010   0x0800b010   0x00000020   Code   RO         4150    .text.USARTTask_ITRead_Task  usart_task.o
+    0x0800b030   0x0800b030   0x00000014   Code   RO         4156    .text.USARTTask_ITWrite_TCTask  usart_task.o
+    0x0800b044   0x0800b044   0x00000014   Code   RO         4154    .text.USARTTask_ITWrite_TXETask  usart_task.o
+    0x0800b058   0x0800b058   0x000000b0   Code   RO         4128    .text.USARTTask_Init  usart_task.o
+    0x0800b108   0x0800b108   0x00000014   Code   RO         4134    .text.USARTTask_ReadInit  usart_task.o
+    0x0800b11c   0x0800b11c   0x00000020   Code   RO         4158    .text.USARTTask_RealTime_AddByte  usart_task.o
+    0x0800b13c   0x0800b13c   0x00000014   Code   RO         4162    .text.USARTTask_RealTime_AddByteCRC  usart_task.o
+    0x0800b150   0x0800b150   0x00000020   Code   RO         4160    .text.USARTTask_RealTime_AddByteSize  usart_task.o
+    0x0800b170   0x0800b170   0x00000018   Code   RO         4144    .text.USARTTask_TimeOVFTask  usart_task.o
+    0x0800b188   0x0800b188   0x00000046   Code   RO         3910    .text.USART_485GPIOInit  usart_cfg.o
     0x0800b1ce   0x0800b1ce   0x00000002   PAD
-    0x0800b1d0   0x0800b1d0   0x0000030e   Code   RO         3894    .text.USART_CRCTask_Read  usart_cfg.o
+    0x0800b1d0   0x0800b1d0   0x0000030e   Code   RO         3988    .text.USART_CRCTask_Read  usart_cfg.o
     0x0800b4de   0x0800b4de   0x00000002   PAD
-    0x0800b4e0   0x0800b4e0   0x00000034   Code   RO         3846    .text.USART_ClearOVF  usart_cfg.o
-    0x0800b514   0x0800b514   0x00000130   Code   RO         3918    .text.USART_Clock   usart_cfg.o
-    0x0800b644   0x0800b644   0x00000040   Code   RO         3910    .text.USART_DeviceID  usart_cfg.o
-    0x0800b684   0x0800b684   0x00000060   Code   RO         3930    .text.USART_DeviceInit  usart_cfg.o
-    0x0800b6e4   0x0800b6e4   0x0000004a   Code   RO         3812    .text.USART_GPIOInit  usart_cfg.o
+    0x0800b4e0   0x0800b4e0   0x00000034   Code   RO         3940    .text.USART_ClearOVF  usart_cfg.o
+    0x0800b514   0x0800b514   0x00000130   Code   RO         4012    .text.USART_Clock   usart_cfg.o
+    0x0800b644   0x0800b644   0x00000040   Code   RO         4004    .text.USART_DeviceID  usart_cfg.o
+    0x0800b684   0x0800b684   0x00000060   Code   RO         4024    .text.USART_DeviceInit  usart_cfg.o
+    0x0800b6e4   0x0800b6e4   0x0000004a   Code   RO         3906    .text.USART_GPIOInit  usart_cfg.o
     0x0800b72e   0x0800b72e   0x00000002   PAD
-    0x0800b730   0x0800b730   0x00000012   Code   RO         3902    .text.USART_GetReadState  usart_cfg.o
+    0x0800b730   0x0800b730   0x00000012   Code   RO         3996    .text.USART_GetReadState  usart_cfg.o
     0x0800b742   0x0800b742   0x00000002   PAD
-    0x0800b744   0x0800b744   0x000001d4   Code   RO         3848    .text.USART_ITRead_16BitsTask  usart_cfg.o
-    0x0800b918   0x0800b918   0x00000186   Code   RO         3844    .text.USART_ITRead_8BitsTask  usart_cfg.o
+    0x0800b744   0x0800b744   0x000001d4   Code   RO         3942    .text.USART_ITRead_16BitsTask  usart_cfg.o
+    0x0800b918   0x0800b918   0x00000186   Code   RO         3938    .text.USART_ITRead_8BitsTask  usart_cfg.o
     0x0800ba9e   0x0800ba9e   0x00000002   PAD
-    0x0800baa0   0x0800baa0   0x00000046   Code   RO         3850    .text.USART_ITRead_Task  usart_cfg.o
+    0x0800baa0   0x0800baa0   0x00000046   Code   RO         3944    .text.USART_ITRead_Task  usart_cfg.o
     0x0800bae6   0x0800bae6   0x00000002   PAD
-    0x0800bae8   0x0800bae8   0x00000076   Code   RO         3876    .text.USART_ITWrite_TCTask  usart_cfg.o
+    0x0800bae8   0x0800bae8   0x00000076   Code   RO         3970    .text.USART_ITWrite_TCTask  usart_cfg.o
     0x0800bb5e   0x0800bb5e   0x00000002   PAD
-    0x0800bb60   0x0800bb60   0x000000c0   Code   RO         3870    .text.USART_ITWrite_TXETask  usart_cfg.o
-    0x0800bc20   0x0800bc20   0x000000f4   Code   RO         3804    .text.USART_Init    usart_cfg.o
-    0x0800bd14   0x0800bd14   0x00000044   Code   RO         3852    .text.USART_PollMode_WriteByte  usart_cfg.o
-    0x0800bd58   0x0800bd58   0x00000132   Code   RO         3838    .text.USART_Printf  usart_cfg.o
+    0x0800bb60   0x0800bb60   0x000000c0   Code   RO         3964    .text.USART_ITWrite_TXETask  usart_cfg.o
+    0x0800bc20   0x0800bc20   0x000000f4   Code   RO         3898    .text.USART_Init    usart_cfg.o
+    0x0800bd14   0x0800bd14   0x00000044   Code   RO         3946    .text.USART_PollMode_WriteByte  usart_cfg.o
+    0x0800bd58   0x0800bd58   0x00000132   Code   RO         3932    .text.USART_Printf  usart_cfg.o
     0x0800be8a   0x0800be8a   0x00000002   PAD
-    0x0800be8c   0x0800be8c   0x0000004c   Code   RO         3840    .text.USART_ReadInit  usart_cfg.o
-    0x0800bed8   0x0800bed8   0x00000090   Code   RO         3880    .text.USART_RealTime_AddByte  usart_cfg.o
-    0x0800bf68   0x0800bf68   0x00000126   Code   RO         3888    .text.USART_RealTime_AddByteCRC  usart_cfg.o
+    0x0800be8c   0x0800be8c   0x0000004c   Code   RO         3934    .text.USART_ReadInit  usart_cfg.o
+    0x0800bed8   0x0800bed8   0x00000090   Code   RO         3974    .text.USART_RealTime_AddByte  usart_cfg.o
+    0x0800bf68   0x0800bf68   0x00000126   Code   RO         3982    .text.USART_RealTime_AddByteCRC  usart_cfg.o
     0x0800c08e   0x0800c08e   0x00000002   PAD
-    0x0800c090   0x0800c090   0x00000108   Code   RO         3886    .text.USART_RealTime_AddByteSize  usart_cfg.o
-    0x0800c198   0x0800c198   0x000000c6   Code   RO         3802    .text.USART_StructInit  usart_cfg.o
+    0x0800c090   0x0800c090   0x00000108   Code   RO         3980    .text.USART_RealTime_AddByteSize  usart_cfg.o
+    0x0800c198   0x0800c198   0x000000c6   Code   RO         3896    .text.USART_StructInit  usart_cfg.o
     0x0800c25e   0x0800c25e   0x00000002   PAD
-    0x0800c260   0x0800c260   0x00000104   Code   RO         3836    .text.USART_TimeOVFTask  usart_cfg.o
-    0x0800c364   0x0800c364   0x0000005a   Code   RO         3830    .text.USART_TimeTick_Init  usart_cfg.o
+    0x0800c260   0x0800c260   0x00000104   Code   RO         3930    .text.USART_TimeOVFTask  usart_cfg.o
+    0x0800c364   0x0800c364   0x0000005a   Code   RO         3924    .text.USART_TimeTick_Init  usart_cfg.o
     0x0800c3be   0x0800c3be   0x00000002   PAD
-    0x0800c3c0   0x0800c3c0   0x00000128   Code   RO         3834    .text.USART_TimeTick_OVF  usart_cfg.o
-    0x0800c4e8   0x0800c4e8   0x00000050   Code   RO         3842    .text.USART_WriteInit  usart_cfg.o
+    0x0800c3c0   0x0800c3c0   0x00000128   Code   RO         3928    .text.USART_TimeTick_OVF  usart_cfg.o
+    0x0800c4e8   0x0800c4e8   0x00000050   Code   RO         3936    .text.USART_WriteInit  usart_cfg.o
     0x0800c538   0x0800c538   0x00000004   Code   RO           69    .text.UsageFault_Handler  stm32f1xx_it.o
-    0x0800c53c   0x0800c53c   0x0000002c   Code   RO         4373    .text.WM8510Lib_I2C_Init  wm8510_lib.o
-    0x0800c568   0x0800c568   0x00000014   Code   RO         4383    .text.WM8510Lib_I2C_Reset  wm8510_lib.o
-    0x0800c57c   0x0800c57c   0x0000001c   Code   RO         4385    .text.WM8510Lib_I2C_SetFreqHzWithAllFreqReg  wm8510_lib.o
-    0x0800c598   0x0800c598   0x0000002c   Code   RO         4403    .text.WM8510Task_I2C_Init  wm8510_task.o
-    0x0800c5c4   0x0800c5c4   0x00000014   Code   RO         4413    .text.WM8510Task_I2C_Reset  wm8510_task.o
-    0x0800c5d8   0x0800c5d8   0x0000001c   Code   RO         4415    .text.WM8510Task_I2C_SetFreqHzWithAllFreqReg  wm8510_task.o
-    0x0800c5f4   0x0800c5f4   0x00000018   Code   RO         4339    .text.WM8510_Calc_FreqAdd  wm8510_cfg.o
-    0x0800c60c   0x0800c60c   0x000004ec   Code   RO         4341    .text.WM8510_Calc_PllRate  wm8510_cfg.o
-    0x0800caf8   0x0800caf8   0x00000022   Code   RO         4337    .text.WM8510_HWI2C_WriteReg  wm8510_cfg.o
+    0x0800c53c   0x0800c53c   0x0000002c   Code   RO         4467    .text.WM8510Lib_I2C_Init  wm8510_lib.o
+    0x0800c568   0x0800c568   0x00000014   Code   RO         4477    .text.WM8510Lib_I2C_Reset  wm8510_lib.o
+    0x0800c57c   0x0800c57c   0x0000001c   Code   RO         4479    .text.WM8510Lib_I2C_SetFreqHzWithAllFreqReg  wm8510_lib.o
+    0x0800c598   0x0800c598   0x0000002c   Code   RO         4497    .text.WM8510Task_I2C_Init  wm8510_task.o
+    0x0800c5c4   0x0800c5c4   0x00000014   Code   RO         4507    .text.WM8510Task_I2C_Reset  wm8510_task.o
+    0x0800c5d8   0x0800c5d8   0x0000001c   Code   RO         4509    .text.WM8510Task_I2C_SetFreqHzWithAllFreqReg  wm8510_task.o
+    0x0800c5f4   0x0800c5f4   0x00000018   Code   RO         4433    .text.WM8510_Calc_FreqAdd  wm8510_cfg.o
+    0x0800c60c   0x0800c60c   0x000004ec   Code   RO         4435    .text.WM8510_Calc_PllRate  wm8510_cfg.o
+    0x0800caf8   0x0800caf8   0x00000022   Code   RO         4431    .text.WM8510_HWI2C_WriteReg  wm8510_cfg.o
     0x0800cb1a   0x0800cb1a   0x00000002   PAD
-    0x0800cb1c   0x0800cb1c   0x00000050   Code   RO         4321    .text.WM8510_I2C_Device0_Init  wm8510_cfg.o
-    0x0800cb6c   0x0800cb6c   0x0000000e   Code   RO         4323    .text.WM8510_I2C_Device1_Init  wm8510_cfg.o
+    0x0800cb1c   0x0800cb1c   0x00000050   Code   RO         4415    .text.WM8510_I2C_Device0_Init  wm8510_cfg.o
+    0x0800cb6c   0x0800cb6c   0x0000000e   Code   RO         4417    .text.WM8510_I2C_Device1_Init  wm8510_cfg.o
     0x0800cb7a   0x0800cb7a   0x00000002   PAD
-    0x0800cb7c   0x0800cb7c   0x0000000e   Code   RO         4325    .text.WM8510_I2C_Device2_Init  wm8510_cfg.o
+    0x0800cb7c   0x0800cb7c   0x0000000e   Code   RO         4419    .text.WM8510_I2C_Device2_Init  wm8510_cfg.o
     0x0800cb8a   0x0800cb8a   0x00000002   PAD
-    0x0800cb8c   0x0800cb8c   0x000000d4   Code   RO         4327    .text.WM8510_I2C_Init  wm8510_cfg.o
-    0x0800cc60   0x0800cc60   0x00000052   Code   RO         4351    .text.WM8510_I2C_Reset  wm8510_cfg.o
+    0x0800cb8c   0x0800cb8c   0x000000d4   Code   RO         4421    .text.WM8510_I2C_Init  wm8510_cfg.o
+    0x0800cc60   0x0800cc60   0x00000052   Code   RO         4445    .text.WM8510_I2C_Reset  wm8510_cfg.o
     0x0800ccb2   0x0800ccb2   0x00000002   PAD
-    0x0800ccb4   0x0800ccb4   0x0000004e   Code   RO         4329    .text.WM8510_I2C_START  wm8510_cfg.o
+    0x0800ccb4   0x0800ccb4   0x0000004e   Code   RO         4423    .text.WM8510_I2C_START  wm8510_cfg.o
     0x0800cd02   0x0800cd02   0x00000002   PAD
-    0x0800cd04   0x0800cd04   0x00000044   Code   RO         4331    .text.WM8510_I2C_SendCMD  wm8510_cfg.o
-    0x0800cd48   0x0800cd48   0x000000d6   Code   RO         4353    .text.WM8510_I2C_SetFreqHzWithAllFreqReg  wm8510_cfg.o
+    0x0800cd04   0x0800cd04   0x00000044   Code   RO         4425    .text.WM8510_I2C_SendCMD  wm8510_cfg.o
+    0x0800cd48   0x0800cd48   0x000000d6   Code   RO         4447    .text.WM8510_I2C_SetFreqHzWithAllFreqReg  wm8510_cfg.o
     0x0800ce1e   0x0800ce1e   0x00000002   PAD
-    0x0800ce20   0x0800ce20   0x000000b2   Code   RO         4319    .text.WM8510_I2C_StructInit  wm8510_cfg.o
+    0x0800ce20   0x0800ce20   0x000000b2   Code   RO         4413    .text.WM8510_I2C_StructInit  wm8510_cfg.o
     0x0800ced2   0x0800ced2   0x00000002   PAD
-    0x0800ced4   0x0800ced4   0x000000b6   Code   RO         4335    .text.WM8510_SWI2C_WriteReg  wm8510_cfg.o
+    0x0800ced4   0x0800ced4   0x000000b6   Code   RO         4429    .text.WM8510_SWI2C_WriteReg  wm8510_cfg.o
     0x0800cf8a   0x0800cf8a   0x00000002   PAD
     0x0800cf8c   0x0800cf8c   0x00000010   Code   RO           79    .text.WWDG_IRQHandler  stm32f1xx_it.o
     0x0800cf9c   0x0800cf9c   0x00000012   Code   RO          130    .text._Error_Handler  stm32_cfg.o
@@ -9230,34 +9316,34 @@ Memory Map of the image
     0x0800cfb4   0x0800cfb4   0x00000004   Code   RO          128    .text._irq_enable   stm32_cfg.o
     0x0800cfb8   0x0800cfb8   0x0000009a   Code   RO         1213    .text.main          main.o
     0x0800d052   0x0800d052   0x00000002   PAD
-    0x0800d054   0x0800d054   0x0000002c   Code   RO         4613    i.__0vsnprintf      mc_w.l(printfa.o)
-    0x0800d080   0x0800d080   0x0000000e   Code   RO         4699    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x0800d08e   0x0800d08e   0x00000002   Code   RO         4700    i.__scatterload_null  mc_w.l(handlers.o)
-    0x0800d090   0x0800d090   0x0000000e   Code   RO         4701    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0800d054   0x0800d054   0x0000002c   Code   RO         4672    i.__0vsnprintf      mc_w.l(printfa.o)
+    0x0800d080   0x0800d080   0x0000000e   Code   RO         4766    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0800d08e   0x0800d08e   0x00000002   Code   RO         4767    i.__scatterload_null  mc_w.l(handlers.o)
+    0x0800d090   0x0800d090   0x0000000e   Code   RO         4768    i.__scatterload_zeroinit  mc_w.l(handlers.o)
     0x0800d09e   0x0800d09e   0x00000002   PAD
-    0x0800d0a0   0x0800d0a0   0x00000184   Code   RO         4615    i._fp_digits        mc_w.l(printfa.o)
-    0x0800d224   0x0800d224   0x000006dc   Code   RO         4616    i._printf_core      mc_w.l(printfa.o)
-    0x0800d900   0x0800d900   0x00000024   Code   RO         4617    i._printf_post_padding  mc_w.l(printfa.o)
-    0x0800d924   0x0800d924   0x0000002e   Code   RO         4618    i._printf_pre_padding  mc_w.l(printfa.o)
-    0x0800d952   0x0800d952   0x00000016   Code   RO         4619    i._snputc           mc_w.l(printfa.o)
+    0x0800d0a0   0x0800d0a0   0x00000184   Code   RO         4674    i._fp_digits        mc_w.l(printfa.o)
+    0x0800d224   0x0800d224   0x000006dc   Code   RO         4675    i._printf_core      mc_w.l(printfa.o)
+    0x0800d900   0x0800d900   0x00000024   Code   RO         4676    i._printf_post_padding  mc_w.l(printfa.o)
+    0x0800d924   0x0800d924   0x0000002e   Code   RO         4677    i._printf_pre_padding  mc_w.l(printfa.o)
+    0x0800d952   0x0800d952   0x00000016   Code   RO         4678    i._snputc           mc_w.l(printfa.o)
     0x0800d968   0x0800d968   0x00000010   Data   RO          219    .rodata.AHBPrescTable  system_stm32f1xx.o
     0x0800d978   0x0800d978   0x00000008   Data   RO          220    .rodata.APBPrescTable  system_stm32f1xx.o
     0x0800d980   0x0800d980   0x00000007   Data   RO          115    .rodata.CHANNEL_OFFSET_TAB  stm32f1xx_it.o
     0x0800d987   0x0800d987   0x00000007   Data   RO          658    .rodata.CHANNEL_OFFSET_TAB  stm32f1xx_ll_dma.o
     0x0800d98e   0x0800d98e   0x00000007   Data   RO         1113    .rodata.CHANNEL_OFFSET_TAB  adc_cfg.o
-    0x0800d995   0x0800d995   0x00000007   Data   RO         3749    .rodata.OFFSET_TAB_CCMRx  timer_cfg.o
+    0x0800d995   0x0800d995   0x00000007   Data   RO         3843    .rodata.OFFSET_TAB_CCMRx  timer_cfg.o
     0x0800d99c   0x0800d99c   0x00000007   Data   RO         1694    .rodata.SHIFT_TAB_CCxP  decode_cfg.o
-    0x0800d9a3   0x0800d9a3   0x00000007   Data   RO         3751    .rodata.SHIFT_TAB_CCxP  timer_cfg.o
-    0x0800d9aa   0x0800d9aa   0x00000007   Data   RO         3750    .rodata.SHIFT_TAB_ICxx  timer_cfg.o
+    0x0800d9a3   0x0800d9a3   0x00000007   Data   RO         3845    .rodata.SHIFT_TAB_CCxP  timer_cfg.o
+    0x0800d9aa   0x0800d9aa   0x00000007   Data   RO         3844    .rodata.SHIFT_TAB_ICxx  timer_cfg.o
     0x0800d9b1   0x0800d9b1   0x00000001   PAD
     0x0800d9b2   0x0800d9b2   0x00000200   Data   RO         1422    .rodata.crc16Table  crc_cfg.o
     0x0800dbb2   0x0800dbb2   0x00000100   Data   RO         1423    .rodata.crc8Table07  crc_cfg.o
     0x0800dcb2   0x0800dcb2   0x00000100   Data   RO         1424    .rodata.crc8Table31  crc_cfg.o
     0x0800ddb2   0x0800ddb2   0x0000001a   Data   RO         1215    .rodata.str1.1      main.o
-    0x0800ddcc   0x0800ddcc   0x0000001f   Data   RO         3308    .rodata.str1.1      rfask_task.o
-    0x0800ddeb   0x0800ddeb   0x00000056   Data   RO         3949    .rodata.str1.1      usart_cfg.o
+    0x0800ddcc   0x0800ddcc   0x0000001f   Data   RO         3401    .rodata.str1.1      rfask_task.o
+    0x0800ddeb   0x0800ddeb   0x00000056   Data   RO         4043    .rodata.str1.1      usart_cfg.o
     0x0800de41   0x0800de41   0x00000003   PAD
-    0x0800de44   0x0800de44   0x00000020   Data   RO         4697    Region$$Table       anon$$obj.o
+    0x0800de44   0x0800de44   0x00000020   Data   RO         4764    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0800de68, Size: 0x00002d68, Max: 0x00018000, ABSOLUTE)
@@ -9269,17 +9355,17 @@ Memory Map of the image
     0x20000005   0x0800de6d   0x00000003   PAD
     0x20000008   0x0800de70   0x00000004   Data   RW         1110    .data.pABChannelADC  adc_cfg.o
     0x2000000c   0x0800de74   0x00000004   Data   RW         1112    .data.pCDChannelADC  adc_cfg.o
-    0x20000010   0x0800de78   0x00000004   Data   RW         3748    .data.pCalcFreq     timer_cfg.o
-    0x20000014   0x0800de7c   0x00000004   Data   RW         3223    .data.pRFASK        rfask_cfg.o
-    0x20000018   0x0800de80   0x00000004   Data   RW         3624    .data.pSysTick      systick_cfg.o
-    0x2000001c   0x0800de84   0x00000004   Data   RW         3947    .data.pUSART1       usart_cfg.o
-    0x20000020   0x0800de88   0x00000004   Data   RW         4362    .data.pWM8510Device0  wm8510_cfg.o
+    0x20000010   0x0800de78   0x00000004   Data   RW         3842    .data.pCalcFreq     timer_cfg.o
+    0x20000014   0x0800de7c   0x00000004   Data   RW         3316    .data.pRFASK        rfask_cfg.o
+    0x20000018   0x0800de80   0x00000004   Data   RW         3718    .data.pSysTick      systick_cfg.o
+    0x2000001c   0x0800de84   0x00000004   Data   RW         4041    .data.pUSART1       usart_cfg.o
+    0x20000020   0x0800de88   0x00000004   Data   RW         4456    .data.pWM8510Device0  wm8510_cfg.o
     0x20000024   0x0800de8c   0x00000004   Data   RW          342    .data.uwTickFreq    stm32f1xx_hal.o
-    0x20000028        -       0x00000004   Zero   RW         2799    .bss.LEDWork_Task.ledCount  led_cfg.o
-    0x2000002c        -       0x0000070c   Zero   RW         4090    .bss.USART1_RX_BUFFER  usart_task.o
-    0x20000738        -       0x0000070c   Zero   RW         4091    .bss.USART1_TX_BUFFER  usart_task.o
-    0x20000e44        -       0x00000001   Zero   RW         3951    .bss.USART_ITRead_16BitsTask.tempVal  usart_cfg.o
-    0x20000e45        -       0x00000001   Zero   RW         3950    .bss.USART_ITRead_8BitsTask.tempVal  usart_cfg.o
+    0x20000028        -       0x00000004   Zero   RW         2892    .bss.LEDWork_Task.ledCount  led_cfg.o
+    0x2000002c        -       0x0000070c   Zero   RW         4184    .bss.USART1_RX_BUFFER  usart_task.o
+    0x20000738        -       0x0000070c   Zero   RW         4185    .bss.USART1_TX_BUFFER  usart_task.o
+    0x20000e44        -       0x00000001   Zero   RW         4045    .bss.USART_ITRead_16BitsTask.tempVal  usart_cfg.o
+    0x20000e45        -       0x00000001   Zero   RW         4044    .bss.USART_ITRead_8BitsTask.tempVal  usart_cfg.o
     0x20000e46        -       0x00000004   Zero   RW         1693    .bss.decodeActivateSite  decode_cfg.o
     0x20000e4a        -       0x00000008   Zero   RW         1690    .bss.decodeBitIndex  decode_cfg.o
     0x20000e52   0x0800de90   0x00000002   PAD
@@ -9295,13 +9381,13 @@ Memory Map of the image
     0x20000ed8        -       0x00000004   Zero   RW         1689    .bss.decodeStep     decode_cfg.o
     0x20000edc        -       0x0000004e   Zero   RW         1109    .bss.g_ABChannelADC  adc_cfg.o
     0x20000f2a        -       0x0000004e   Zero   RW         1111    .bss.g_CDChannelADC  adc_cfg.o
-    0x20000f78        -       0x0000000c   Zero   RW         3747    .bss.g_CalcFreq     timer_cfg.o
-    0x20000f84        -       0x00000800   Zero   RW         1999    .bss.g_EepromVal    eeprom_cfg.o
-    0x20001784        -       0x00000114   Zero   RW         3222    .bss.g_RFASK        rfask_cfg.o
-    0x20001898        -       0x00000014   Zero   RW         3623    .bss.g_SysTick      systick_cfg.o
-    0x200018ac        -       0x00000060   Zero   RW         3946    .bss.g_USART1       usart_cfg.o
-    0x2000190c        -       0x00000058   Zero   RW         4361    .bss.g_WM8510Device0  wm8510_cfg.o
-    0x20001964        -       0x00000400   Zero   RW         3948    .bss.printfBuffer   usart_cfg.o
+    0x20000f78        -       0x0000000c   Zero   RW         3841    .bss.g_CalcFreq     timer_cfg.o
+    0x20000f84        -       0x00000800   Zero   RW         2089    .bss.g_EepromVal    eeprom_cfg.o
+    0x20001784        -       0x00000114   Zero   RW         3315    .bss.g_RFASK        rfask_cfg.o
+    0x20001898        -       0x00000014   Zero   RW         3717    .bss.g_SysTick      systick_cfg.o
+    0x200018ac        -       0x00000060   Zero   RW         4040    .bss.g_USART1       usart_cfg.o
+    0x2000190c        -       0x00000058   Zero   RW         4455    .bss.g_WM8510Device0  wm8510_cfg.o
+    0x20001964        -       0x00000400   Zero   RW         4042    .bss.printfBuffer   usart_cfg.o
     0x20001d64        -       0x00000004   Zero   RW          343    .bss.uwTick         stm32f1xx_hal.o
     0x20001d68        -       0x00001000   Zero   RW         1008    STACK               startup_stm32f103xg.o
 

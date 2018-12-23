@@ -46,6 +46,9 @@
     <Filter Include="Application\EERPOM">
       <UniqueIdentifier>{309CD4BA-1C80-9510-85E0-8F6371E37F92}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Application\ENC28J60">
+      <UniqueIdentifier>{18A80F52-0437-991B-AD55-AD1699C3A9C1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Application\FLASH">
       <UniqueIdentifier>{B6D2041D-22E9-02B3-6B60-8ED4D7B5D33A}</UniqueIdentifier>
     </Filter>
@@ -87,6 +90,9 @@
     </Filter>
     <Filter Include="Application\PCF8563">
       <UniqueIdentifier>{B7AC975E-230E-756C-AC7B-BB1E18DCAB2B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application\PID">
+      <UniqueIdentifier>{25C7296C-9152-9730-9A63-1A25066EF330}</UniqueIdentifier>
     </Filter>
     <Filter Include="Application\Power">
       <UniqueIdentifier>{35E1CD1D-A1F7-CBB3-EA6E-57D556C49C3B}</UniqueIdentifier>
@@ -273,6 +279,15 @@
     <ClInclude Include="..\Application\EEPROM\eeprom_task.h">
       <Filter>Application\EERPOM</Filter>
     </ClInclude>
+    <ClInclude Include="..\Application\ENC28J60\enc28j60_cfg.h">
+      <Filter>Application\ENC28J60</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Application\ENC28J60\enc28j60_lib.h">
+      <Filter>Application\ENC28J60</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Application\ENC28J60\enc28j60_task.h">
+      <Filter>Application\ENC28J60</Filter>
+    </ClInclude>
     <ClInclude Include="..\Application\FLASH\flash_cfg.h">
       <Filter>Application\FLASH</Filter>
     </ClInclude>
@@ -398,6 +413,15 @@
     </ClInclude>
     <ClInclude Include="..\Application\PCF8563\pcf8563_task.h">
       <Filter>Application\PCF8563</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Application\PID\pid_cfg.h">
+      <Filter>Application\PID</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Application\PID\pid_lib.h">
+      <Filter>Application\PID</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Application\PID\pid_task.h">
+      <Filter>Application\PID</Filter>
     </ClInclude>
     <ClInclude Include="..\Application\Power\power_cfg.h">
       <Filter>Application\Power</Filter>
@@ -719,6 +743,15 @@
     <ClCompile Include="..\Application\EEPROM\eeprom_task.c">
       <Filter>Application\EERPOM</Filter>
     </ClCompile>
+    <ClCompile Include="..\Application\ENC28J60\enc28j60_cfg.c">
+      <Filter>Application\ENC28J60</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Application\ENC28J60\enc28j60_lib.c">
+      <Filter>Application\ENC28J60</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Application\ENC28J60\enc28j60_task.c">
+      <Filter>Application\ENC28J60</Filter>
+    </ClCompile>
     <ClCompile Include="..\Application\FLASH\flash_cfg.c">
       <Filter>Application\FLASH</Filter>
     </ClCompile>
@@ -844,6 +877,15 @@
     </ClCompile>
     <ClCompile Include="..\Application\PCF8563\pcf8563_task.c">
       <Filter>Application\PCF8563</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Application\PID\pid_cfg.c">
+      <Filter>Application\PID</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Application\PID\pid_lib.c">
+      <Filter>Application\PID</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Application\PID\pid_task.c">
+      <Filter>Application\PID</Filter>
     </ClCompile>
     <ClCompile Include="..\Application\Power\power_cfg.c">
       <Filter>Application\Power</Filter>

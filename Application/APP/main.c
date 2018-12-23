@@ -169,7 +169,7 @@ void Sys_Init(void)
 
 	//---启动解码逻辑
 	//DecodeTask_START();
-	//---查询解码的初始化
+	//---查询解码的初始化，所有的SITE都进行解码
 	DecodeTask_QueryInit(0x0F);
 }
 

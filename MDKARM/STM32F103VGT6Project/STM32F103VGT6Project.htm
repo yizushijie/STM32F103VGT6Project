@@ -3,7 +3,7 @@
 <title>Static Call Graph - [STM32F103VGT6Project\STM32F103VGT6Project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image STM32F103VGT6Project\STM32F103VGT6Project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6100100: Last Updated: Sat Dec 22 18:56:59 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6100100: Last Updated: Sun Dec 23 15:01:43 2018
 <BR><P>
 <H3>Maximum Stack Usage =        936 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -339,8 +339,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
 <LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_frsub
+<BR>[Called By]<UL><LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_frsub
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fsub
 </UL>
 
 <P><STRONG><a name="[5a]"></a>__aeabi_fsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, fadd.o(.text))
@@ -469,16 +469,16 @@ Global Symbols
 <P><STRONG><a name="[2bf]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, iusefp.o(.text), UNUSED)
 
 <P><STRONG><a name="[59]"></a>_float_round</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fepilogue.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<BR><BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fdiv
 </UL>
 
 <P><STRONG><a name="[58]"></a>_float_epilogue</STRONG> (Thumb, 92 bytes, Stack size 4 bytes, fepilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = _float_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
+<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2f
 <LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2f
-<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_fadd
 </UL>
 
 <P><STRONG><a name="[60]"></a>_double_round</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, depilogue.o(.text))
@@ -897,9 +897,9 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CRCLib_Enable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USARTLib_Init
-<LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_RealTime_AddByteCRC
+<BR>[Called By]<UL><LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_RealTime_AddByteCRC
 <LI><a href="#[263]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_CRCTask_Read
+<LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USARTLib_Init
 </UL>
 
 <P><STRONG><a name="[ba]"></a>CRCTask_Init</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, crc_task.o(.text.CRCTask_Init))
@@ -1460,8 +1460,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DelayNLib_us
 </UL>
-<BR>[Address Reference Count : 2]<UL><LI> main.o(.text.Sys_Init)
-<LI> i2c_cfg.o(.text.I2C_MSW_Init)
+<BR>[Address Reference Count : 2]<UL><LI> i2c_cfg.o(.text.I2C_MSW_Init)
+<LI> main.o(.text.Sys_Init)
 </UL>
 <P><STRONG><a name="[125]"></a>Delay_ms</STRONG> (Thumb, 52 bytes, Stack size 24 bytes, delay_cfg.o(.text.Delay_ms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = Delay_ms &rArr; DelayN_ms &rArr; DelayN_us &rArr; SysTickTask_WaitTick &rArr; SysTickLib_WaitTick &rArr; SysTick_WaitTick &rArr; IWDGTask_Reset &rArr; IWDGLib_Reset &rArr; IWDG_Reset &rArr; LL_IWDG_ReloadCounter
@@ -1554,14 +1554,14 @@ Global Symbols
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Decode_DecodeLEDInit
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Decode_DecodeCHInit
 <LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MSW_Init
-<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDWork_Init
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDDebug_Init
 <LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_SOTInit
 <LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_EOTInit
 <LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_BINInit
-<LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Power_Init
+<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDWork_Init
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDDebug_Init
 <LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RFASK_YSELInit
 <LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RFASK_ClkInit
+<LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Power_Init
 <LI><a href="#[257]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_Init
 </UL>
 
@@ -2198,16 +2198,16 @@ Global Symbols
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Decode_DecodeLEDInit
 <LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Decode_DecodeCHInit
 <LI><a href="#[13f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;I2C_MSW_Init
-<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDWork_Init
-<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDDebug_Init
 <LI><a href="#[17a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_SOTInit
 <LI><a href="#[177]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_EOTInit
 <LI><a href="#[176]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_BINInit
-<LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Power_Init
+<LI><a href="#[180]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDWork_Init
+<LI><a href="#[17b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LEDDebug_Init
 <LI><a href="#[1f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RFASK_YSELInit
 <LI><a href="#[1f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RFASK_ClkInit
-<LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_CalcFreqMode_Init
+<LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Power_Init
 <LI><a href="#[257]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART1_Init
+<LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Timer_CalcFreqMode_Init
 </UL>
 
 <P><STRONG><a name="[199]"></a>LL_RCC_GetSystemClocksFreq</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, stm32f1xx_ll_rcc.o(.text.LL_RCC_GetSystemClocksFreq))
@@ -3562,8 +3562,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[260]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_485GPIOInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USARTLib_ReadInit
-<LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_TimeOVFTask
+<BR>[Called By]<UL><LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_TimeOVFTask
+<LI><a href="#[272]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USARTLib_ReadInit
 </UL>
 
 <P><STRONG><a name="[275]"></a>USART_RealTime_AddByte</STRONG> (Thumb, 144 bytes, Stack size 40 bytes, usart_cfg.o(.text.USART_RealTime_AddByte))
@@ -3574,9 +3574,9 @@ Global Symbols
 <LI><a href="#[292]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_IsEnabledIT_TXE
 <LI><a href="#[296]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LL_USART_EnableIT_TXE
 </UL>
-<BR>[Called By]<UL><LI><a href="#[274]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USARTLib_RealTime_AddByte
-<LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_RealTime_AddByteSize
+<BR>[Called By]<UL><LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_RealTime_AddByteSize
 <LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_RealTime_AddByteCRC
+<LI><a href="#[274]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USARTLib_RealTime_AddByte
 </UL>
 
 <P><STRONG><a name="[277]"></a>USART_RealTime_AddByteCRC</STRONG> (Thumb, 294 bytes, Stack size 72 bytes, usart_cfg.o(.text.USART_RealTime_AddByteCRC))

@@ -413,7 +413,8 @@ extern "C" {
 
 	//===数据的绝对值
 	#define ABS(a)						( (a)>=0?(a):-(a) )
-
+	//===范围内的最小值
+	#define RANGE(x, a, b)				( MIN( MAX( x, a ), b ) )
 	//===数据的绝对差
 	#define ABS_SUB(a,b)				( (a)>(b)?((a)-(b)):((b)-(a)) )
 

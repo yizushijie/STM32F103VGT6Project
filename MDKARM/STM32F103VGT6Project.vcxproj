@@ -39,7 +39,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>USE_FULL_LL_DRIVER;USE_HAL_DRIVER;HSE_VALUE=8000000;STM32F103xG;_IAR_;__ICCARM__;__CC_ARM;_Pragma(x)=;__interrupt=;__packed=__attribute__((__packed__));__weak=__attribute__((weak));%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Complier;..\Doc;..\STM32F1xx;..\Drivers\CMSIS\Include;..\Drivers\STM32F1xx_HAL_Driver\Inc;..\Drivers\STM32F1xx_HAL_Driver\Src;..\Application\APP;..\Application\IWDG;..\Application\AD5593;..\Application\AT24Cxx;..\Application\CRC;..\Application\Delay;..\Application\DHT11;..\Application\DS18B20;..\Application\GPIO;..\Application\I2C;..\Application\OneWire;..\Application\PCF8563;..\Application\Random;..\Application\SysTick;..\Application\USART;..\Application\WM8510;..\Application\HMC830;..\Application\ISP;..\Application\SPI;..\Application\LED;..\Application\ADC;..\Application\Timer;..\Application\Key;..\Application\Power;..\Application\EEPROM;..\Application\RFASK;..\Application\FLASH;..\Application\NRF2401;..\Application\LCD1602;..\Application\BKP;..\Application\SHT2x;..\Application\Decode;..\Application\CSS;..\Application\ADS8688;..\Application\IAP;..\Application\OLED;..\Application\WWDG;..\Application\W25Qxx;..\Application\RFASKHW;..\Application\DS1302;D:\Keil_v5\ARM\RV31;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Complier;..\Doc;..\STM32F1xx;..\Drivers\CMSIS\Include;..\Drivers\STM32F1xx_HAL_Driver\Inc;..\Drivers\STM32F1xx_HAL_Driver\Src;..\Application\APP;..\Application\IWDG;..\Application\AD5593;..\Application\AT24Cxx;..\Application\CRC;..\Application\Delay;..\Application\DHT11;..\Application\DS18B20;..\Application\GPIO;..\Application\I2C;..\Application\OneWire;..\Application\PCF8563;..\Application\Random;..\Application\SysTick;..\Application\USART;..\Application\WM8510;..\Application\HMC830;..\Application\ISP;..\Application\SPI;..\Application\LED;..\Application\ADC;..\Application\Timer;..\Application\Key;..\Application\Power;..\Application\EEPROM;..\Application\RFASK;..\Application\FLASH;..\Application\NRF2401;..\Application\LCD1602;..\Application\BKP;..\Application\SHT2x;..\Application\Decode;..\Application\CSS;..\Application\ADS8688;..\Application\IAP;..\Application\OLED;..\Application\WWDG;..\Application\W25Qxx;..\Application\RFASKHW;..\Application\DS1302;..\Application\ENC28J60;..\Application\PID;D:\Keil_v5\ARM\RV31;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Disabled</Optimization>
     </ClCompile>
     <Link>
@@ -88,6 +88,9 @@
     <ClInclude Include="..\Application\EEPROM\eeprom_cfg.h" />
     <ClInclude Include="..\Application\EEPROM\eeprom_lib.h" />
     <ClInclude Include="..\Application\EEPROM\eeprom_task.h" />
+    <ClInclude Include="..\Application\ENC28J60\enc28j60_cfg.h" />
+    <ClInclude Include="..\Application\ENC28J60\enc28j60_lib.h" />
+    <ClInclude Include="..\Application\ENC28J60\enc28j60_task.h" />
     <ClInclude Include="..\Application\FLASH\flash_cfg.h" />
     <ClInclude Include="..\Application\FLASH\flash_lib.h" />
     <ClInclude Include="..\Application\FLASH\flash_task.h" />
@@ -130,6 +133,9 @@
     <ClInclude Include="..\Application\PCF8563\pcf8563_cfg.h" />
     <ClInclude Include="..\Application\PCF8563\pcf8563_lib.h" />
     <ClInclude Include="..\Application\PCF8563\pcf8563_task.h" />
+    <ClInclude Include="..\Application\PID\pid_cfg.h" />
+    <ClInclude Include="..\Application\PID\pid_lib.h" />
+    <ClInclude Include="..\Application\PID\pid_task.h" />
     <ClInclude Include="..\Application\Power\power_cfg.h" />
     <ClInclude Include="..\Application\Power\power_lib.h" />
     <ClInclude Include="..\Application\Power\power_task.h" />
@@ -238,6 +244,9 @@
     <ClCompile Include="..\Application\EEPROM\eeprom_cfg.c" />
     <ClCompile Include="..\Application\EEPROM\eeprom_lib.c" />
     <ClCompile Include="..\Application\EEPROM\eeprom_task.c" />
+    <ClCompile Include="..\Application\ENC28J60\enc28j60_cfg.c" />
+    <ClCompile Include="..\Application\ENC28J60\enc28j60_lib.c" />
+    <ClCompile Include="..\Application\ENC28J60\enc28j60_task.c" />
     <ClCompile Include="..\Application\FLASH\flash_cfg.c" />
     <ClCompile Include="..\Application\FLASH\flash_lib.c" />
     <ClCompile Include="..\Application\FLASH\flash_task.c" />
@@ -280,6 +289,9 @@
     <ClCompile Include="..\Application\PCF8563\pcf8563_cfg.c" />
     <ClCompile Include="..\Application\PCF8563\pcf8563_lib.c" />
     <ClCompile Include="..\Application\PCF8563\pcf8563_task.c" />
+    <ClCompile Include="..\Application\PID\pid_cfg.c" />
+    <ClCompile Include="..\Application\PID\pid_lib.c" />
+    <ClCompile Include="..\Application\PID\pid_task.c" />
     <ClCompile Include="..\Application\Power\power_cfg.c" />
     <ClCompile Include="..\Application\Power\power_lib.c" />
     <ClCompile Include="..\Application\Power\power_task.c" />
